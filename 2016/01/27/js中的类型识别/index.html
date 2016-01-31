@@ -13,7 +13,8 @@
 <meta property="og:site_name" content="王楠">
 <meta property="og:description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
 1234567891011121314typeof &apos;js&apos;;  //&quot;string&quot;typeof 12;   //&quot;number&quot;typeof true; //&quot;boolean&quot;typeof null; //&quot;object&quot;typeof &amp;#123;na">
-<meta property="og:updated_time" content="2016-01-31T15:11:53.909Z">
+<meta property="og:image" content="http://yoursite.com/../../public/img/js-one-31.png">
+<meta property="og:updated_time" content="2016-01-31T15:36:00.922Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的类型识别">
 <meta name="twitter:description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
@@ -277,6 +278,8 @@
 <li>不能判别原始对象类型</li>
 <li>判别自定义对象类型</li>
 </ul>
+<h1 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call"></a>Object.prototype.toString.call</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>,-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/../../public/img/js-one-31.png" alt="js"></p>
 
       
     </div>
@@ -288,7 +291,7 @@
         <p><span>本文标题:</span><a href="/2016/01/27/js中的类型识别/">js中的类型识别</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年01月27日 - 15时31分</p>
-        <p><span>最后更新:</span>2016年01月31日 - 23时11分</p>
+        <p><span>最后更新:</span>2016年01月31日 - 23时36分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/01/27/js中的类型识别/" title="js中的类型识别">http://yoursite.com/2016/01/27/js中的类型识别/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/01/27/js中的类型识别/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -318,7 +321,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#typeof"><span class="toc-number">1.</span> <span class="toc-text">typeof</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#instanceof"><span class="toc-number">2.</span> <span class="toc-text">instanceof</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#typeof"><span class="toc-number">1.</span> <span class="toc-text">typeof</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#instanceof"><span class="toc-number">2.</span> <span class="toc-text">instanceof</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Object-prototype-toString-call"><span class="toc-number">3.</span> <span class="toc-text">Object.prototype.toString.call</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
