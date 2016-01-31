@@ -503,10 +503,10 @@
 
 
   
-    <article id="post-我的第一篇博文" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-js中的类型识别" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/27/我的第一篇博文/" class="article-date">
+      <a href="/2016/01/27/js中的类型识别/" class="article-date">
       <time datetime="2016-01-27T07:31:29.000Z" itemprop="datePublished">2016-01-27</time>
 </a>
     </div>
@@ -520,7 +520,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/27/我的第一篇博文/">我的第一篇博文</a>
+      <a class="article-title" href="/2016/01/27/js中的类型识别/">我的第一篇博文</a>
     </h1>
   
 
@@ -530,7 +530,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="js_u4E2D_u7684_u7C7B_u578B_u8BC6_u522B"><a href="#js_u4E2D_u7684_u7C7B_u578B_u8BC6_u522B" class="headerlink" title="js中的类型识别"></a>js中的类型识别</h2><h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>typeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。</p>
+        <h1 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h1><p>typeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">'js'</span>;  <span class="comment">//"string"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">12</span>;   <span class="comment">//"number"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">//"boolean"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">//"object"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> &#123;name:<span class="string">"wn"</span>&#125;; <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;; <span class="comment">//"function"</span></span><br><span class="line"><span class="keyword">typeof</span> [];  <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>; <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> /\d/; <span class="comment">//"object"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> Person;<span class="comment">//"object"</span></span><br></pre></td></tr></table></figure>
+<p>typeof 总结：</p>
+<ul>
+<li>可以识别标准类型（Null除外）</li>
+<li>不能识别具体的对象类型（Function 除外）</li>
+</ul>
 
       
     </div>

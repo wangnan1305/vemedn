@@ -5,16 +5,19 @@
   
   <title>我的第一篇博文 | 王楠</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="js中的类型识别typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。">
+  <meta name="description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
+1234567891011121314typeof &apos;js&apos;;  //&quot;string&quot;typeof 12;   //&quot;number&quot;typeof true; //&quot;boolean&quot;typeof null; //&quot;object&quot;typeof &amp;#123;na">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的第一篇博文">
-<meta property="og:url" content="http://yoursite.com/2016/01/27/我的第一篇博文/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/01/27/js中的类型识别/index.html">
 <meta property="og:site_name" content="王楠">
-<meta property="og:description" content="js中的类型识别typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。">
-<meta property="og:updated_time" content="2016-01-31T14:25:14.425Z">
+<meta property="og:description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
+1234567891011121314typeof &apos;js&apos;;  //&quot;string&quot;typeof 12;   //&quot;number&quot;typeof true; //&quot;boolean&quot;typeof null; //&quot;object&quot;typeof &amp;#123;na">
+<meta property="og:updated_time" content="2016-01-31T14:40:12.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的第一篇博文">
-<meta name="twitter:description" content="js中的类型识别typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。">
+<meta name="twitter:description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
+1234567891011121314typeof &apos;js&apos;;  //&quot;string&quot;typeof 12;   //&quot;number&quot;typeof true; //&quot;boolean&quot;typeof null; //&quot;object&quot;typeof &amp;#123;na">
   
     <link rel="alternative" href="/atom.xml" title="王楠" type="application/atom+xml">
   
@@ -219,10 +222,10 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-我的第一篇博文" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-js中的类型识别" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/27/我的第一篇博文/" class="article-date">
+      <a href="/2016/01/27/js中的类型识别/" class="article-date">
       <time datetime="2016-01-27T07:31:29.000Z" itemprop="datePublished">2016-01-27</time>
 </a>
     </div>
@@ -257,7 +260,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="js_u4E2D_u7684_u7C7B_u578B_u8BC6_u522B"><a href="#js_u4E2D_u7684_u7C7B_u578B_u8BC6_u522B" class="headerlink" title="js中的类型识别"></a>js中的类型识别</h2><h2 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h2><p>typeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。</p>
+        <h1 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h1><p>typeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">'js'</span>;  <span class="comment">//"string"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">12</span>;   <span class="comment">//"number"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">//"boolean"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">//"object"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> &#123;name:<span class="string">"wn"</span>&#125;; <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;; <span class="comment">//"function"</span></span><br><span class="line"><span class="keyword">typeof</span> [];  <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>; <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> /\d/; <span class="comment">//"object"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> Person;<span class="comment">//"object"</span></span><br></pre></td></tr></table></figure>
+<p>typeof 总结：</p>
+<ul>
+<li>可以识别标准类型（Null除外）</li>
+<li>不能识别具体的对象类型（Function 除外）</li>
+</ul>
 
       
     </div>
@@ -266,13 +275,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/01/27/我的第一篇博文/">我的第一篇博文</a></p>
+        <p><span>本文标题:</span><a href="/2016/01/27/js中的类型识别/">我的第一篇博文</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年01月27日 - 15时31分</p>
-        <p><span>最后更新:</span>2016年01月31日 - 22时25分</p>
+        <p><span>最后更新:</span>2016年01月31日 - 22时40分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/01/27/我的第一篇博文/" title="我的第一篇博文">http://yoursite.com/2016/01/27/我的第一篇博文/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/01/27/我的第一篇博文/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/01/27/js中的类型识别/" title="我的第一篇博文">http://yoursite.com/2016/01/27/js中的类型识别/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/01/27/js中的类型识别/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -299,7 +308,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js_u4E2D_u7684_u7C7B_u578B_u8BC6_u522B"><span class="toc-number">1.</span> <span class="toc-text">js中的类型识别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#typeof"><span class="toc-number">2.</span> <span class="toc-text">typeof</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#typeof"><span class="toc-number">1.</span> <span class="toc-text">typeof</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -379,7 +388,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/我的第五篇博客/">我的第五篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/28/我的第四篇博客/">我的第四篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/我的第三篇博客/">我的第三篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/第二篇博文/">第二篇博文</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/我的第一篇博文/">我的第一篇博文</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/我的第五篇博客/">我的第五篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/28/我的第四篇博客/">我的第四篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/我的第三篇博客/">我的第三篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/第二篇博文/">第二篇博文</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/js中的类型识别/">我的第一篇博文</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
