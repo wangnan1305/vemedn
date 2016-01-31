@@ -538,7 +538,7 @@
 <li>不能识别具体的对象类型（Function 除外）</li>
 </ul>
 <h1 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h1><p>instanceof用来识别内置的对象类型,不能够识别原始类型。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[] <span class="keyword">instanceof</span> <span class="built_in">Array</span>; <span class="comment">//true</span></span><br><span class="line">/\d/ <span class="keyword">instanceof</span> <span class="built_in">RegExp</span>; <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span> <span class="keyword">instanceof</span> <span class="built_in">Number</span>;<span class="comment">//false</span></span><br><span class="line"><span class="string">"wn"</span> <span class="keyword">instanceof</span> <span class="built_in">String</span>;<span class="comment">// false</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
