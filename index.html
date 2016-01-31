@@ -548,8 +548,14 @@
 <li>判别自定义对象类型</li>
 </ul>
 <h1 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call"></a>Object.prototype.toString.call</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>,-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/source/img/weibo.png" alt="img"></p>
-<p><img src="/../img/weibo.png" alt="img"></p>
+<p><img src="/../img/js-one-31.png" alt="img"></p>
+<p>Object.prototype.toString.call总结：</p>
+<ul>
+<li>可以识别标准类型以及内置（build-in）对象类型</li>
+<li>不能识别自定义对象类型</li>
+</ul>
+<h1 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h1><p>constructor就是构造这个对象的构造函数本身。</p>
+<p>我们用构造函数去识别这个对象是什么类型肯定是准确的。</p>
 
       
     </div>
