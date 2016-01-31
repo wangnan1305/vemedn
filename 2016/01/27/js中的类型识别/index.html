@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="王楠">
 <meta property="og:description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
 1234567891011121314typeof &apos;js&apos;;  //&quot;string&quot;typeof 12;   //&quot;number&quot;typeof true; //&quot;boolean&quot;typeof null; //&quot;object&quot;typeof &amp;#123;na">
-<meta property="og:updated_time" content="2016-01-31T15:00:06.812Z">
+<meta property="og:updated_time" content="2016-01-31T15:11:53.909Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的类型识别">
 <meta name="twitter:description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
@@ -269,6 +269,14 @@
 </ul>
 <h1 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h1><p>instanceof用来识别内置的对象类型,不能够识别原始类型。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[] <span class="keyword">instanceof</span> <span class="built_in">Array</span>; <span class="comment">//true</span></span><br><span class="line">/\d/ <span class="keyword">instanceof</span> <span class="built_in">RegExp</span>; <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span> <span class="keyword">instanceof</span> <span class="built_in">Number</span>;<span class="comment">//false</span></span><br><span class="line"><span class="string">"wn"</span> <span class="keyword">instanceof</span> <span class="built_in">String</span>;<span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>instanceof 能够用来判别自定义对象类型及父子类型</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*我们先定义了一个Point构造函数，然后Circle继承了Point,生成了Circle对象。*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.x=x;</span><br><span class="line">	<span class="keyword">this</span>.y=y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Circle</span>(<span class="params">x,y,r</span>)</span>&#123;</span><br><span class="line">	Point.call(<span class="keyword">this</span>,x,y);</span><br><span class="line">	<span class="keyword">this</span>.radius=r;</span><br><span class="line">&#125;</span><br><span class="line">Circle.prototype = <span class="keyword">new</span> Point();</span><br><span class="line">Circle.prototype.constructor=Circle;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c=<span class="keyword">new</span> Circle(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">c <span class="keyword">instanceof</span> Circle ;<span class="comment">//true </span></span><br><span class="line">c <span class="keyword">instanceof</span> Point; <span class="comment">//true;</span></span><br></pre></td></tr></table></figure>
+<p>instanceof 总结：</p>
+<ul>
+<li>判别内置对象类型</li>
+<li>不能判别原始对象类型</li>
+<li>判别自定义对象类型</li>
+</ul>
 
       
     </div>
@@ -280,7 +288,7 @@
         <p><span>本文标题:</span><a href="/2016/01/27/js中的类型识别/">js中的类型识别</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年01月27日 - 15时31分</p>
-        <p><span>最后更新:</span>2016年01月31日 - 23时00分</p>
+        <p><span>最后更新:</span>2016年01月31日 - 23时11分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/01/27/js中的类型识别/" title="js中的类型识别">http://yoursite.com/2016/01/27/js中的类型识别/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/01/27/js中的类型识别/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
