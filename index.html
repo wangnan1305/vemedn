@@ -547,17 +547,17 @@
 <li>不能判别原始对象类型</li>
 <li>判别自定义对象类型</li>
 </ul>
-<h1 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call"></a>Object.prototype.toString.call</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>,-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call"></a><strong>Object.prototype.toString.call</strong></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>,-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="/../img/js-one-31.png" alt="img"></p>
 <p>Object.prototype.toString.call总结：</p>
 <ul>
 <li>可以识别标准类型以及内置（build-in）对象类型</li>
 <li>不能识别自定义对象类型</li>
 </ul>
-<h1 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h1><p>constructor就是构造这个对象的构造函数本身。</p>
+<h1 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a><strong>constructor</strong></h1><p>constructor就是构造这个对象的构造函数本身。</p>
 <p>我们用构造函数去识别这个对象是什么类型肯定是准确的。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断原始类型</span></span><br><span class="line"><span class="string">"wangnan"</span>.constructor === <span class="built_in">String</span>;  <span class="comment">//true</span></span><br><span class="line">(<span class="number">1</span>).constructor === <span class="built_in">Number</span>;        <span class="comment">//true</span></span><br><span class="line"><span class="literal">true</span>.constructor === <span class="built_in">Boolean</span>;      <span class="comment">//true</span></span><br><span class="line">(&#123;&#125;).constructor ===<span class="built_in">Object</span>;        <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//判断内置对象类型</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().constructor === <span class="built_in">Date</span>;   <span class="comment">//true</span></span><br><span class="line">[].constructor === <span class="built_in">Array</span>;          <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-<p>constructor 总结：</p>
+<p><strong>constructor 总结</strong>：</p>
 <ul>
 <li>判断标准类型（Undefined/Null 除外，因为前两者没有构造函数）</li>
 <li>判别内置对象类型</li>
