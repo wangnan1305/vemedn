@@ -143,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/node/" style="font-size: 10px;">node</a>
+                        <a href="/tags/js/" style="font-size: 10px;">js</a>
                     </div>
                 </section>
                 
@@ -223,6 +223,206 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-text" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/03/text/" class="article-date">
+      <time datetime="2016-02-03T09:57:29.877Z" itemprop="datePublished">2016-02-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        function clone(param){
+	if(typeof(param) !='object'){
+		return param;
+	}
+	else if(param instanceof Array){
+		var arr=[];
+		for(var i=0;i
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-sadsa" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/03/sadsa/" class="article-date">
+      <time datetime="2016-02-03T09:48:44.710Z" itemprop="datePublished">2016-02-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var foo="abc";
+	with({
+		foo:"bar"
+	}){
+		function f(){
+			alert(foo);
+			
+		};
+		(function(){
+			alert(foo);
+		})();
+		f();
+	}
+</script>
+<script type="text/javascript">
+	function Teacher() {}
+	Teacher.prototype = {
+		job: 'teacher',
+		setName: function(name) {
+			this.name = name;
+		}
+	}
+	var bill = new Teacher();
+
+	/*bill.setName('Bill');
+	alert(bill.name);  //Bill
+	alert(bill.job);  //teacher
+	bill.job='assistant'; //assistant
+	alert(bill.job);
+	delete bill.job;
+	alert(bill.job);teacher*/
+</script>
+<script type="text/javascript">
+	var a = 1;
+	var func = (function(){
+		var a = 2;
+		return function() { 
+			a++;
+	   		alert(a);
+		}
+	})();
+	func();
+	func();
+</script>
+<script type="text/javascript">
+	var x=10;
+	function foo(){
+		alert(x);
+	}
+	function bar(){
+		var x=20;
+		foo();
+	}
+	bar();
+</script>
+<script type="text/javascript">
+	/*(function (){
+		var a=0;
+		function b(){
+			a=1;
+			
+		}
+		b();
+	})()*/
+</script>
+
+<script type="text/javascript">
+function Car(type,color){
+  this.type = type;
+  this.color = color;
+  this.status = "stop";
+  this.light = "off";
+  console.log(this);
+  console.log(eval(this))
+}
+Car.prototype.start = function(){
+  this.status = "driving";
+  this.light = "on";
+  console.log(this.type + " is " + this.status);
+}
+Car.prototype.stop = function(){
+  this.status = "stop";
+  this.light = "off";
+  console.log(this.type + " is " + this.status);
+}
+var audi = new Car("audi", "silver");
+/*var benz = new Car("benz", "black");
+var ferrari = new Car("ferrari", "yellow");*/
+ 
+
+function add(i, j){
+  return i+j;
+}
+var myNumber = {
+  value: 1,
+  double: function(){
+  	var _this=this;
+    var helper = function(){
+      _this.value = add(_this.value,_this.value);
+    }
+    helper();
+  }
+}
+</script>
+</body>
+</html>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-我的第五篇博客" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -292,7 +492,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/28/我的第四篇博客/">我的第四篇博客</a>
+      <a class="article-title" href="/2016/01/28/我的第四篇博客/">原型</a>
     </h1>
   
 
@@ -302,8 +502,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>我的第四篇博客<br><img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png" alt="图片"></p>
-
+        
       
     </div>
     
@@ -312,6 +511,10 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -345,7 +548,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/27/我的第三篇博客/">我的第三篇博客</a>
+      <a class="article-title" href="/2016/01/27/我的第三篇博客/">apply/call方法</a>
     </h1>
   
 
@@ -355,7 +558,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>我的第三篇博客</p>
+        <p>apply/call 方法是Function对象原型链上的方法，Function.prototypr.apply,因此所有的函数都可以调用apply/call方法。</p>
+<p>为什么js中需要apply/call方法？</p>
 
       
     </div>
@@ -366,7 +570,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
     </div>
 
       
@@ -402,7 +606,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/27/第二篇博文/">第二篇博文</a>
+      <a class="article-title" href="/2016/01/27/第二篇博文/">arguments类数组对象转化为数组</a>
     </h1>
   
 
@@ -412,7 +616,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>node入门</p>
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> arr = <span class="built_in">Array</span>.prototype.slice.apply(<span class="built_in">arguments</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(arr)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>解释</strong>：apply是用来改变函数执行是this指向的，这里以argumens对象为this来执行Array.prototype.slice函数，而Array.prototype.slice函数不带参数时默认返回的是数组对象本身。 var ar = Array.prototype.slice.apply({0:1,length:1}) console.log(ar)//[0] 这里会将{0:1,length:1}形成一个新数组（这里属性名必须是0,1,2….，而且length属性不能少，而且应该跟前面属性个数对应，这样就模拟了一个数组）</p>
 
       
     </div>
@@ -423,7 +628,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
     </div>
 
       
@@ -483,7 +688,7 @@
 <p><strong>instanceof 总结</strong>：</p>
 <ul>
 <li>判别内置对象类型</li>
-<li>不能判别原始对象类型</li>
+<li>不能判别原始类型</li>
 <li>判别自定义对象类型</li>
 </ul>
 <h1 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call"></a><strong>Object.prototype.toString.call</strong></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>,-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

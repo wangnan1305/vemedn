@@ -15,7 +15,7 @@
 1234567891011121314typeof &apos;js&apos;;  //&quot;string&quot;typeof 12;   //&quot;number&quot;typeof true; //&quot;boolean&quot;typeof null; //&quot;object&quot;typeof &amp;#123;na">
 <meta property="og:image" content="http://yoursite.com/../img/js-one-31.png">
 <meta property="og:image" content="http://yoursite.com/../img/js-one-1.png">
-<meta property="og:updated_time" content="2016-02-01T04:42:01.353Z">
+<meta property="og:updated_time" content="2016-02-03T10:06:10.644Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的类型识别">
 <meta name="twitter:description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
@@ -146,7 +146,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/node/" style="font-size: 10px;">node</a>
+                        <a href="/tags/js/" style="font-size: 10px;">js</a>
                     </div>
                 </section>
                 
@@ -276,7 +276,7 @@
 <p><strong>instanceof 总结</strong>：</p>
 <ul>
 <li>判别内置对象类型</li>
-<li>不能判别原始对象类型</li>
+<li>不能判别原始类型</li>
 <li>判别自定义对象类型</li>
 </ul>
 <h1 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call"></a><strong>Object.prototype.toString.call</strong></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>,-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -308,7 +308,7 @@
         <p><span>本文标题:</span><a href="/2016/01/27/js中的类型识别/">js中的类型识别</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年01月27日 - 15时31分</p>
-        <p><span>最后更新:</span>2016年02月01日 - 12时42分</p>
+        <p><span>最后更新:</span>2016年02月03日 - 18时06分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/01/27/js中的类型识别/" title="js中的类型识别">http://yoursite.com/2016/01/27/js中的类型识别/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/01/27/js中的类型识别/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -326,7 +326,7 @@
         
             <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2016/01/27/第二篇博文/">
-                    第二篇博文
+                    arguments类数组对象转化为数组
                 </a>
             </div>
         
@@ -406,7 +406,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/01/27/第二篇博文/" title="上一篇: 第二篇博文">
+            <a href="/2016/01/27/第二篇博文/" title="上一篇: arguments类数组对象转化为数组">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -418,7 +418,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/我的第五篇博客/">我的第五篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/28/我的第四篇博客/">我的第四篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/我的第三篇博客/">我的第三篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/第二篇博文/">第二篇博文</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/js中的类型识别/">js中的类型识别</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/text/">text</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/sadsa/">sadsa</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/我的第五篇博客/">我的第五篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/28/我的第四篇博客/">原型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/我的第三篇博客/">apply/call方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/第二篇博文/">arguments类数组对象转化为数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/js中的类型识别/">js中的类型识别</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");

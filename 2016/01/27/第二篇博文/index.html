@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>第二篇博文 | 王楠</title>
+  <title>arguments类数组对象转化为数组 | 王楠</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="node入门">
+  <meta name="description" content="1234function a()&amp;#123;	var arr = Array.prototype.slice.apply(arguments);	console.log(arr)&amp;#125;
+解释：apply是用来改变函数执行是this指向的，这里以argumens对象为this来执行Array.prototype.slice函数，而Array.prototype.slice函数不带参数时默认返回">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二篇博文">
+<meta property="og:title" content="arguments类数组对象转化为数组">
 <meta property="og:url" content="http://yoursite.com/2016/01/27/第二篇博文/index.html">
 <meta property="og:site_name" content="王楠">
-<meta property="og:description" content="node入门">
-<meta property="og:updated_time" content="2016-01-27T10:18:33.356Z">
+<meta property="og:description" content="1234function a()&amp;#123;	var arr = Array.prototype.slice.apply(arguments);	console.log(arr)&amp;#125;
+解释：apply是用来改变函数执行是this指向的，这里以argumens对象为this来执行Array.prototype.slice函数，而Array.prototype.slice函数不带参数时默认返回">
+<meta property="og:updated_time" content="2016-02-01T08:12:26.628Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第二篇博文">
-<meta name="twitter:description" content="node入门">
+<meta name="twitter:title" content="arguments类数组对象转化为数组">
+<meta name="twitter:description" content="1234function a()&amp;#123;	var arr = Array.prototype.slice.apply(arguments);	console.log(arr)&amp;#125;
+解释：apply是用来改变函数执行是this指向的，这里以argumens对象为this来执行Array.prototype.slice函数，而Array.prototype.slice函数不带参数时默认返回">
   
     <link rel="alternative" href="/atom.xml" title="王楠" type="application/atom+xml">
   
@@ -141,7 +144,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/node/" style="font-size: 10px;">node</a>
+                        <a href="/tags/js/" style="font-size: 10px;">js</a>
                     </div>
                 </section>
                 
@@ -236,7 +239,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第二篇博文
+      arguments类数组对象转化为数组
     </h1>
   
 
@@ -247,7 +250,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -257,7 +260,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>node入门</p>
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> arr = <span class="built_in">Array</span>.prototype.slice.apply(<span class="built_in">arguments</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(arr)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>解释</strong>：apply是用来改变函数执行是this指向的，这里以argumens对象为this来执行Array.prototype.slice函数，而Array.prototype.slice函数不带参数时默认返回的是数组对象本身。 var ar = Array.prototype.slice.apply({0:1,length:1}) console.log(ar)//[0] 这里会将{0:1,length:1}形成一个新数组（这里属性名必须是0,1,2….，而且length属性不能少，而且应该跟前面属性个数对应，这样就模拟了一个数组）</p>
 
       
     </div>
@@ -266,12 +270,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/01/27/第二篇博文/">第二篇博文</a></p>
+        <p><span>本文标题:</span><a href="/2016/01/27/第二篇博文/">arguments类数组对象转化为数组</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年01月27日 - 18时17分</p>
-        <p><span>最后更新:</span>2016年01月27日 - 18时18分</p>
+        <p><span>最后更新:</span>2016年02月01日 - 16时12分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/01/27/第二篇博文/" title="第二篇博文">http://yoursite.com/2016/01/27/第二篇博文/</a>
+            <span>原始链接:</span><a class="post-url" href="/2016/01/27/第二篇博文/" title="arguments类数组对象转化为数组">http://yoursite.com/2016/01/27/第二篇博文/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/01/27/第二篇博文/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
@@ -287,7 +291,7 @@
         
             <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2016/01/27/我的第三篇博客/">
-                    我的第三篇博客
+                    apply/call方法
                 </a>
             </div>
         
@@ -373,7 +377,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/01/27/我的第三篇博客/" title="上一篇: 我的第三篇博客">
+            <a href="/2016/01/27/我的第三篇博客/" title="上一篇: apply/call方法">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -387,7 +391,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/我的第五篇博客/">我的第五篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/28/我的第四篇博客/">我的第四篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/我的第三篇博客/">我的第三篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/第二篇博文/">第二篇博文</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/js中的类型识别/">js中的类型识别</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/text/">text</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/02/03/sadsa/">sadsa</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/31/我的第五篇博客/">我的第五篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/28/我的第四篇博客/">原型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/我的第三篇博客/">apply/call方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/第二篇博文/">arguments类数组对象转化为数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/js中的类型识别/">js中的类型识别</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
