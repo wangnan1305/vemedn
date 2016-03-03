@@ -417,7 +417,7 @@
       
           
         <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> arr = <span class="built_in">Array</span>.prototype.slice.apply(<span class="built_in">arguments</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(arr)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>解释</strong>：apply是用来改变函数执行是this指向的，这里以argumens对象为this来执行Array.prototype.slice函数，而Array.prototype.slice函数不带参数时默认返回的是数组对象本身。 var ar = Array.prototype.slice.apply({0:1,length:1}) console.log(ar)//[0] 这里会将{0:1,length:1}形成一个新数组（这里属性名必须是0,1,2….，而且length属性不能少，而且应该跟前面属性个数对应，这样就模拟了一个数组）</p>
+<p><strong>解释</strong>：apply是用来改变函数执行时this指向的，这里以argumens对象为this来执行Array.prototype.slice函数，而Array.prototype.slice函数不带参数时默认返回的是数组对象本身。 var ar = Array.prototype.slice.apply({0:1,length:1}) console.log(ar)//[0] 这里会将{0:1,length:1}形成一个新数组（这里属性名必须是0,1,2….，而且length属性不能少，而且应该跟前面属性个数对应，这样就模拟了一个数组）</p>
 
       
     </div>
