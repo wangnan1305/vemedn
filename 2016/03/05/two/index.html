@@ -15,7 +15,7 @@ on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsit
 <meta property="og:description" content="bind直接绑定在一个对象上123$(&apos;#foo&apos;).bind(&apos;click&apos;, function() &amp;#123;	alert(&apos;User clicked on &quot;foo.&quot;&apos;);&amp;#125;);
 这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。
 on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsite&quot;, function()&amp;">
-<meta property="og:updated_time" content="2016-03-06T14:05:43.526Z">
+<meta property="og:updated_time" content="2016-03-06T14:07:22.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bind()和on(),live()和bind()的区别">
 <meta name="twitter:description" content="bind直接绑定在一个对象上123$(&apos;#foo&apos;).bind(&apos;click&apos;, function() &amp;#123;	alert(&apos;User clicked on &quot;foo.&quot;&apos;);&amp;#125;);
@@ -265,7 +265,7 @@ on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsit
           
         <h2 id="bind_u76F4_u63A5_u7ED1_u5B9A_u5728_u4E00_u4E2A_u5BF9_u8C61_u4E0A"><a href="#bind_u76F4_u63A5_u7ED1_u5B9A_u5728_u4E00_u4E2A_u5BF9_u8C61_u4E0A" class="headerlink" title="bind直接绑定在一个对象上"></a>bind直接绑定在一个对象上</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#foo'</span>).bind(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert(<span class="string">'User clicked on "foo."'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。</p>
-<h2 id="on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258"><a href="#on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258" class="headerlink" title="on方法是一个事件委托"></a>on方法是一个事件委托</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).on(<span class="string">"click"</span>, <span class="string">"a.offsite"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">	alert(<span class="string">"Goodbye!"</span>); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258"><a href="#on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258" class="headerlink" title="on方法是一个事件委托"></a>on方法是一个事件委托</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).on(<span class="string">"click"</span>, <span class="string">"a.offsite"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">	alert(<span class="string">"Goodbye!"</span>); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>这个例子是绑定在<code>document</code>上，点击<code>document</code>下的含有类<code>offsite</code>的a标签元才执行回调函数。</p>
 <h2 id="live_u65B9_u6CD5_u662Fon_u65B9_u6CD5_u7684_u4E00_u79CD_u5B9E_u73B0"><a href="#live_u65B9_u6CD5_u662Fon_u65B9_u6CD5_u7684_u4E00_u79CD_u5B9E_u73B0" class="headerlink" title="live方法是on方法的一种实现"></a>live方法是on方法的一种实现</h2><pre><code class="javascript">$(<span class="string">"a.offsite"</span>).live(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{ 
     alert(<span class="string">"Goodbye!"</span>); 
@@ -287,7 +287,7 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
         <p><span>本文标题:</span><a href="/2016/03/05/two/">bind()和on(),live()和bind()的区别</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年03月05日 - 22时19分</p>
-        <p><span>最后更新:</span>2016年03月06日 - 22时05分</p>
+        <p><span>最后更新:</span>2016年03月06日 - 22时07分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/03/05/two/" title="bind()和on(),live()和bind()的区别">http://yoursite.com/2016/03/05/two/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/05/two/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -317,7 +317,7 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#bind_u76F4_u63A5_u7ED1_u5B9A_u5728_u4E00_u4E2A_u5BF9_u8C61_u4E0A"><span class="toc-number">1.</span> <span class="toc-text">bind直接绑定在一个对象上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258"><span class="toc-number">2.</span> <span class="toc-text">on方法是一个事件委托</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#live_u65B9_u6CD5_u662Fon_u65B9_u6CD5_u7684_u4E00_u79CD_u5B9E_u73B0"><span class="toc-number">3.</span> <span class="toc-text">live方法是on方法的一种实现</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#bind_u76F4_u63A5_u7ED1_u5B9A_u5728_u4E00_u4E2A_u5BF9_u8C61_u4E0A"><span class="toc-number">1.</span> <span class="toc-text">bind直接绑定在一个对象上</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258"><span class="toc-number"></span> <span class="toc-text">on方法是一个事件委托</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#live_u65B9_u6CD5_u662Fon_u65B9_u6CD5_u7684_u4E00_u79CD_u5B9E_u73B0"><span class="toc-number">1.</span> <span class="toc-text">live方法是on方法的一种实现</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
