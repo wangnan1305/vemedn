@@ -250,7 +250,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>##bind直接绑定在一个对象上<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"a.offsite"</span>).live(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">	alert(<span class="string">"Goodbye!"</span>); </span><br><span class="line">&#125;);   </span><br><span class="line"></span><br><span class="line">$(<span class="built_in">document</span>).on(<span class="string">"click"</span>, <span class="string">"a.offsite"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">	alert(<span class="string">"Goodbye!"</span>); </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(<span class="string">'#foo'</span>).bind(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert(<span class="string">'User clicked on "foo."'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+        <p>##bind直接绑定在一个对象上<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#foo'</span>).bind(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert(<span class="string">'User clicked on "foo."'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。</p>
+<p>##on方法是一个事件委托<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).on(<span class="string">"click"</span>, <span class="string">"a.offsite"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">	alert(<span class="string">"Goodbye!"</span>); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这个例子是绑定在<code>document</code>上，点击<code>document</code>下的含有类<code>offsite</code>的a标签元才执行回调函数。</p>
+<p>##live方法是on方法的一种实现</p>
+<pre><code class="javascript">$(<span class="string">"a.offsite"</span>).live(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{ 
+    alert(<span class="string">"Goodbye!"</span>); 
+});
+
+$(<span class="built_in">document</span>).on(<span class="string">"click"</span>, <span class="string">"a.offsite"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{ 
+    alert(<span class="string">"Goodbye!"</span>); 
+});
+</code></pre>
+<p>live方法是on方法的一种实现，上面这两个方法完全相同，live 方法是on方法的一种实现。</p>
 
       
     </div>
