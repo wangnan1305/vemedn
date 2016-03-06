@@ -252,10 +252,19 @@
           
         <h2 id="u4E8B_u4EF6_u6D41"><a href="#u4E8B_u4EF6_u6D41" class="headerlink" title="事件流"></a>事件流</h2><p>事件流描述的是从页面中接受事件的顺序。IE下的事件流是事件冒泡流，标准浏览器下是事件捕获流。</p>
 <ul>
-<li>事件冒泡流</li>
+<li>事件冒泡流（IE）<br>事件开始时有最具体的元素，逐级向上传播到较为不具体的节点（文档）。</li>
 </ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"myDiv"</span>&gt;</span>点击我<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果你点击了dome中的<code>div</code>元素，那么这个<code>click</code>事件会按照下面如下顺序传播：</p>
+<ol>
+<li><div></div></li>
+<li><body></body></li>
+<li><html></html></li>
+<li>document</li>
+</ol>
+<p>也就是说click事件首先在<div>元素上发生，然后，click事件沿DOM树向上传播，在每一级节点上都会发生，直至传播到<code>document</code>对象。</div></p>
 <ul>
-<li>事件捕获流</li>
+<li>事件捕获流（Netscape）</li>
 </ul>
 
       

@@ -7,29 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="事件流事件流描述的是从页面中接受事件的顺序。IE下的事件流是事件冒泡流，标准浏览器下是事件捕获流。
 
-事件冒泡流
+事件冒泡流（IE）事件开始时有最具体的元素，逐级向上传播到较为不具体的节点（文档）。
 
-
-事件捕获流">
+123456789&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;g">
 <meta property="og:type" content="article">
 <meta property="og:title" content="事件">
 <meta property="og:url" content="http://yoursite.com/2016/03/06/three/index.html">
 <meta property="og:site_name" content="王楠">
 <meta property="og:description" content="事件流事件流描述的是从页面中接受事件的顺序。IE下的事件流是事件冒泡流，标准浏览器下是事件捕获流。
 
-事件冒泡流
+事件冒泡流（IE）事件开始时有最具体的元素，逐级向上传播到较为不具体的节点（文档）。
 
-
-事件捕获流">
-<meta property="og:updated_time" content="2016-03-06T14:20:56.402Z">
+123456789&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;g">
+<meta property="og:updated_time" content="2016-03-06T14:55:51.103Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="事件">
 <meta name="twitter:description" content="事件流事件流描述的是从页面中接受事件的顺序。IE下的事件流是事件冒泡流，标准浏览器下是事件捕获流。
 
-事件冒泡流
+事件冒泡流（IE）事件开始时有最具体的元素，逐级向上传播到较为不具体的节点（文档）。
 
-
-事件捕获流">
+123456789&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;g">
   
     <link rel="alternative" href="/atom.xml" title="王楠" type="application/atom+xml">
   
@@ -274,10 +271,19 @@
           
         <h2 id="u4E8B_u4EF6_u6D41"><a href="#u4E8B_u4EF6_u6D41" class="headerlink" title="事件流"></a>事件流</h2><p>事件流描述的是从页面中接受事件的顺序。IE下的事件流是事件冒泡流，标准浏览器下是事件捕获流。</p>
 <ul>
-<li>事件冒泡流</li>
+<li>事件冒泡流（IE）<br>事件开始时有最具体的元素，逐级向上传播到较为不具体的节点（文档）。</li>
 </ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"myDiv"</span>&gt;</span>点击我<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果你点击了dome中的<code>div</code>元素，那么这个<code>click</code>事件会按照下面如下顺序传播：</p>
+<ol>
+<li><div></div></li>
+<li><body></body></li>
+<li><html></html></li>
+<li>document</li>
+</ol>
+<p>也就是说click事件首先在<div>元素上发生，然后，click事件沿DOM树向上传播，在每一级节点上都会发生，直至传播到<code>document</code>对象。</div></p>
 <ul>
-<li>事件捕获流</li>
+<li>事件捕获流（Netscape）</li>
 </ul>
 
       
@@ -290,7 +296,7 @@
         <p><span>本文标题:</span><a href="/2016/03/06/three/">事件</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年03月06日 - 22时10分</p>
-        <p><span>最后更新:</span>2016年03月06日 - 22时20分</p>
+        <p><span>最后更新:</span>2016年03月06日 - 22时55分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/03/06/three/" title="事件">http://yoursite.com/2016/03/06/three/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/06/three/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
