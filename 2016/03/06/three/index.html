@@ -21,7 +21,7 @@
 
 事件开始时有最具体的元素，逐级向上传播到较为不具体的节点（文档）。
 123456789&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;">
-<meta property="og:updated_time" content="2016-03-07T06:52:04.226Z">
+<meta property="og:updated_time" content="2016-03-07T06:56:10.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="事件">
 <meta name="twitter:description" content="事件流事件流描述的是从页面中接受事件的顺序。IE下的事件流是事件冒泡流，标准浏览器下是事件捕获流。
@@ -280,10 +280,10 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"myDiv"</span>&gt;</span>点击我<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>如果你点击了dome中的<code>div</code>元素，那么这个<code>click</code>事件会按照下面如下顺序传播：</p>
 <ol>
-<li><div></div></li>
-<li><body></body></li>
-<li><html></html></li>
-<li>document</li>
+<li><code>&lt;div&gt;</code></li>
+<li><code>&lt;body&gt;</code></li>
+<li><code>&lt;html&gt;</code></li>
+<li><code>document</code></li>
 </ol>
 <p>也就是说click事件首先在<div>元素上发生，然后，click事件沿DOM树向上传播，在每一级节点上都会发生，直至传播到<code>document</code>对象。</div></p>
 <ul>
@@ -293,12 +293,10 @@
 <p><strong>事件捕获的真实用意在于在事件到达预定目的地之前捕获它</strong></p>
 <p>以上面的例子举例，单击<code>&lt;div&gt;</code>元素会以下列顺序触发click事件：</p>
 <ol>
-<li>document</li>
-<li><html></html></li>
-<li><body></body></li>
-<li><div>
-
-</div></li>
+<li><code>document</code></li>
+<li><code>&lt;html&gt;</code></li>
+<li><code>&lt;body&gt;</code></li>
+<li><code>&lt;div&gt;</code></li>
 </ol>
 <p>事件捕获过程中</p>
 
@@ -312,7 +310,7 @@
         <p><span>本文标题:</span><a href="/2016/03/06/three/">事件</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年03月06日 - 22时10分</p>
-        <p><span>最后更新:</span>2016年03月07日 - 14时52分</p>
+        <p><span>最后更新:</span>2016年03月07日 - 14时56分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/03/06/three/" title="事件">http://yoursite.com/2016/03/06/three/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/06/three/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
