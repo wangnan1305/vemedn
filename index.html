@@ -143,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
+                        <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
                     </div>
                 </section>
                 
@@ -222,6 +222,77 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-CSS3D" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/07/CSS3D/" class="article-date">
+      <time datetime="2016-03-07T12:09:06.000Z" itemprop="datePublished">2016-03-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/07/CSS3D/">CSS 3D transform变换那些事</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><strong>3D transform有下面三个方法：</strong></p>
+<ul>
+<li>rotateX(angle)</li>
+<li>rotateY(angle)</li>
+<li>rotateZ(angle)</li>
+</ul>
+<p>XYZ轴就像下面这张图一样：</p>
+<p><img src="/../img/css3d.png" alt="3D变换"></p>
+<p><strong>简而言之，X轴是向前扑倒，Y轴是原地转圈，Z轴是平躺着</strong></p>
+<h1 id="u5FC5_u4E0D_u53EF_u5C11_u7684perspective_u5C5E_u6027"><a href="#u5FC5_u4E0D_u53EF_u5C11_u7684perspective_u5C5E_u6027" class="headerlink" title="必不可少的perspective属性"></a><strong>必不可少的perspective属性</strong></h1><p>这个属性是干嘛的？简单来说没有这个属性我们看到的东西都是2D，不会有3D的效果。</p>
+<p>perspective的中文意思是：<strong>透视，视角</strong>！</p>
+<p>perspective属性的存在与否决定了你所看到的是2次元的还是3次元的，也就是是2D transform还是3D transform. 这不难理解，没有透视，不成3D。</p>
+<p>CSS3 3D transform的<strong>透视点是在浏览器的前方，大概就是我们眼睛的方位</strong>。</p>
+<p>为了更好的观察和理解<code>perspective</code>属性，我们用<code>translateZ</code>属性来说明,<code>translateZ</code>表示的是元素在Z轴移动的距离，换句话说，<code>translateZ</code>的功能就是让元素在自己的眼前或近或远。比方说，我们设置元素<code>perspective</code>为201像素，如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perspective: <span class="number">201</span>px;</span><br></pre></td></tr></table></figure></p>
+<p>则其子元素，设置的translateZ值越小，则子元素大小越小（因为元素远去，我们眼睛看到的就会变小）；translateZ值越大，该元素也会越来越大，当translateZ值非常接近201像素，但是不超过201像素的时候（如200像素），该元素的大小就会撑满整个屏幕（如果父辈元素没有类似overflow:hidden的限制的话）。因为这个时候，子元素正好移到了你的眼睛前面，所谓“一叶蔽目，不见泰山”，就是这么回事。当translateZ值再变大，超过201像素的时候，该元素看不见了——这很好理解：我们是看不见眼睛后面的东西的！</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-three" class="article article-type-post" itemscope itemprop="blogPost">
   
