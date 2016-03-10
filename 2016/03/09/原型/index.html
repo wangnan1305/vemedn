@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>js原型 | 王楠</title>
+  <title>javascript原型 | 王楠</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="object和function的那些基情　在javascript中只有object和function两种东西才有对象化的能力。　任何一个函数都可以为其动态的添加或去除属性，这些属性可以是简单类型，可以使对象，也可以是其他函数。听着有点绕？看下面的例子：
 12345678function wn()&amp;#123;	console.log(wn.name+&quot;:&quot;+wn.wife);&amp;#125;;wn.na">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js原型">
+<meta property="og:title" content="javascript原型">
 <meta property="og:url" content="http://yoursite.com/2016/03/09/原型/index.html">
 <meta property="og:site_name" content="王楠">
 <meta property="og:description" content="object和function的那些基情　在javascript中只有object和function两种东西才有对象化的能力。　任何一个函数都可以为其动态的添加或去除属性，这些属性可以是简单类型，可以使对象，也可以是其他函数。听着有点绕？看下面的例子：
 12345678function wn()&amp;#123;	console.log(wn.name+&quot;:&quot;+wn.wife);&amp;#125;;wn.na">
-<meta property="og:updated_time" content="2016-03-09T15:03:56.124Z">
+<meta property="og:updated_time" content="2016-03-10T01:28:54.452Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js原型">
+<meta name="twitter:title" content="javascript原型">
 <meta name="twitter:description" content="object和function的那些基情　在javascript中只有object和function两种东西才有对象化的能力。　任何一个函数都可以为其动态的添加或去除属性，这些属性可以是简单类型，可以使对象，也可以是其他函数。听着有点绕？看下面的例子：
 12345678function wn()&amp;#123;	console.log(wn.name+&quot;:&quot;+wn.wife);&amp;#125;;wn.na">
   
@@ -239,7 +239,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js原型
+      javascript原型
     </h1>
   
 
@@ -271,16 +271,16 @@
 　<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Car 构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params">logo</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.logo = logo || <span class="string">"unknown name"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//设置Car的prototype属性</span></span><br><span class="line">Car.prototype= &#123;</span><br><span class="line">	strat:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'开始'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;,</span><br><span class="line">	run:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'行走中'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;,</span><br><span class="line">	stop:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'停止'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建对象</span></span><br><span class="line"><span class="keyword">var</span> landRover = <span class="keyword">new</span> Car(<span class="string">"landRover"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用方法</span></span><br><span class="line"></span><br><span class="line">car1.start();</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p><a href="/../images/原型1.png">原型</a></p>
+<p><a href="/../img/原型1.png">原型</a></p>
 <p>可以看出：<strong>prototype是构造器对象属性，构造器实例化对象时，prototype会被实例对象的proto所引用。</strong>即<code>landRover.__proto__ === Car.prototype  //true</code>。</p>
 <h1 id="u539F_u578B_u94FE_u5B9E_u4F8B"><a href="#u539F_u578B_u94FE_u5B9E_u4F8B" class="headerlink" title="原型链实例"></a>原型链实例</h1><p>　<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Car 构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params">logo</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.logo = logo || <span class="string">"unknown name"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//设置Car的prototype属性</span></span><br><span class="line">Car.prototype= &#123;</span><br><span class="line">	strat:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'开始'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;,</span><br><span class="line">	run:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'行走中'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;,</span><br><span class="line">	stop:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'停止'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//LandRover构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">LandRover</span>(<span class="params">serialno</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.seriaNumber = serialno;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//设置LandRover的prototype属性</span></span><br><span class="line">LandRover.prototype = <span class="keyword">new</span> Car(<span class="string">"landRover"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建LandRover对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> landRover1 = <span class="keyword">new</span> LandRover(<span class="number">1000000</span>);</span><br><span class="line"><span class="keyword">var</span> landRover2 = <span class="keyword">new</span> LandRover(<span class="number">1000001</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(landRover1.seriaNumber);</span><br></pre></td></tr></table></figure></p>
-<p><a href="/../images/原型2.png">原型链</a></p>
+<p><a href="/../img/原型2.png">原型链</a></p>
 <p>图中那条红色的线，我们就叫做原型链，那么这条原型链有什么作用呢，实际上js里面对象的属性增删查改和原型链都有着直接关系！<br>　<br>查看属性</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">landRover1.seriaNumber  <span class="comment">//直接在landRover1上查看</span></span><br><span class="line">landRover1.toString()   <span class="comment">//通过原型链会在Object.prototype上找到这个方法</span></span><br></pre></td></tr></table></figure>
 <p>修改属性</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">landRover1.seriaNumber = <span class="number">100002</span>;<span class="comment">//只会影响本身不会影响原型链上的</span></span><br><span class="line"></span><br><span class="line">landRover1.logo = <span class="string">"landWind"</span>;</span><br><span class="line">landRover1.name = <span class="string">"myCar"</span>;  <span class="comment">//不会修改原型链上的，会直接在自身属性下面创建</span></span><br></pre></td></tr></table></figure>
-<p><a href="/../images/原型3.png">原型链</a>;</p>
-<h1 id="u6269_u5C55_u7684_u539F_u578B_u94FE"><a href="#u6269_u5C55_u7684_u539F_u578B_u94FE" class="headerlink" title="扩展的原型链"></a>扩展的原型链</h1><p><a href="/../images/原型4.png">原型链</a></p>
+<p><a href="/../img/原型3.png">原型链</a>;</p>
+<h1 id="u6269_u5C55_u7684_u539F_u578B_u94FE"><a href="#u6269_u5C55_u7684_u539F_u578B_u94FE" class="headerlink" title="扩展的原型链"></a>扩展的原型链</h1><p><a href="/../img/原型4.png">原型链</a></p>
 <p>以上，也印证了本文开始的一段话，函数皆是对象！</p>
 
       
@@ -290,12 +290,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/09/原型/">js原型</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/09/原型/">javascript原型</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年03月09日 - 20时52分</p>
-        <p><span>最后更新:</span>2016年03月09日 - 23时03分</p>
+        <p><span>最后更新:</span>2016年03月10日 - 09时28分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/09/原型/" title="js原型">http://yoursite.com/2016/03/09/原型/</a>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/09/原型/" title="javascript原型">http://yoursite.com/2016/03/09/原型/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/09/原型/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
@@ -403,7 +403,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/09/原型/">js原型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/CSS3D/">CSS 3D transform变换那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/06/three/">事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/two/">bind()和on(),live()和bind()的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/js中的类型识别/">js中的类型识别</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/09/原型/">javascript原型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/CSS3D/">CSS 3D transform变换那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/06/three/">事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/two/">bind()和on(),live()和bind()的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/js中的类型识别/">js中的类型识别</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
