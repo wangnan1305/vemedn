@@ -272,6 +272,9 @@
 <p><img src="/../img/原型3.png" alt="原型链">;</p>
 <h1 id="u6269_u5C55_u7684_u539F_u578B_u94FE"><a href="#u6269_u5C55_u7684_u539F_u578B_u94FE" class="headerlink" title="扩展的原型链"></a>扩展的原型链</h1><p><img src="/../img/原型4.png" alt="原型链"></p>
 <p>以上，也印证了本文开始的一段话，函数皆是对象！</p>
+<h1 id="prototype_u548Cconstructor"><a href="#prototype_u548Cconstructor" class="headerlink" title="prototype和constructor"></a><strong>prototype和constructor</strong></h1><p>prototype和constructor的关系？<br>constructor是prototype的一个属性。<br>　<br>什么样的对象具有prototype属性？是否所有对象都有这个属性（包括对象直接量）？<br>构造器对象有prototype（即原型对象）属性，普通对象没有。（普通对象只有引用了prototype的proto隐藏属性）
+　</p>
+<p>什么样的对象具有constructor属性？是否只有用new加构造器构造出来的对象有？<br>prototype（即原型对象）有constructor属性。普通对象可以隐式的通过原型链（proto）访问到constructor。</p>
 
       
     </div>
