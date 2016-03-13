@@ -21,7 +21,7 @@
 参数和变量不会被垃圾回收机制回收
 
 闭包的定义及其优缺点闭包是指有权访问另一个函数作用域中的变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。　缺点：常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。优点：设计私有的方法和变量。　一般函数执行完毕后，局部活动对象就被销毁，内存中仅">
-<meta property="og:updated_time" content="2016-03-13T14:50:16.573Z">
+<meta property="og:updated_time" content="2016-03-13T14:58:41.698Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="闭包">
 <meta name="twitter:description" content="闭包的特性
@@ -280,7 +280,19 @@
 <h1 id="u95ED_u5305_u7684_u5B9A_u4E49_u53CA_u5176_u4F18_u7F3A_u70B9"><a href="#u95ED_u5305_u7684_u5B9A_u4E49_u53CA_u5176_u4F18_u7F3A_u70B9" class="headerlink" title="闭包的定义及其优缺点"></a>闭包的定义及其优缺点</h1><p><strong>闭包</strong>是指有权访问另一个函数作用域中的变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。<br>　<br>缺点：常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。<br>优点：设计私有的方法和变量。<br>　<br><strong>一般函数执行完毕后，局部活动对象就被销毁，内存中仅仅保存全局作用域。但闭包的情况不同！</strong></p>
 <p>#嵌套函数的闭包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function add()&#123;&#10;&#9;var i=0;&#10;&#9;return function()&#123;&#10;&#9;&#9;alert(i++);&#10;&#9;&#125;&#10;&#125;&#10;var f=add();&#10;f();   // 0  &#20808;&#25191;&#34892;&#22312;++&#10;f();   // 1  &#10;f=null; //a&#34987;&#22238;&#25910;</span><br></pre></td></tr></table></figure></p>
 <p><strong>闭包会使变量始终保存在内存中，如果不当使用会增大内存消耗。</strong></p>
-
+<h1 id="javascript_u7684_u5783_u573E_u56DE_u6536_u539F_u7406"><a href="#javascript_u7684_u5783_u573E_u56DE_u6536_u539F_u7406" class="headerlink" title="javascript的垃圾回收原理"></a><code>javascript</code>的垃圾回收原理</h1><ul>
+<li>在<code>javascript</code>中，如果一个对象不再被引用，那么这个对象就会被<code>GC</code>回收; </li>
+<li>如果两个对象互相引用，而不再被第<code>3</code>者所引用，那么这两个互相引用的对象也会被回收。</li>
+</ul>
+<h1 id="u4F7F_u7528_u95ED_u5305_u7684_u597D_u5904"><a href="#u4F7F_u7528_u95ED_u5305_u7684_u597D_u5904" class="headerlink" title="使用闭包的好处"></a>使用闭包的好处</h1><ul>
+<li>希望一个变量长期驻扎在内存中</li>
+<li>避免全局变量的污染</li>
+<li>私有成员的存在</li>
+</ul>
+<h1 id="u4E00_u3001_u5168_u5C40_u53D8_u91CF_u7684_u7D2F_u52A0"><a href="#u4E00_u3001_u5168_u5C40_u53D8_u91CF_u7684_u7D2F_u52A0" class="headerlink" title="一、全局变量的累加"></a>一、全局变量的累加</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	a++;</span><br><span class="line">	alert(a);</span><br><span class="line">&#125;</span><br><span class="line">abc();<span class="comment">//2</span></span><br><span class="line">abc();<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+<h1 id="u4E8C_u3001_u5C40_u90E8_u53D8_u91CF"><a href="#u4E8C_u3001_u5C40_u90E8_u53D8_u91CF" class="headerlink" title="二、局部变量"></a>二、局部变量</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">	a++;</span><br><span class="line">	alert(a);</span><br><span class="line">&#125;</span><br><span class="line">abc();<span class="comment">//2</span></span><br><span class="line">abc();<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+<p>那么怎么才能做到变量a既是局部变量又可以累加呢？</p>
+<h1 id="u4E09_u3001_u5C40_u90E8_u53D8_u91CF_u7684_u7D2F_u52A0"><a href="#u4E09_u3001_u5C40_u90E8_u53D8_u91CF_u7684_u7D2F_u52A0" class="headerlink" title="三、局部变量的累加"></a>三、局部变量的累加</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span></span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -291,7 +303,7 @@
         <p><span>本文标题:</span><a href="/2016/03/10/闭包/">闭包</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年03月10日 - 10时46分</p>
-        <p><span>最后更新:</span>2016年03月13日 - 22时50分</p>
+        <p><span>最后更新:</span>2016年03月13日 - 22时58分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/03/10/闭包/" title="闭包">http://yoursite.com/2016/03/10/闭包/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/10/闭包/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -321,7 +333,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u95ED_u5305_u7684_u7279_u6027"><span class="toc-number">1.</span> <span class="toc-text">闭包的特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u95ED_u5305_u7684_u5B9A_u4E49_u53CA_u5176_u4F18_u7F3A_u70B9"><span class="toc-number">2.</span> <span class="toc-text">闭包的定义及其优缺点</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u95ED_u5305_u7684_u7279_u6027"><span class="toc-number">1.</span> <span class="toc-text">闭包的特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u95ED_u5305_u7684_u5B9A_u4E49_u53CA_u5176_u4F18_u7F3A_u70B9"><span class="toc-number">2.</span> <span class="toc-text">闭包的定义及其优缺点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#javascript_u7684_u5783_u573E_u56DE_u6536_u539F_u7406"><span class="toc-number">3.</span> <span class="toc-text">javascript的垃圾回收原理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4F7F_u7528_u95ED_u5305_u7684_u597D_u5904"><span class="toc-number">4.</span> <span class="toc-text">使用闭包的好处</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E00_u3001_u5168_u5C40_u53D8_u91CF_u7684_u7D2F_u52A0"><span class="toc-number">5.</span> <span class="toc-text">一、全局变量的累加</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E8C_u3001_u5C40_u90E8_u53D8_u91CF"><span class="toc-number">6.</span> <span class="toc-text">二、局部变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E09_u3001_u5C40_u90E8_u53D8_u91CF_u7684_u7D2F_u52A0"><span class="toc-number">7.</span> <span class="toc-text">三、局部变量的累加</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
