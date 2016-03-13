@@ -5,16 +5,31 @@
   
   <title>闭包 | 王楠</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1function add()&amp;#123;&amp;#10;&amp;#9;var i=0;&amp;#10;&amp;#9;return function()&amp;#123;&amp;#10;&amp;#9;&amp;#9;alert(++i);&amp;#10;&amp;#9;&amp;#125;&amp;#10;&amp;#125;&amp;#10;var f=add();&amp;#10;f();&amp;#10;f();">
+  <meta name="description" content="闭包的特性
+函数嵌套函数
+函数内部可以引用外部的参数和变量
+参数和变量不会被垃圾回收机制回收
+
+闭包的定义及其优缺点闭包是指有权访问另一个函数作用域中的变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。　缺点：常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。优点：设计私有的方法和变量。　一般函数执行完毕后，局部活动对象就被销毁，内存中仅">
 <meta property="og:type" content="article">
 <meta property="og:title" content="闭包">
 <meta property="og:url" content="http://yoursite.com/2016/03/10/闭包/index.html">
 <meta property="og:site_name" content="王楠">
-<meta property="og:description" content="1function add()&amp;#123;&amp;#10;&amp;#9;var i=0;&amp;#10;&amp;#9;return function()&amp;#123;&amp;#10;&amp;#9;&amp;#9;alert(++i);&amp;#10;&amp;#9;&amp;#125;&amp;#10;&amp;#125;&amp;#10;var f=add();&amp;#10;f();&amp;#10;f();">
-<meta property="og:updated_time" content="2016-03-10T03:34:11.804Z">
+<meta property="og:description" content="闭包的特性
+函数嵌套函数
+函数内部可以引用外部的参数和变量
+参数和变量不会被垃圾回收机制回收
+
+闭包的定义及其优缺点闭包是指有权访问另一个函数作用域中的变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。　缺点：常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。优点：设计私有的方法和变量。　一般函数执行完毕后，局部活动对象就被销毁，内存中仅">
+<meta property="og:updated_time" content="2016-03-13T14:50:16.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="闭包">
-<meta name="twitter:description" content="1function add()&amp;#123;&amp;#10;&amp;#9;var i=0;&amp;#10;&amp;#9;return function()&amp;#123;&amp;#10;&amp;#9;&amp;#9;alert(++i);&amp;#10;&amp;#9;&amp;#125;&amp;#10;&amp;#125;&amp;#10;var f=add();&amp;#10;f();&amp;#10;f();">
+<meta name="twitter:description" content="闭包的特性
+函数嵌套函数
+函数内部可以引用外部的参数和变量
+参数和变量不会被垃圾回收机制回收
+
+闭包的定义及其优缺点闭包是指有权访问另一个函数作用域中的变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。　缺点：常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。优点：设计私有的方法和变量。　一般函数执行完毕后，局部活动对象就被销毁，内存中仅">
   
     <link rel="alternative" href="/atom.xml" title="王楠" type="application/atom+xml">
   
@@ -257,7 +272,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function add()&#123;&#10;&#9;var i=0;&#10;&#9;return function()&#123;&#10;&#9;&#9;alert(++i);&#10;&#9;&#125;&#10;&#125;&#10;var f=add();&#10;f();&#10;f();</span><br></pre></td></tr></table></figure>
+        <h1 id="u95ED_u5305_u7684_u7279_u6027"><a href="#u95ED_u5305_u7684_u7279_u6027" class="headerlink" title="闭包的特性"></a>闭包的特性</h1><ul>
+<li>函数嵌套函数</li>
+<li>函数内部可以引用外部的参数和变量</li>
+<li>参数和变量不会被垃圾回收机制回收</li>
+</ul>
+<h1 id="u95ED_u5305_u7684_u5B9A_u4E49_u53CA_u5176_u4F18_u7F3A_u70B9"><a href="#u95ED_u5305_u7684_u5B9A_u4E49_u53CA_u5176_u4F18_u7F3A_u70B9" class="headerlink" title="闭包的定义及其优缺点"></a>闭包的定义及其优缺点</h1><p><strong>闭包</strong>是指有权访问另一个函数作用域中的变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量。<br>　<br>缺点：常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。<br>优点：设计私有的方法和变量。<br>　<br><strong>一般函数执行完毕后，局部活动对象就被销毁，内存中仅仅保存全局作用域。但闭包的情况不同！</strong></p>
+<p>#嵌套函数的闭包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">function add()&#123;&#10;&#9;var i=0;&#10;&#9;return function()&#123;&#10;&#9;&#9;alert(i++);&#10;&#9;&#125;&#10;&#125;&#10;var f=add();&#10;f();   // 0  &#20808;&#25191;&#34892;&#22312;++&#10;f();   // 1  &#10;f=null; //a&#34987;&#22238;&#25910;</span><br></pre></td></tr></table></figure></p>
+<p><strong>闭包会使变量始终保存在内存中，如果不当使用会增大内存消耗。</strong></p>
 
       
     </div>
@@ -269,7 +291,7 @@
         <p><span>本文标题:</span><a href="/2016/03/10/闭包/">闭包</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年03月10日 - 10时46分</p>
-        <p><span>最后更新:</span>2016年03月10日 - 11时34分</p>
+        <p><span>最后更新:</span>2016年03月13日 - 22时50分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/03/10/闭包/" title="闭包">http://yoursite.com/2016/03/10/闭包/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/10/闭包/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -299,7 +321,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u95ED_u5305_u7684_u7279_u6027"><span class="toc-number">1.</span> <span class="toc-text">闭包的特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u95ED_u5305_u7684_u5B9A_u4E49_u53CA_u5176_u4F18_u7F3A_u70B9"><span class="toc-number">2.</span> <span class="toc-text">闭包的定义及其优缺点</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
