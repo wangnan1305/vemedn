@@ -21,3 +21,6 @@ saleOffice.listen(function(price,squareMeter){  //小红订阅消息
 	console.log('价格='+price);
 	console.log('大小='+squareMeter);
 });
+
+var value1=0,value2=0,value3=0;
+for(var i=0;i

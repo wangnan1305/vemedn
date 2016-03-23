@@ -143,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 10px;">js</a>
+                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 15px;">js</a> <a href="/tags/服务器端/" style="font-size: 10px;">服务器端</a>
                     </div>
                 </section>
                 
@@ -222,6 +222,62 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-session和ckkoie" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/23/session和ckkoie/" class="article-date">
+      <time datetime="2016-03-23T10:41:31.000Z" itemprop="datePublished">2016-03-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/23/session和ckkoie/">session和cookie</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器端/">服务器端</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-IE6下常见bug" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -399,7 +455,7 @@
 <li>私有成员的存在</li>
 </ul>
 <h1 id="u4E00_u3001_u5168_u5C40_u53D8_u91CF_u7684_u7D2F_u52A0"><a href="#u4E00_u3001_u5168_u5C40_u53D8_u91CF_u7684_u7D2F_u52A0" class="headerlink" title="一、全局变量的累加"></a>一、全局变量的累加</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	a++;</span><br><span class="line">	alert(a);</span><br><span class="line">&#125;</span><br><span class="line">abc();<span class="comment">//2</span></span><br><span class="line">abc();<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
-<h1 id="u4E8C_u3001_u5C40_u90E8_u53D8_u91CF"><a href="#u4E8C_u3001_u5C40_u90E8_u53D8_u91CF" class="headerlink" title="二、局部变量"></a>二、局部变量</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">	a++;</span><br><span class="line">	alert(a);</span><br><span class="line">&#125;</span><br><span class="line">abc();<span class="comment">//2</span></span><br><span class="line">abc();<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+<h1 id="u4E8C_u3001_u5C40_u90E8_u53D8_u91CF"><a href="#u4E8C_u3001_u5C40_u90E8_u53D8_u91CF" class="headerlink" title="二、局部变量"></a>二、局部变量</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">	a++;</span><br><span class="line">	alert(a);</span><br><span class="line">&#125;</span><br><span class="line">abc();<span class="comment">//2</span></span><br><span class="line">abc();<span class="comment">//2</span></span><br></pre></td></tr></table></figure>
 <p>那么怎么才能做到变量a既是局部变量又可以累加呢？</p>
 <h1 id="u4E09_u3001_u5C40_u90E8_u53D8_u91CF_u7684_u7D2F_u52A0"><a href="#u4E09_u3001_u5C40_u90E8_u53D8_u91CF_u7684_u7D2F_u52A0" class="headerlink" title="三、局部变量的累加"></a>三、局部变量的累加</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		x++;</span><br><span class="line">		alert(x);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> y=outer();</span><br><span class="line">y();<span class="comment">//11</span></span><br><span class="line">y();<span class="comment">//12</span></span><br></pre></td></tr></table></figure>
 <h1 id="u56DB_u3001_u6A21_u5757_u5316_u4EE3_u7801_uFF0C_u51CF_u5C11_u5168_u5C40_u53D8_u91CF_u6C61_u67D3"><a href="#u56DB_u3001_u6A21_u5757_u5316_u4EE3_u7801_uFF0C_u51CF_u5C11_u5168_u5C40_u53D8_u91CF_u6C61_u67D3" class="headerlink" title="四、模块化代码，减少全局变量污染"></a>四、模块化代码，减少全局变量污染</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> abc = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">		a++;</span><br><span class="line">		alert(a);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)();</span><br><span class="line">abc();<span class="comment">//2</span></span><br><span class="line">abc();<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
