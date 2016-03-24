@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>bind()和on(),live()和bind()的区别 | 王楠</title>
+  <title>如何理解HTTP协议的无连接无状态 | 王楠</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="bind直接绑定在一个对象上123$(&apos;#foo&apos;).bind(&apos;click&apos;, function() &amp;#123;	alert(&apos;User clicked on &quot;foo.&quot;&apos;);&amp;#125;);
-这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。
-on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsite&quot;, function()&amp;">
+  <meta name="description" content="HTTP 协议一共有五大特点：1、支持客户/服务器模式;2、简单快速;3、灵活;4、无连接;5、无状态。
+　
+无连接无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并且收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。　随着时间的推移，网页变得越来越复杂，里面可能嵌入了很多图片，这时候每次访问图片都需要建立一次 TCP 连接就显得很低效。后来，Keep-Alive被提出">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bind()和on(),live()和bind()的区别">
-<meta property="og:url" content="http://yoursite.com/2016/03/05/two/index.html">
+<meta property="og:title" content="如何理解HTTP协议的无连接无状态">
+<meta property="og:url" content="http://yoursite.com/2016/03/23/如何理解HTTP协议的无连接无状态/index.html">
 <meta property="og:site_name" content="王楠">
-<meta property="og:description" content="bind直接绑定在一个对象上123$(&apos;#foo&apos;).bind(&apos;click&apos;, function() &amp;#123;	alert(&apos;User clicked on &quot;foo.&quot;&apos;);&amp;#125;);
-这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。
-on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsite&quot;, function()&amp;">
-<meta property="og:updated_time" content="2016-03-06T14:09:39.240Z">
+<meta property="og:description" content="HTTP 协议一共有五大特点：1、支持客户/服务器模式;2、简单快速;3、灵活;4、无连接;5、无状态。
+　
+无连接无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并且收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。　随着时间的推移，网页变得越来越复杂，里面可能嵌入了很多图片，这时候每次访问图片都需要建立一次 TCP 连接就显得很低效。后来，Keep-Alive被提出">
+<meta property="og:updated_time" content="2016-03-24T03:49:56.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bind()和on(),live()和bind()的区别">
-<meta name="twitter:description" content="bind直接绑定在一个对象上123$(&apos;#foo&apos;).bind(&apos;click&apos;, function() &amp;#123;	alert(&apos;User clicked on &quot;foo.&quot;&apos;);&amp;#125;);
-这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。
-on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsite&quot;, function()&amp;">
+<meta name="twitter:title" content="如何理解HTTP协议的无连接无状态">
+<meta name="twitter:description" content="HTTP 协议一共有五大特点：1、支持客户/服务器模式;2、简单快速;3、灵活;4、无连接;5、无状态。
+　
+无连接无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并且收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。　随着时间的推移，网页变得越来越复杂，里面可能嵌入了很多图片，这时候每次访问图片都需要建立一次 TCP 连接就显得很低效。后来，Keep-Alive被提出">
   
     <link rel="alternative" href="/atom.xml" title="王楠" type="application/atom+xml">
   
@@ -225,11 +225,11 @@ on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsit
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-two" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-如何理解HTTP协议的无连接无状态" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/05/two/" class="article-date">
-      <time datetime="2016-03-05T14:19:51.000Z" itemprop="datePublished">2016-03-05</time>
+      <a href="/2016/03/23/如何理解HTTP协议的无连接无状态/" class="article-date">
+      <time datetime="2016-03-23T13:43:33.000Z" itemprop="datePublished">2016-03-23</time>
 </a>
     </div>
   
@@ -242,7 +242,7 @@ on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsit
         
   
     <h1 class="article-title" itemprop="name">
-      bind()和on(),live()和bind()的区别
+      如何理解HTTP协议的无连接无状态
     </h1>
   
 
@@ -253,7 +253,7 @@ on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsit
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTTP/">HTTP</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -263,19 +263,10 @@ on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsit
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="bind_u76F4_u63A5_u7ED1_u5B9A_u5728_u4E00_u4E2A_u5BF9_u8C61_u4E0A"><a href="#bind_u76F4_u63A5_u7ED1_u5B9A_u5728_u4E00_u4E2A_u5BF9_u8C61_u4E0A" class="headerlink" title="bind直接绑定在一个对象上"></a><strong>bind直接绑定在一个对象上</strong></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#foo'</span>).bind(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert(<span class="string">'User clicked on "foo."'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。</p>
-<h1 id="on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258"><a href="#on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258" class="headerlink" title="on方法是一个事件委托"></a><strong>on方法是一个事件委托</strong></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).on(<span class="string">"click"</span>, <span class="string">"a.offsite"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">	alert(<span class="string">"Goodbye!"</span>); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>这个例子是绑定在<code>document</code>上，点击<code>document</code>下的含有类<code>offsite</code>的a标签元才执行回调函数。</p>
-<h1 id="live_u65B9_u6CD5_u662Fon_u65B9_u6CD5_u7684_u4E00_u79CD_u5B9E_u73B0"><a href="#live_u65B9_u6CD5_u662Fon_u65B9_u6CD5_u7684_u4E00_u79CD_u5B9E_u73B0" class="headerlink" title="live方法是on方法的一种实现"></a><strong>live方法是on方法的一种实现</strong></h1><pre><code class="javascript">$(<span class="string">"a.offsite"</span>).live(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{ 
-    alert(<span class="string">"Goodbye!"</span>); 
-});
-
-$(<span class="built_in">document</span>).on(<span class="string">"click"</span>, <span class="string">"a.offsite"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{ 
-    alert(<span class="string">"Goodbye!"</span>); 
-});
-</code></pre>
-<p>live方法是on方法的一种实现，上面这两个方法完全相同，live 方法是on方法的一种实现。</p>
+        <p><strong>HTTP 协议一共有五大特点：1、支持客户/服务器模式;2、简单快速;3、灵活;4、无连接;5、无状态。</strong>
+　</p>
+<h1 id="u65E0_u8FDE_u63A5"><a href="#u65E0_u8FDE_u63A5" class="headerlink" title="无连接"></a><strong>无连接</strong></h1><p>无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并且收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。<br>　<br>随着时间的推移，网页变得越来越复杂，里面可能嵌入了很多图片，这时候每次访问图片都需要建立一次 <code>TCP</code> 连接就显得很低效。后来，<code>Keep-Alive</code>被提出用来解决这效率低的问题。<br>　<br><code>Keep-Alive</code> 功能使客户端到服务器端的连接持续有效，当出现对服务器的后继请求时，<code>Keep-Alive</code> 功能避免了建立或者重新建立连接。市场上的大部分 <code>Web</code> 服务器，包括 <code>iPlanet</code>、<code>IIS</code> 和 <code>Apache</code>，都支持 <code>HTTP Keep-Alive</code>。对于提供静态内容的网站来说，这个功能通常很有用。但是，对于负担较重的网站来说，这里存在另外一个问题：虽然为客户保留打开的连接有一定的好处，但它同样影响了性能，因为在处理暂停期间，本来可以释放的资源仍旧被占用。当<code>Web</code>服务器和应用服务器在同一台机器上运行时，<code>Keep-Alive</code> 功能对资源利用的影响尤其突出。</p>
+<h1 id="u65E0_u72B6_u6001"><a href="#u65E0_u72B6_u6001" class="headerlink" title="无状态"></a><strong>无状态</strong></h1><p>无状态是指协议对于事务处理没有记忆能力，服务器不知道客户端是什么状态。即我们给服务器发送HTTP请求后，服务器根据请求，会给我们发送数据过来，但是发送完，不会记录任何信息。<br>　<br>HTTP是一个无状态协议，这意味着每个请求都是独立的，<code>Keep-Alive</code>没能改变这个结果。<br>　<br>缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。<br>　<br>HTTP协议这种特性有优点也有缺点，优点在于解放了服务器，每一次请求“点到为止”不会造成不必要连接占用，缺点在于每次请求会传输大量重复的内容信息。<br>　<br>客户端与服务器进行动态交互的 Web 应用程序出现之后，HTTP 无状态的特性严重阻碍了这些应用程序的实现，毕竟交互是需要承前启后的，简单的购物车程序也要知道用户到底在之前选择了什么商品。于是，两种用于保持 HTTP 连接状态的技术就应运而生了，一个是 Cookie，而另一个则是 Session。<br>　<br>Cookie可以保持登录信息到用户下次与服务器的会话，换句话说，下次访问同一网站时，用户会发现不必输入用户名和密码就已经登录了(当然，不排除用户手工删除Cookie)。而还有一些Cookie在用户退出会话的时候就被删除了，这样可以有效保护个人隐私。<br>　<br>Cookies 最典型的应用是判定注册用户是否已经登录网站，用户可能会得到提示，是否在下一次进入此网站时保留用户信息以便简化登录手续，这些都是 Cookies 的功用。另一个重要应用场合是“购物车”之类处理。用户可能会在一段时间内在同一家网站的不同页面中选择不同的商品，这些信息都会写入 Cookies，以便在最后付款时提取信息。<br>　<br>与 Cookie 相对的一个解决方案是 Session，它是通过服务器来保持状态的。<br>　<br>当客户端访问服务器时，服务器根据需求设置 Session，将会话信息保存在服务器上，同时将标示 Session 的 SessionId 传递给客户端浏览器，浏览器将这个 SessionId 保存在内存中，我们称之为无过期时间的 Cookie。浏览器关闭后，这个 Cookie 就会被清掉，它不会存在于用户的 Cookie 临时文件。<br>　<br>以后浏览器每次请求都会额外加上这个参数值，服务器会根据这个 SessionId，就能取得客户端的数据信息。<br>　<br>如果客户端浏览器意外关闭，服务器保存的 Session 数据不是立即释放，此时数据还会存在，只要我们知道那个 SessionId，就可以继续通过请求获得此 Session 的信息，因为此时后台的 Session 还存在，当然我们可以设置一个 Session 超时时间，一旦超过规定时间没有客户端请求时，服务器就会清除对应 SessionId 的 Session 信息。</p>
 
       
     </div>
@@ -284,13 +275,13 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/05/two/">bind()和on(),live()和bind()的区别</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/23/如何理解HTTP协议的无连接无状态/">如何理解HTTP协议的无连接无状态</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
-        <p><span>发布时间:</span>2016年03月05日 - 22时19分</p>
-        <p><span>最后更新:</span>2016年03月06日 - 22时09分</p>
+        <p><span>发布时间:</span>2016年03月23日 - 21时43分</p>
+        <p><span>最后更新:</span>2016年03月24日 - 11时49分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/05/two/" title="bind()和on(),live()和bind()的区别">http://yoursite.com/2016/03/05/two/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/05/two/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/23/如何理解HTTP协议的无连接无状态/" title="如何理解HTTP协议的无连接无状态">http://yoursite.com/2016/03/23/如何理解HTTP协议的无连接无状态/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/23/如何理解HTTP协议的无连接无状态/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -303,16 +294,10 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/06/three/">
-                    事件
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/01/27/js中的类型识别/">
-                    js中的类型识别
+                <a href="/2016/03/23/session和cookie/">
+                    session和cookie
                 </a>
             </div>
         
@@ -323,7 +308,7 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#bind_u76F4_u63A5_u7ED1_u5B9A_u5728_u4E00_u4E2A_u5BF9_u8C61_u4E0A"><span class="toc-number">1.</span> <span class="toc-text">bind直接绑定在一个对象上</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258"><span class="toc-number">2.</span> <span class="toc-text">on方法是一个事件委托</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#live_u65B9_u6CD5_u662Fon_u65B9_u6CD5_u7684_u4E00_u79CD_u5B9E_u73B0"><span class="toc-number">3.</span> <span class="toc-text">live方法是on方法的一种实现</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u65E0_u8FDE_u63A5"><span class="toc-number">1.</span> <span class="toc-text">无连接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u65E0_u72B6_u6001"><span class="toc-number">2.</span> <span class="toc-text">无状态</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -391,15 +376,13 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/06/three/" title="上一篇: 事件">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/01/27/js中的类型识别/" title="下一篇: js中的类型识别">
+            <a href="/2016/03/23/session和cookie/" title="下一篇: session和cookie">
                 <i class="fa fa-angle-right"></i>
             </a>
         
