@@ -3,25 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascript原型 | 王楠</title>
+  <title>常用Array方法 | 王楠</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="object和function的那些基情　在javascript中只有object和function两种东西才有对象化的能力。　任何一个函数都可以为其动态的添加或去除属性，这些属性可以是简单类型，可以使对象，也可以是其他函数。听着有点绕？看下面的例子：
-12345678function wn()&amp;#123;	console.log(wn.name+&quot;:&quot;+wn.wife);&amp;#125;;wn.na">
+  <meta name="description" content="Array.forEach()方法forEach()方法有两个参数，arr.forEach(callback[,thisArg]),它会对arr内的每个元素进行遍历，并且会将参数传入到callback中，执行callback。如果有thisArg参数，会将callback中的this指向thisArg。这个方法会改变数组自身
+1234567891011var stu = [	&amp;#123;id:1,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript原型">
-<meta property="og:url" content="http://yoursite.com/2016/03/09/原型/index.html">
+<meta property="og:title" content="常用Array方法">
+<meta property="og:url" content="http://yoursite.com/2016/03/24/常用Array方法/index.html">
 <meta property="og:site_name" content="王楠">
-<meta property="og:description" content="object和function的那些基情　在javascript中只有object和function两种东西才有对象化的能力。　任何一个函数都可以为其动态的添加或去除属性，这些属性可以是简单类型，可以使对象，也可以是其他函数。听着有点绕？看下面的例子：
-12345678function wn()&amp;#123;	console.log(wn.name+&quot;:&quot;+wn.wife);&amp;#125;;wn.na">
-<meta property="og:image" content="http://yoursite.com/../img/原型1.png">
-<meta property="og:image" content="http://yoursite.com/../img/原型2.png">
-<meta property="og:image" content="http://yoursite.com/../img/原型3.png">
-<meta property="og:image" content="http://yoursite.com/../img/原型4.png">
-<meta property="og:updated_time" content="2016-03-10T01:40:15.110Z">
+<meta property="og:description" content="Array.forEach()方法forEach()方法有两个参数，arr.forEach(callback[,thisArg]),它会对arr内的每个元素进行遍历，并且会将参数传入到callback中，执行callback。如果有thisArg参数，会将callback中的this指向thisArg。这个方法会改变数组自身
+1234567891011var stu = [	&amp;#123;id:1,">
+<meta property="og:updated_time" content="2016-03-24T12:00:03.306Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript原型">
-<meta name="twitter:description" content="object和function的那些基情　在javascript中只有object和function两种东西才有对象化的能力。　任何一个函数都可以为其动态的添加或去除属性，这些属性可以是简单类型，可以使对象，也可以是其他函数。听着有点绕？看下面的例子：
-12345678function wn()&amp;#123;	console.log(wn.name+&quot;:&quot;+wn.wife);&amp;#125;;wn.na">
+<meta name="twitter:title" content="常用Array方法">
+<meta name="twitter:description" content="Array.forEach()方法forEach()方法有两个参数，arr.forEach(callback[,thisArg]),它会对arr内的每个元素进行遍历，并且会将参数传入到callback中，执行callback。如果有thisArg参数，会将callback中的this指向thisArg。这个方法会改变数组自身
+1234567891011var stu = [	&amp;#123;id:1,">
   
     <link rel="alternative" href="/atom.xml" title="王楠" type="application/atom+xml">
   
@@ -226,11 +222,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-原型" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-常用Array方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/09/原型/" class="article-date">
-      <time datetime="2016-03-09T12:52:08.000Z" itemprop="datePublished">2016-03-09</time>
+      <a href="/2016/03/24/常用Array方法/" class="article-date">
+      <time datetime="2016-03-24T10:35:59.000Z" itemprop="datePublished">2016-03-24</time>
 </a>
     </div>
   
@@ -243,7 +239,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      javascript原型
+      常用Array方法
     </h1>
   
 
@@ -254,7 +250,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -264,31 +260,23 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="object_u548Cfunction_u7684_u90A3_u4E9B_u57FA_u60C5"><a href="#object_u548Cfunction_u7684_u90A3_u4E9B_u57FA_u60C5" class="headerlink" title="object和function的那些基情"></a>object和function的那些基情</h2><p>　<br>在<code>javascript</code>中只有object和function两种东西才有对象化的能力。<br>　<br><strong>任何一个函数都可以为其动态的添加或去除属性，这些属性可以是简单类型，可以使对象，也可以是其他函数。</strong><br>听着有点绕？看下面的例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(wn.name+<span class="string">":"</span>+wn.wife);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">wn.name=<span class="string">"wangnan"</span>;</span><br><span class="line">wn.wife=<span class="string">"dll"</span>;</span><br><span class="line"></span><br><span class="line">wn();</span><br></pre></td></tr></table></figure>
-<p>这段代码中，我们验证了函数具有对象的全部特征，完全可以把函数当对象来用。<strong>其实函数就是对象，只不过比对象多了一个<code>()</code>操作符，这个是用来执行函数的逻辑，即函数本身可以被调用，一般对象去不可以被调用，除此之外完全相同。</strong></p>
-<h2 id="u539F_u578B"><a href="#u539F_u578B" class="headerlink" title="原型"></a>原型</h2><p>　<br>上面对函数和对象的理解可以帮我们更好的理解原型的概念。</p>
-<p><strong>构造函数</strong></p>
-<ul>
-<li>使用prototype设置原型</li>
-<li>使用new创建对象
-　<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Car 构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params">logo</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.logo = logo || <span class="string">"unknown name"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//设置Car的prototype属性</span></span><br><span class="line">Car.prototype= &#123;</span><br><span class="line">	strat:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'开始'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;,</span><br><span class="line">	run:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'行走中'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;,</span><br><span class="line">	stop:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'停止'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建对象</span></span><br><span class="line"><span class="keyword">var</span> landRover = <span class="keyword">new</span> Car(<span class="string">"landRover"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用方法</span></span><br><span class="line"></span><br><span class="line">car1.start();</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="/../img/原型1.png" alt="原型"></p>
-<p>可以看出：<strong>prototype是构造器对象属性，构造器实例化对象时，prototype会被实例对象的proto所引用。</strong>即<code>landRover.__proto__ === Car.prototype  //true</code>。</p>
-<h1 id="u539F_u578B_u94FE_u5B9E_u4F8B"><a href="#u539F_u578B_u94FE_u5B9E_u4F8B" class="headerlink" title="原型链实例"></a>原型链实例</h1><p>　<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Car 构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params">logo</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.logo = logo || <span class="string">"unknown name"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//设置Car的prototype属性</span></span><br><span class="line">Car.prototype= &#123;</span><br><span class="line">	strat:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'开始'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;,</span><br><span class="line">	run:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'行走中'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;,</span><br><span class="line">	stop:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'停止'</span>,<span class="keyword">this</span>.logo);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//LandRover构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">LandRover</span>(<span class="params">serialno</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.seriaNumber = serialno;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//设置LandRover的prototype属性</span></span><br><span class="line">LandRover.prototype = <span class="keyword">new</span> Car(<span class="string">"landRover"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建LandRover对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> landRover1 = <span class="keyword">new</span> LandRover(<span class="number">1000000</span>);</span><br><span class="line"><span class="keyword">var</span> landRover2 = <span class="keyword">new</span> LandRover(<span class="number">1000001</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(landRover1.seriaNumber);</span><br></pre></td></tr></table></figure></p>
-<p><img src="/../img/原型2.png" alt="原型链"></p>
-<p>图中那条红色的线，我们就叫做原型链，那么这条原型链有什么作用呢，实际上js里面对象的属性增删查改和原型链都有着直接关系！<br>　<br>查看属性</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">landRover1.seriaNumber  <span class="comment">//直接在landRover1上查看</span></span><br><span class="line">landRover1.toString()   <span class="comment">//通过原型链会在Object.prototype上找到这个方法</span></span><br></pre></td></tr></table></figure>
-<p>修改属性</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">landRover1.seriaNumber = <span class="number">100002</span>;<span class="comment">//只会影响本身不会影响原型链上的</span></span><br><span class="line"></span><br><span class="line">landRover1.logo = <span class="string">"landWind"</span>;</span><br><span class="line">landRover1.name = <span class="string">"myCar"</span>;  <span class="comment">//不会修改原型链上的，会直接在自身属性下面创建</span></span><br></pre></td></tr></table></figure>
-<p><img src="/../img/原型3.png" alt="原型链">;</p>
-<h1 id="u6269_u5C55_u7684_u539F_u578B_u94FE"><a href="#u6269_u5C55_u7684_u539F_u578B_u94FE" class="headerlink" title="扩展的原型链"></a>扩展的原型链</h1><p><img src="/../img/原型4.png" alt="原型链"></p>
-<p>以上，也印证了本文开始的一段话，函数皆是对象！</p>
-<h1 id="prototype_u548Cconstructor"><a href="#prototype_u548Cconstructor" class="headerlink" title="prototype和constructor"></a><strong>prototype和constructor</strong></h1><p>prototype和constructor的关系？<br>constructor是prototype的一个属性。<br>　<br>什么样的对象具有prototype属性？是否所有对象都有这个属性（包括对象直接量）？<br>构造器对象有prototype（即原型对象）属性，普通对象没有。（普通对象只有引用了prototype的proto隐藏属性）
-　</p>
-<p>什么样的对象具有constructor属性？是否只有用new加构造器构造出来的对象有？<br>prototype（即原型对象）有constructor属性。普通对象可以隐式的通过原型链（proto）访问到constructor。</p>
+        <h1 id="Array-forEach_28_29_u65B9_u6CD5"><a href="#Array-forEach_28_29_u65B9_u6CD5" class="headerlink" title="Array.forEach()方法"></a>Array.forEach()方法</h1><p>forEach()方法有两个参数，arr.forEach(callback[,thisArg]),它会对arr内的每个元素进行遍历，并且会将参数传入到callback中，执行callback。如果有thisArg参数，会将callback中的this指向thisArg。<br><strong>这个方法会改变数组自身</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stu = </span><br><span class="line">[</span><br><span class="line">	&#123;id:<span class="number">1</span>,socre:<span class="number">80</span>&#125;,</span><br><span class="line">	&#123;id:<span class="number">2</span>,socre:<span class="number">70</span>&#125;,</span><br><span class="line">	&#123;id:<span class="number">3</span>,socre:<span class="number">60</span>&#125;</span><br><span class="line">];</span><br><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;   <span class="comment">//item是遍历的每个元素，index是索引，array是数组本身</span></span><br><span class="line">	item[<span class="string">"socre"</span>]+=<span class="number">5</span>;</span><br><span class="line">&#125;;</span><br><span class="line">stu.forEach(add);</span><br><span class="line"><span class="built_in">console</span>.log(stu);</span><br></pre></td></tr></table></figure>
+<h1 id="Array-reverse_28_29_u65B9_u6CD5"><a href="#Array-reverse_28_29_u65B9_u6CD5" class="headerlink" title="Array.reverse()方法"></a>Array.reverse()方法</h1><p>讲数组倒序排列，会改变原始数组</p>
+<h1 id="Array-sort_28_29_u65B9_u6CD5"><a href="#Array-sort_28_29_u65B9_u6CD5" class="headerlink" title="Array.sort()方法"></a>Array.sort()方法</h1><p>对数组进行重排序，会改变原始数组，默认会按照ASCll码进行排序。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a -b;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(arr) <span class="comment">// 1 2 3 4 5</span></span><br></pre></td></tr></table></figure>
+<h1 id="Array-push_28_29_u65B9_u6CD5"><a href="#Array-push_28_29_u65B9_u6CD5" class="headerlink" title="Array.push()方法"></a>Array.push()方法</h1><p>在数组的尾部添加一项。</p>
+<h1 id="Array-unshift_28_29_u65B9_u6CD5"><a href="#Array-unshift_28_29_u65B9_u6CD5" class="headerlink" title="Array.unshift()方法"></a>Array.unshift()方法</h1><p>在数组的前面添加一项。</p>
+<h1 id="Array-shift_28_29_u65B9_u6CD5"><a href="#Array-shift_28_29_u65B9_u6CD5" class="headerlink" title="Array.shift()方法"></a>Array.shift()方法</h1><p>获取数组的第一个元素，并返回数组的第一个元素，而且原数组中的第一个元素被干掉了。</p>
+<h1 id="Array-pop_28_29_u65B9_u6CD5"><a href="#Array-pop_28_29_u65B9_u6CD5" class="headerlink" title="Array.pop()方法"></a>Array.pop()方法</h1><p>获取数组中的最后一个元素，并返回数组的最后一个元素，而且原数组中的最后一个元素被干掉了。</p>
+<h1 id="Array-splice_28_29_u65B9_u6CD5"><a href="#Array-splice_28_29_u65B9_u6CD5" class="headerlink" title="Array.splice()方法"></a>Array.splice()方法</h1><p>在任意位置删除插入元素，<code>arr.splice(index,howMany,[ele1,ele2,...])</code>,index表示从哪里开始删除，howMany表示删除几个，后面的所有参数都是要插入的参数。<br>如果howMany为0，并且后面有需要插入的元素，那么插入位置是在index之前插入。<br>举个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line">arr.splice(<span class="number">1</span>,<span class="number">0</span>,<span class="number">666</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//5 666 4 3 2 1</span></span><br></pre></td></tr></table></figure>
+<p><strong><code>splice</code>可以做到删除，插入，删除并且替换的功能。</strong><br>　<br><strong>总结：<code>reverse</code>,<code>sort</code>,<code>push</code>,<code>unshift</code>,<code>shift</code>,<code>pop</code>,<code>splice</code></strong>这些方法全部会改变原来的数组。</p>
+<h1 id="Array-slice_28_29_u65B9_u6CD5"><a href="#Array-slice_28_29_u65B9_u6CD5" class="headerlink" title="Array.slice()方法"></a>Array.slice()方法</h1><p>这个方法可以拷贝数组的某一段，arr.slice(begin[,end])。<br>包含begin，不包含end，end为0就取到数组结束为止。<code>arr.slice(0)</code>就是对数组完全拷贝。<br>这个方法是复制，拷贝，不会对原数组进行修改。</p>
+<h1 id="Array-concat_28_29_u65B9_u6CD5"><a href="#Array-concat_28_29_u65B9_u6CD5" class="headerlink" title="Array.concat()方法"></a>Array.concat()方法</h1><p>多个数组,或对象的连接，arr.concat(val1,val2,val3…);</p>
+<h1 id="Array-join_28_29_u65B9_u6CD5"><a href="#Array-join_28_29_u65B9_u6CD5" class="headerlink" title="Array.join()方法"></a>Array.join()方法</h1><p>使用join传入的字符，连接每个数组。<strong>返回字符串。</strong><br>　<br>相对比于字符串的<code>split</code>的方法，它是将字符串分割成数组。两个方法相互对应。</p>
+<h1 id="Array-map_28_29_u65B9_u6CD5"><a href="#Array-map_28_29_u65B9_u6CD5" class="headerlink" title="Array.map()方法"></a>Array.map()方法</h1><p>map跟forEach有点类似。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//需求：在保留原数组的前提下，对数组进行处理得到新数组</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> scores = [<span class="number">60</span>,<span class="number">70</span>,<span class="number">80</span>,<span class="number">90</span>];</span><br><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> item + <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line">scores.map(add); <span class="comment">// [65,75,85,95]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//采用forEach</span></span><br><span class="line"><span class="keyword">var</span> scores = [<span class="number">60</span>,<span class="number">70</span>,<span class="number">80</span>,<span class="number">90</span>];</span><br><span class="line"><span class="keyword">var</span> newScores = [];</span><br><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">	newScores.push(item + <span class="number">5</span>);</span><br><span class="line">&#125;</span><br><span class="line">scores.forEach(add); </span><br><span class="line"><span class="built_in">console</span>.log(newScores);<span class="comment">// [65,75,85,95]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//采用slice</span></span><br><span class="line"><span class="keyword">var</span> scores = [<span class="number">60</span>,<span class="number">70</span>,<span class="number">80</span>,<span class="number">90</span>];</span><br><span class="line"><span class="keyword">var</span> scores2 = scores.slice(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(scores2);</span><br><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">	item += <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line">scores2.forEach(add);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -297,13 +285,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/09/原型/">javascript原型</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/24/常用Array方法/">常用Array方法</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
-        <p><span>发布时间:</span>2016年03月09日 - 20时52分</p>
-        <p><span>最后更新:</span>2016年03月10日 - 09时40分</p>
+        <p><span>发布时间:</span>2016年03月24日 - 18时35分</p>
+        <p><span>最后更新:</span>2016年03月24日 - 20时00分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/09/原型/" title="javascript原型">http://yoursite.com/2016/03/09/原型/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/09/原型/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/24/常用Array方法/" title="常用Array方法">http://yoursite.com/2016/03/24/常用Array方法/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/24/常用Array方法/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -316,16 +304,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/10/闭包/">
-                    闭包
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/03/07/CSS3D/">
-                    CSS 3D transform变换那些事
+                <a href="/2016/03/24/js求一千万以内的质数算法/">
+                    js求一千万以内的质数算法
                 </a>
             </div>
         
@@ -336,7 +318,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#object_u548Cfunction_u7684_u90A3_u4E9B_u57FA_u60C5"><span class="toc-number">1.</span> <span class="toc-text">object和function的那些基情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u539F_u578B"><span class="toc-number">2.</span> <span class="toc-text">原型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u539F_u578B_u94FE_u5B9E_u4F8B"><span class="toc-number"></span> <span class="toc-text">原型链实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6269_u5C55_u7684_u539F_u578B_u94FE"><span class="toc-number"></span> <span class="toc-text">扩展的原型链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#prototype_u548Cconstructor"><span class="toc-number"></span> <span class="toc-text">prototype和constructor</span></a>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-forEach_28_29_u65B9_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">Array.forEach()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-reverse_28_29_u65B9_u6CD5"><span class="toc-number">2.</span> <span class="toc-text">Array.reverse()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-sort_28_29_u65B9_u6CD5"><span class="toc-number">3.</span> <span class="toc-text">Array.sort()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-push_28_29_u65B9_u6CD5"><span class="toc-number">4.</span> <span class="toc-text">Array.push()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-unshift_28_29_u65B9_u6CD5"><span class="toc-number">5.</span> <span class="toc-text">Array.unshift()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-shift_28_29_u65B9_u6CD5"><span class="toc-number">6.</span> <span class="toc-text">Array.shift()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-pop_28_29_u65B9_u6CD5"><span class="toc-number">7.</span> <span class="toc-text">Array.pop()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-splice_28_29_u65B9_u6CD5"><span class="toc-number">8.</span> <span class="toc-text">Array.splice()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-slice_28_29_u65B9_u6CD5"><span class="toc-number">9.</span> <span class="toc-text">Array.slice()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-concat_28_29_u65B9_u6CD5"><span class="toc-number">10.</span> <span class="toc-text">Array.concat()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-join_28_29_u65B9_u6CD5"><span class="toc-number">11.</span> <span class="toc-text">Array.join()方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Array-map_28_29_u65B9_u6CD5"><span class="toc-number">12.</span> <span class="toc-text">Array.map()方法</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -404,15 +386,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/10/闭包/" title="上一篇: 闭包">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/03/07/CSS3D/" title="下一篇: CSS 3D transform变换那些事">
+            <a href="/2016/03/24/js求一千万以内的质数算法/" title="下一篇: js求一千万以内的质数算法">
                 <i class="fa fa-angle-right"></i>
             </a>
         
