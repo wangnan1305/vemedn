@@ -1,4 +1,6 @@
-var saleOffice={};   //定义售楼处
+
+
+/*var saleOffice={};   //定义售楼处
 
 saleOffice.clientList=[];   //定义缓存列表
 
