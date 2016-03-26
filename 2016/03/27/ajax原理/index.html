@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>session和cookie | 王楠</title>
+  <title>ajax原理 | 王楠</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、Sessionsession，在汉语中表示会话，的意思，其本来的含义一个终端用户与交互系统进行通信的时间(间隔),通常是指从注册(进入系统)到注销(退出系统)之间所经过的时间。比如打电话时从拿起电话拨号到挂断电话这中间的一系列过程可以称之为一个session。　现在通常指一个浏览器窗口打开到关闭这个期间。session在我们的网络应用中就是一种客户端与服务器端保持状态的解决方案，有时候sess">
+  <meta name="description" content="AJAX原理和XMLHttpRequest对象　　Ajax的原理简单来说就是通过XmlHttpRequest对象来向服务器发送异步请求，然后获取数据，然后用Javascript来操作DOM来更新页面。这其中最关键的一步就是从服务器获得请求的数据。要搞清楚这个我们就要对XMLHttpRequest有所了解。　　XMLHttpRequest是ajax的核心，首先在IE5中引入的，是一种支持异步请求的技">
 <meta property="og:type" content="article">
-<meta property="og:title" content="session和cookie">
-<meta property="og:url" content="http://yoursite.com/2016/03/23/session和cookie/index.html">
+<meta property="og:title" content="ajax原理">
+<meta property="og:url" content="http://yoursite.com/2016/03/27/ajax原理/index.html">
 <meta property="og:site_name" content="王楠">
-<meta property="og:description" content="一、Sessionsession，在汉语中表示会话，的意思，其本来的含义一个终端用户与交互系统进行通信的时间(间隔),通常是指从注册(进入系统)到注销(退出系统)之间所经过的时间。比如打电话时从拿起电话拨号到挂断电话这中间的一系列过程可以称之为一个session。　现在通常指一个浏览器窗口打开到关闭这个期间。session在我们的网络应用中就是一种客户端与服务器端保持状态的解决方案，有时候sess">
-<meta property="og:updated_time" content="2016-03-26T11:38:58.419Z">
+<meta property="og:description" content="AJAX原理和XMLHttpRequest对象　　Ajax的原理简单来说就是通过XmlHttpRequest对象来向服务器发送异步请求，然后获取数据，然后用Javascript来操作DOM来更新页面。这其中最关键的一步就是从服务器获得请求的数据。要搞清楚这个我们就要对XMLHttpRequest有所了解。　　XMLHttpRequest是ajax的核心，首先在IE5中引入的，是一种支持异步请求的技">
+<meta property="og:updated_time" content="2016-03-26T17:26:06.940Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="session和cookie">
-<meta name="twitter:description" content="一、Sessionsession，在汉语中表示会话，的意思，其本来的含义一个终端用户与交互系统进行通信的时间(间隔),通常是指从注册(进入系统)到注销(退出系统)之间所经过的时间。比如打电话时从拿起电话拨号到挂断电话这中间的一系列过程可以称之为一个session。　现在通常指一个浏览器窗口打开到关闭这个期间。session在我们的网络应用中就是一种客户端与服务器端保持状态的解决方案，有时候sess">
+<meta name="twitter:title" content="ajax原理">
+<meta name="twitter:description" content="AJAX原理和XMLHttpRequest对象　　Ajax的原理简单来说就是通过XmlHttpRequest对象来向服务器发送异步请求，然后获取数据，然后用Javascript来操作DOM来更新页面。这其中最关键的一步就是从服务器获得请求的数据。要搞清楚这个我们就要对XMLHttpRequest有所了解。　　XMLHttpRequest是ajax的核心，首先在IE5中引入的，是一种支持异步请求的技">
   
     <link rel="alternative" href="/atom.xml" title="王楠" type="application/atom+xml">
   
@@ -219,11 +219,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-session和cookie" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ajax原理" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/23/session和cookie/" class="article-date">
-      <time datetime="2016-03-23T10:41:31.000Z" itemprop="datePublished">2016-03-23</time>
+      <a href="/2016/03/27/ajax原理/" class="article-date">
+      <time datetime="2016-03-26T16:11:01.000Z" itemprop="datePublished">2016-03-27</time>
 </a>
     </div>
   
@@ -236,7 +236,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      session和cookie
+      ajax原理
     </h1>
   
 
@@ -247,7 +247,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTTP/">HTTP</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -257,16 +257,41 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="u4E00_u3001Session"><a href="#u4E00_u3001Session" class="headerlink" title="一、Session"></a><strong>一、Session</strong></h1><p><code>session</code>，在汉语中表示会话，的意思，其本来的含义一个终端用户与交互系统进行通信的时间(间隔),通常是指从注册(进入系统)到注销(退出系统)之间所经过的时间。比如打电话时从拿起电话拨号到挂断电话这中间的一系列过程可以称之为一个<code>session</code>。<br>　<br>现在通常指一个浏览器窗口打开到关闭这个期间。<code>session</code>在我们的网络应用中就是一种客户端与服务器端保持状态的解决方案，有时候<code>session</code>也用来指这种解决方案的存储结构。<br>　<br><code>session</code>与用户之间是一种一对一的关系。<code>session</code>在用户进入网站时由服务器自动产生，并在用户正常离开站点时释放。使用<code>session</code>的好处就在于，可以将很多与用户相关的信息，例如用户的帐号、昵称等保存到<code>session</code>中；利用<code>session</code>，可以跟踪用户在网站上的活动。例如：当你上网进入一个网站时，如果你没有登陆，无论你访问哪几个页面都会跳转回登陆页。还有就是你在购物时，不可能把你的东西放到别人的购物车里去，这就得用一个信息变量来判断！<br>　<br><code>cookie</code>的作用就是为了解决<code>HTTP</code>协议无状态的缺陷所作出的努力。至于后来出现的Session机制则是又一种在客户端与服务器之间保持状态的解决方案。</p>
-<h1 id="u4E8C_u3001Session_u673A_u5236"><a href="#u4E8C_u3001Session_u673A_u5236" class="headerlink" title="二、Session机制"></a><strong>二、Session机制</strong></h1><p><code>session</code>机制采用的是在服务器端保持状态的方案。</p>
-<h1 id="u4E09_u3001Cookies"><a href="#u4E09_u3001Cookies" class="headerlink" title="三、Cookies"></a><strong>三、Cookies</strong></h1><p><code>cookie</code>是一种由服务器发送给客户的片段信息，存储在客户环境中，并在客户所有的对服务器的请求中都要发回它。<br>就好比我们在用IE登陆某个电子购物商城时，IE在得到商品列表页面的 同时还收到<code>Set-Cookie</code>应答头信息，我们打开一个<code>Cookie</code>文件，我们所看到的格式一般都是：<br><code>Cookie：NAME=VALUE；Comment=COMMENT；Domain=DOMAINNMAM；Max-age=SECONDS；Path=PATH；secure；Version=1*DIGIT</code><br>　<br>其中NAME值对（值对间用分号分隔）是必须的，其余都是可选的。最重要的信息当然也在所必须的值对里了，VALUE是NAME的值，也是这个 <code>Cookie</code>的标识。<code>Max-age</code>定义了<code>Cookie</code>的最长生存时间。<br>　<br>当我们选购了某种商品，向服务器发送选购清单时，会自动在你的请求信息头里加上NAME值对,如果<code>Cookie</code>被禁止。当Web服务器收到这个请求后，会检查该<code>Cookie</code>是否存在，然后相应的跟踪会话。从以上分析不难理解，其实Web服务器跟踪会话就靠<code>Set-Cookie</code>头信息，跟踪NAME值对进行身份验证。假如我们用非Web终端接收Web服务器的响应信息，从中解析出<code>Cookie</code>头信息，当再次向Web服务器发送请求时附加上解析出的<code>Cookie</code>信息，Web服务器据此不就可以进行身份认证了吗？<br>　<br>Cookies的好处：</p>
+        <h2 id="AJAX_u539F_u7406_u548CXMLHttpRequest_u5BF9_u8C61"><a href="#AJAX_u539F_u7406_u548CXMLHttpRequest_u5BF9_u8C61" class="headerlink" title="AJAX原理和XMLHttpRequest对象"></a><strong>AJAX原理和XMLHttpRequest对象</strong></h2><p>　　Ajax的原理简单来说就是通过XmlHttpRequest对象来向服务器发送异步请求，然后获取数据，然后用Javascript来操作DOM来更新页面。这其中最关键的一步就是从服务器获得请求的数据。要搞清楚这个我们就要对XMLHttpRequest有所了解。<br>　　XMLHttpRequest是ajax的核心，首先在IE5中引入的，是一种支持异步请求的技术。也就是javascript可以及时向服务器提出请求和处理响应，并且不阻塞用户。达到无刷新的效果。<br>　　所以我们先从XMLHttpRequest讲起，来看看它的工作原理。<br>　　首先，我们先来看看XMLHttpRequest这个对象的属性。<br>    它的属性有：<br>  　　onreadystatechange  每次状态改变所触发事件的事件处理程序。<br>  　　responseText        从服务器进程返回数据的字符串形式。<br>  　　responseXML         从服务器进程返回的DOM兼容的文档数据对象。<br>  　　status              从服务器返回的数字代码，比如常见的404（未找到）和200（已就绪）<br>  　　status Text         伴随状态码的字符串信息<br>  　　readyState          对象状态值</p>
+<pre><code>- 0(未初始化)对象已建立，但是尚未初始化（尚未调用open方法）
+- 1(初始化)对象已建立，尚未调用send方法
+- 2 (发送数据) send方法已调用，但是当前的状态及http头未知
+</code></pre><p>　　　　        - 3 (数据传送中)已接收部分数据，因为响应及http头不全，这时通过responseBody和responseText获取部分数据会出现错误。<br>　　　　        - 4 (完成) 数据接收完毕,此时可以通过通过responseXml和responseText获取完整的回应数据<br>　<br>但是由于浏览器差异创建XMLHttpRequest需要不同的方法：IE和其他浏览器之间，下面是一个创建方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ajax = <span class="function"><span class="keyword">function</span>(<span class="params">method,url,success</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> xhr = <span class="literal">null</span>;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">		xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">	&#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">		xhr = <span class="keyword">new</span> ActiveXObject(<span class="string">'Microsoft.XMLHttp'</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	xhr.open(method,url,<span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(method === <span class="string">'get'</span>)&#123;</span><br><span class="line">		xhr.send(<span class="literal">null</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		xhr.setRequestHeader(<span class="string">'content-type'</span>, <span class="string">'application/x-www-form-urlencoded'</span>);</span><br><span class="line">		xhr.send(data);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(xhr.readyState == <span class="number">4</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>((xhr.status &gt;= <span class="number">200</span> &amp;&amp; xhr.status &lt; <span class="number">300</span>) || xhr.status == <span class="number">304</span>)&#123;</span><br><span class="line">				success &amp;&amp; success(xhr.reponseText)</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				alert(<span class="string">'Error:'</span>+xhr.status)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如上所示，函数首先检查XMLHttpRequest的整体状态并且保证它已经完成（readyStatus=4），即数据已经发送完毕。然后根据服务器的设定询问请求状态，如果一切已经就绪（status&gt;=200或者304），那么就执行下面需要的操作。<br>　<br>a、向服务器提交数据的类型，即post还是get。<br>b、请求的url地址和传递的参数。<br>c、传输方式，false为同步，true为异步。默认为true。</p>
+<p>　　知道了XMLHttpRequest的工作流程，我们可以看出，XMLHttpRequest是完全用来向服务器发出一个请求的，它的作用也局限于此，但它的作用是整个ajax实现的关键，因为ajax无非是两个过程，发出请求和响应请求。并且它完全是一种客户端的技术。而XMLHttpRequest正是处理了服务器端和客户端通信的问题所以才会如此的重要。<br>　　现在，我们对ajax的原理大概可以有一个了解了。我们可以把服务器端看成一个数据接口，它返回的是一个纯文本流，当然，这个文本流可以是XML格式，可以是Html，可以是Javascript代码，也可以只是一个字符串。这时候，XMLHttpRequest向服务器端请求这个页面，服务器端将文本的结果写入页面，这和普通的web开发流程是一样的，不同的是，客户端在异步获取这个结果后，不是直接显示在页面，而是先由javascript来处理，然后再显示在页面。至于现在流行的很多ajax控件，比如magicajax等，可以返回DataSet等其它数据类型，只是将这个过程封装了的结果，本质上他们并没有什么太大的区别。</p>
+<p>#<strong>ajax优点：</strong>
+　</p>
 <ul>
-<li><code>Cookie</code>能使站点跟踪特定访问者的访问次数、最后访问时间和访问者进入站点的路径 </li>
-<li><code>Cookie</code>能告诉在线广告商广告被点击的次数，从而可以更精确的投放广告 </li>
-<li><code>Cookie</code>有效期限未到时，Cookie能使用户在不键入密码和用户名的情况下进入曾经浏览过的一些站点 </li>
-<li><code>Cookie</code>能帮助站点统计用户个人资料以实现各种各样的个性化服务，其实，cookie的作用就是为了解决HTTP协议无状态的缺陷所作的努力</li>
+<li>最大的一点是页面无刷新，在页面内与服务器通信，给用户的体验非常好。</li>
+<li>使用异步方式与服务器通信，不需要打断用户的操作，具有更加迅速的响应能力。</li>
+<li>可以把以前一些服务器负担的工作转嫁到客户端，利用客户端闲置的能力来处理，减轻服务器和带宽的负担，节约空间和宽带租用成本。并且减轻服务器的负担，ajax的原则是“按需取数据”，可以最大程度的减少冗余请求，和响应对服务器造成的负担。</li>
+<li>基于标准化的并被广泛支持的技术，不需要下载插件或者小程序。</li>
 </ul>
-<h1 id="u56DB_u3001Cookies_u673A_u5236"><a href="#u56DB_u3001Cookies_u673A_u5236" class="headerlink" title="四、Cookies机制"></a><strong>四、Cookies机制</strong></h1><p><code>Cookie</code>机制采用的是在客户端保持状态的方案。 </p>
+<h1 id="ajax_u7F3A_u70B9_uFF1A"><a href="#ajax_u7F3A_u70B9_uFF1A" class="headerlink" title="ajax缺点："></a><strong>ajax缺点：</strong></h1><p>　</p>
+<ul>
+<li>ajax干掉了back按钮。</li>
+<li>安全问题。还有ajax也难以避免一些已知的安全弱点，诸如跨站点脚步攻击、SQL注入攻击和基于credentials的安全漏洞等。</li>
+<li>对搜索引擎的支持比较弱。</li>
+<li>对搜索引擎的支持比较弱。</li>
+<li>一些手持设备（如手机、PDA等）现在还不能很好的支持ajax，比如说我们在手机的浏览器上打开采用ajax技术的网站时，它目前是不支持的，当然，这个问题和我们没太多关系。</li>
+</ul>
+<h2 id="u5173_u4E8Epost_u63D0_u4EA4_u548Cget_u63D0_u4EA4_u7684_u533A_u522B"><a href="#u5173_u4E8Epost_u63D0_u4EA4_u548Cget_u63D0_u4EA4_u7684_u533A_u522B" class="headerlink" title="关于post提交和get提交的区别"></a><strong>关于post提交和get提交的区别</strong></h2><p>　<br><strong>GET一般用于获取/查询 资源信息，而POST一般用于更新 资源信息</strong>。</p>
+<ul>
+<li>根据HTTP规范，GET用于信息获取，而且应该是安全的。</li>
+<li>根据HTTP规范，POST表示可能修改变服务器上的资源的请求 。</li>
+</ul>
+<p><strong>GET提交，请求的数据会附在URL之后。POST提交：把提交的数据放置在是HTTP包的包体中。</strong></p>
+<p>传输数据的大小：首先声明：HTTP协议没有对传输的数据大小进行限制，HTTP协议规范也没有对URL长度进行限制。</p>
+<p>GET:特定浏览器和服务器对URL长度有限制，例如IE对URL长度的限制是2083字节(2K+35)。对于其他浏览器，如Netscape、FireFox等，理论上没有长度限制，其限制取决于操作系统的支持。</p>
+<p>因此对于GET提交时，传输数据就会受到URL长度的限制。</p>
+<p>POST:由于不是通过URL传值，理论上数据不受限。但实际各个WEB服务器会规定对post提交数据大小进行限制，Apache、IIS6都有各自的配置。</p>
+<p>POST的安全性要比GET的安全性高。通过GET提交数据，用户名和密码将明文出现在URL上，因为(1)登录页面有可能被浏览器缓存， (2)其他人查看浏览器的历史纪录，那么别人就可以拿到你的账号和密码了，除此之外，使用GET提交数据还可能会造成Cross-site request forgery攻击</p>
 
       
     </div>
@@ -275,13 +300,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/23/session和cookie/">session和cookie</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/27/ajax原理/">ajax原理</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
-        <p><span>发布时间:</span>2016年03月23日 - 18时41分</p>
-        <p><span>最后更新:</span>2016年03月26日 - 19时38分</p>
+        <p><span>发布时间:</span>2016年03月27日 - 00时11分</p>
+        <p><span>最后更新:</span>2016年03月27日 - 01时26分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/23/session和cookie/" title="session和cookie">http://yoursite.com/2016/03/23/session和cookie/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/23/session和cookie/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/27/ajax原理/" title="ajax原理">http://yoursite.com/2016/03/27/ajax原理/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/27/ajax原理/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -294,16 +319,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/23/如何理解HTTP协议的无连接无状态/">
-                    如何理解HTTP协议的无连接无状态
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/03/17/IE6下常见bug/">
-                    IE6下常见bug
+                <a href="/2016/03/26/逆转序列/">
+                    逆转序列
                 </a>
             </div>
         
@@ -314,7 +333,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E00_u3001Session"><span class="toc-number">1.</span> <span class="toc-text">一、Session</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E8C_u3001Session_u673A_u5236"><span class="toc-number">2.</span> <span class="toc-text">二、Session机制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E09_u3001Cookies"><span class="toc-number">3.</span> <span class="toc-text">三、Cookies</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u56DB_u3001Cookies_u673A_u5236"><span class="toc-number">4.</span> <span class="toc-text">四、Cookies机制</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AJAX_u539F_u7406_u548CXMLHttpRequest_u5BF9_u8C61"><span class="toc-number">1.</span> <span class="toc-text">AJAX原理和XMLHttpRequest对象</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ajax_u7F3A_u70B9_uFF1A"><span class="toc-number"></span> <span class="toc-text">ajax缺点：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5173_u4E8Epost_u63D0_u4EA4_u548Cget_u63D0_u4EA4_u7684_u533A_u522B"><span class="toc-number">1.</span> <span class="toc-text">关于post提交和get提交的区别</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -382,15 +401,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/23/如何理解HTTP协议的无连接无状态/" title="上一篇: 如何理解HTTP协议的无连接无状态">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/03/17/IE6下常见bug/" title="下一篇: IE6下常见bug">
+            <a href="/2016/03/26/逆转序列/" title="下一篇: 逆转序列">
                 <i class="fa fa-angle-right"></i>
             </a>
         
