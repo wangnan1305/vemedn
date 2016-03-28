@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/03/27/ajax原理/index.html">
 <meta property="og:site_name" content="王楠">
 <meta property="og:description" content="AJAX原理和XMLHttpRequest对象　　Ajax的原理简单来说就是通过XmlHttpRequest对象来向服务器发送异步请求，然后获取数据，然后用Javascript来操作DOM来更新页面。这其中最关键的一步就是从服务器获得请求的数据。要搞清楚这个我们就要对XMLHttpRequest有所了解。　　XMLHttpRequest是ajax的核心，首先在IE5中引入的，是一种支持异步请求的技">
-<meta property="og:updated_time" content="2016-03-26T17:26:06.940Z">
+<meta property="og:updated_time" content="2016-03-27T16:19:22.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ajax原理">
 <meta name="twitter:description" content="AJAX原理和XMLHttpRequest对象　　Ajax的原理简单来说就是通过XmlHttpRequest对象来向服务器发送异步请求，然后获取数据，然后用Javascript来操作DOM来更新页面。这其中最关键的一步就是从服务器获得请求的数据。要搞清楚这个我们就要对XMLHttpRequest有所了解。　　XMLHttpRequest是ajax的核心，首先在IE5中引入的，是一种支持异步请求的技">
@@ -141,7 +141,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a>
+                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/计算机网络/" style="font-size: 10px;">计算机网络</a>
                     </div>
                 </section>
                 
@@ -278,7 +278,6 @@
 <li>ajax干掉了back按钮。</li>
 <li>安全问题。还有ajax也难以避免一些已知的安全弱点，诸如跨站点脚步攻击、SQL注入攻击和基于credentials的安全漏洞等。</li>
 <li>对搜索引擎的支持比较弱。</li>
-<li>对搜索引擎的支持比较弱。</li>
 <li>一些手持设备（如手机、PDA等）现在还不能很好的支持ajax，比如说我们在手机的浏览器上打开采用ajax技术的网站时，它目前是不支持的，当然，这个问题和我们没太多关系。</li>
 </ul>
 <h2 id="u5173_u4E8Epost_u63D0_u4EA4_u548Cget_u63D0_u4EA4_u7684_u533A_u522B"><a href="#u5173_u4E8Epost_u63D0_u4EA4_u548Cget_u63D0_u4EA4_u7684_u533A_u522B" class="headerlink" title="关于post提交和get提交的区别"></a><strong>关于post提交和get提交的区别</strong></h2><p>　<br><strong>GET一般用于获取/查询 资源信息，而POST一般用于更新 资源信息</strong>。</p>
@@ -287,11 +286,13 @@
 <li>根据HTTP规范，POST表示可能修改变服务器上的资源的请求 。</li>
 </ul>
 <p><strong>GET提交，请求的数据会附在URL之后。POST提交：把提交的数据放置在是HTTP包的包体中。</strong></p>
-<p>传输数据的大小：首先声明：HTTP协议没有对传输的数据大小进行限制，HTTP协议规范也没有对URL长度进行限制。</p>
-<p>GET:特定浏览器和服务器对URL长度有限制，例如IE对URL长度的限制是2083字节(2K+35)。对于其他浏览器，如Netscape、FireFox等，理论上没有长度限制，其限制取决于操作系统的支持。</p>
+<p><strong>传输数据的大小</strong>：首先声明：HTTP协议没有对传输的数据大小进行限制，HTTP协议规范也没有对URL长度进行限制。</p>
+<p><strong>GET:特定浏览器和服务器对URL长度有限制，</strong>例如IE对URL长度的限制是2083字节(2K+35)。对于其他浏览器，如Netscape、FireFox等，理论上没有长度限制，其限制取决于操作系统的支持。</p>
 <p>因此对于GET提交时，传输数据就会受到URL长度的限制。</p>
-<p>POST:由于不是通过URL传值，理论上数据不受限。但实际各个WEB服务器会规定对post提交数据大小进行限制，Apache、IIS6都有各自的配置。</p>
-<p>POST的安全性要比GET的安全性高。通过GET提交数据，用户名和密码将明文出现在URL上，因为(1)登录页面有可能被浏览器缓存， (2)其他人查看浏览器的历史纪录，那么别人就可以拿到你的账号和密码了，除此之外，使用GET提交数据还可能会造成Cross-site request forgery攻击</p>
+<p><strong>POST:由于不是通过URL传值，理论上数据不受限。</strong>但实际各个WEB服务器会规定对post提交数据大小进行限制，Apache、IIS6都有各自的配置。</p>
+<p><strong>POST的安全性要比GET的安全性高。</strong>通过GET提交数据，用户名和密码将明文出现在URL上，因为(1)登录页面有可能被浏览器缓存， (2)其他人查看浏览器的历史纪录，那么别人就可以拿到你的账号和密码了，除此之外，使用GET提交数据还可能会造成Cross-site request forgery攻击。</p>
+<h1 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a><strong>JSONP</strong></h1><p>原理：<strong>利用script标签没有跨域限制</strong>，允许用户传递一个<code>callback</code>参数给服务器，然后服务器返回数据时会将这个<code>callback</code>参数作为函数名来包裹住JSON数据（也就是返回的是一段可执行的Javasript代码），这样客户端就能可以随意定制自己的函数来处理JSON数据。</p>
+<p>其他跨域方式还有Comet,CORS</p>
 
       
     </div>
@@ -303,7 +304,7 @@
         <p><span>本文标题:</span><a href="/2016/03/27/ajax原理/">ajax原理</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年03月27日 - 00时11分</p>
-        <p><span>最后更新:</span>2016年03月27日 - 01时26分</p>
+        <p><span>最后更新:</span>2016年03月28日 - 00时19分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/03/27/ajax原理/" title="ajax原理">http://yoursite.com/2016/03/27/ajax原理/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/27/ajax原理/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -319,6 +320,12 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/03/27/CSS定位机制/">
+                    CSS定位机制
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
                 <a href="/2016/03/26/逆转序列/">
@@ -333,7 +340,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AJAX_u539F_u7406_u548CXMLHttpRequest_u5BF9_u8C61"><span class="toc-number">1.</span> <span class="toc-text">AJAX原理和XMLHttpRequest对象</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ajax_u7F3A_u70B9_uFF1A"><span class="toc-number"></span> <span class="toc-text">ajax缺点：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5173_u4E8Epost_u63D0_u4EA4_u548Cget_u63D0_u4EA4_u7684_u533A_u522B"><span class="toc-number">1.</span> <span class="toc-text">关于post提交和get提交的区别</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AJAX_u539F_u7406_u548CXMLHttpRequest_u5BF9_u8C61"><span class="toc-number">1.</span> <span class="toc-text">AJAX原理和XMLHttpRequest对象</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ajax_u7F3A_u70B9_uFF1A"><span class="toc-number"></span> <span class="toc-text">ajax缺点：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5173_u4E8Epost_u63D0_u4EA4_u548Cget_u63D0_u4EA4_u7684_u533A_u522B"><span class="toc-number">1.</span> <span class="toc-text">关于post提交和get提交的区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JSONP"><span class="toc-number"></span> <span class="toc-text">JSONP</span></a>
 </div>
 <style>
     .left-col .switch-btn {
@@ -401,7 +408,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/03/27/CSS定位机制/" title="上一篇: CSS定位机制">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -413,7 +422,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/ajax原理/">ajax原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/26/逆转序列/">逆转序列</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/常用Array方法/">常用Array方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/js求一千万以内的质数算法/">js求一千万以内的质数算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/23/如何理解HTTP协议的无连接无状态/">如何理解HTTP协议的无连接无状态</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/23/session和cookie/">session和cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/IE6下常见bug/">IE6下常见bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/15/CSS3动画/">CSS3动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/10/闭包/">闭包</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/09/原型/">javascript原型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/CSS3D/">CSS 3D transform变换那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/06/three/">事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/two/">bind()和on(),live()和bind()的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/js中的类型识别/">js中的类型识别</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/计算机网络体系结构/">计算机网络体系结构</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/CSS定位机制/">CSS定位机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/ajax原理/">ajax原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/26/逆转序列/">逆转序列</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/常用Array方法/">常用Array方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/js求一千万以内的质数算法/">js求一千万以内的质数算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/23/如何理解HTTP协议的无连接无状态/">如何理解HTTP协议的无连接无状态</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/23/session和cookie/">session和cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/IE6下常见bug/">IE6下常见bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/15/CSS3动画/">CSS3动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/10/闭包/">闭包</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/09/原型/">javascript原型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/CSS3D/">CSS 3D transform变换那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/06/three/">事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/two/">bind()和on(),live()和bind()的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/js中的类型识别/">js中的类型识别</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");

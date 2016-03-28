@@ -3,24 +3,57 @@
 <head>
   <meta charset="utf-8">
   
-  <title>bind()和on(),live()和bind()的区别 | 王楠</title>
+  <title>CSS定位机制 | 王楠</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="bind直接绑定在一个对象上123$(&apos;#foo&apos;).bind(&apos;click&apos;, function() &amp;#123;	alert(&apos;User clicked on &quot;foo.&quot;&apos;);&amp;#125;);
-这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。
-on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsite&quot;, function()&amp;">
+  <meta name="description" content="display:block特征
+默认宽度为父元素宽度
+可设置宽高
+换行显示常见元素有：div,p,h1-h6,ul,form
+
+display:inline特征
+默认宽度为内容宽度
+不可设置宽高
+同行显示常见元素有：span,em,a,label,cite
+
+display:inline-block特征
+默认宽度为内容宽度
+可设置宽高
+不换行显示常见元素有：input,button,textare">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bind()和on(),live()和bind()的区别">
-<meta property="og:url" content="http://yoursite.com/2016/03/05/two/index.html">
+<meta property="og:title" content="CSS定位机制">
+<meta property="og:url" content="http://yoursite.com/2016/03/27/CSS定位机制/index.html">
 <meta property="og:site_name" content="王楠">
-<meta property="og:description" content="bind直接绑定在一个对象上123$(&apos;#foo&apos;).bind(&apos;click&apos;, function() &amp;#123;	alert(&apos;User clicked on &quot;foo.&quot;&apos;);&amp;#125;);
-这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。
-on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsite&quot;, function()&amp;">
-<meta property="og:updated_time" content="2016-03-06T14:09:39.240Z">
+<meta property="og:description" content="display:block特征
+默认宽度为父元素宽度
+可设置宽高
+换行显示常见元素有：div,p,h1-h6,ul,form
+
+display:inline特征
+默认宽度为内容宽度
+不可设置宽高
+同行显示常见元素有：span,em,a,label,cite
+
+display:inline-block特征
+默认宽度为内容宽度
+可设置宽高
+不换行显示常见元素有：input,button,textare">
+<meta property="og:updated_time" content="2016-03-27T15:43:58.408Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bind()和on(),live()和bind()的区别">
-<meta name="twitter:description" content="bind直接绑定在一个对象上123$(&apos;#foo&apos;).bind(&apos;click&apos;, function() &amp;#123;	alert(&apos;User clicked on &quot;foo.&quot;&apos;);&amp;#125;);
-这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。
-on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsite&quot;, function()&amp;">
+<meta name="twitter:title" content="CSS定位机制">
+<meta name="twitter:description" content="display:block特征
+默认宽度为父元素宽度
+可设置宽高
+换行显示常见元素有：div,p,h1-h6,ul,form
+
+display:inline特征
+默认宽度为内容宽度
+不可设置宽高
+同行显示常见元素有：span,em,a,label,cite
+
+display:inline-block特征
+默认宽度为内容宽度
+可设置宽高
+不换行显示常见元素有：input,button,textare">
   
     <link rel="alternative" href="/atom.xml" title="王楠" type="application/atom+xml">
   
@@ -225,11 +258,11 @@ on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsit
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-two" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CSS定位机制" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/05/two/" class="article-date">
-      <time datetime="2016-03-05T14:19:51.000Z" itemprop="datePublished">2016-03-05</time>
+      <a href="/2016/03/27/CSS定位机制/" class="article-date">
+      <time datetime="2016-03-27T15:05:33.000Z" itemprop="datePublished">2016-03-27</time>
 </a>
     </div>
   
@@ -242,7 +275,7 @@ on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsit
         
   
     <h1 class="article-title" itemprop="name">
-      bind()和on(),live()和bind()的区别
+      CSS定位机制
     </h1>
   
 
@@ -253,7 +286,7 @@ on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsit
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -263,20 +296,42 @@ on方法是一个事件委托123$(document).on(&quot;click&quot;, &quot;a.offsit
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="bind_u76F4_u63A5_u7ED1_u5B9A_u5728_u4E00_u4E2A_u5BF9_u8C61_u4E0A"><a href="#bind_u76F4_u63A5_u7ED1_u5B9A_u5728_u4E00_u4E2A_u5BF9_u8C61_u4E0A" class="headerlink" title="bind直接绑定在一个对象上"></a><strong>bind直接绑定在一个对象上</strong></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#foo'</span>).bind(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	alert(<span class="string">'User clicked on "foo."'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>这个例子的是绑定在 #foo 这个元素上。点击#foo元素后执行回调函数。</p>
-<h1 id="on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258"><a href="#on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258" class="headerlink" title="on方法是一个事件委托"></a><strong>on方法是一个事件委托</strong></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).on(<span class="string">"click"</span>, <span class="string">"a.offsite"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">	alert(<span class="string">"Goodbye!"</span>); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>这个例子是绑定在<code>document</code>上，点击<code>document</code>下的含有类<code>offsite</code>的a标签元才执行回调函数。</p>
-<h1 id="live_u65B9_u6CD5_u662Fon_u65B9_u6CD5_u7684_u4E00_u79CD_u5B9E_u73B0"><a href="#live_u65B9_u6CD5_u662Fon_u65B9_u6CD5_u7684_u4E00_u79CD_u5B9E_u73B0" class="headerlink" title="live方法是on方法的一种实现"></a><strong>live方法是on方法的一种实现</strong></h1><pre><code class="javascript">$(<span class="string">"a.offsite"</span>).live(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{ 
-    alert(<span class="string">"Goodbye!"</span>); 
-});
-
-$(<span class="built_in">document</span>).on(<span class="string">"click"</span>, <span class="string">"a.offsite"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{ 
-    alert(<span class="string">"Goodbye!"</span>); 
-});
-</code></pre>
-<p>live方法是on方法的一种实现，上面这两个方法完全相同，live 方法是on方法的一种实现。</p>
-
+        <h1 id="display_3Ablock_u7279_u5F81"><a href="#display_3Ablock_u7279_u5F81" class="headerlink" title="display:block特征"></a><strong>display:block特征</strong></h1><ul>
+<li>默认宽度为父元素宽度</li>
+<li>可设置宽高</li>
+<li>换行显示<br>常见元素有：div,p,h1-h6,ul,form</li>
+</ul>
+<h1 id="display_3Ainline_u7279_u5F81"><a href="#display_3Ainline_u7279_u5F81" class="headerlink" title="display:inline特征"></a><strong>display:inline特征</strong></h1><ul>
+<li>默认宽度为内容宽度</li>
+<li>不可设置宽高</li>
+<li>同行显示<br>常见元素有：span,em,a,label,cite</li>
+</ul>
+<h1 id="display_3Ainline-block_u7279_u5F81"><a href="#display_3Ainline-block_u7279_u5F81" class="headerlink" title="display:inline-block特征"></a><strong>display:inline-block特征</strong></h1><ul>
+<li>默认宽度为内容宽度</li>
+<li>可设置宽高</li>
+<li>不换行显示<br>常见元素有：input,button,textarea,select</li>
+</ul>
+<h1 id="position_3Arelative_u7279_u5F81"><a href="#position_3Arelative_u7279_u5F81" class="headerlink" title="position:relative特征"></a><strong>position:relative特征</strong></h1><ul>
+<li>默认宽度为父元素宽度</li>
+<li>仍然在文本流中</li>
+<li>参照物为元素本身<br>经常用于绝对定位元素的参照物，因为其本身设置relative不会对布局有任何影响。</li>
+</ul>
+<h1 id="position_3Aabsolute_u7279_u5F81"><a href="#position_3Aabsolute_u7279_u5F81" class="headerlink" title="position:absolute特征"></a><strong>position:absolute特征</strong></h1><ul>
+<li>默认宽度为内容宽度</li>
+<li>脱离文本流</li>
+<li>参照物为第一个定位祖先元素或根元素</li>
+</ul>
+<h1 id="position_3Afixed_u7279_u5F81"><a href="#position_3Afixed_u7279_u5F81" class="headerlink" title="position:fixed特征"></a><strong>position:fixed特征</strong></h1><ul>
+<li>默认宽度为内容宽度</li>
+<li>脱离文本流</li>
+<li>参照物为视窗</li>
+</ul>
+<h1 id="float_3Aleft/right_u7279_u5F81"><a href="#float_3Aleft/right_u7279_u5F81" class="headerlink" title="float:left/right特征"></a><strong>float:left/right特征</strong></h1><ul>
+<li>默认宽度为内容宽度</li>
+<li>半脱离文本流</li>
+<li>向指定方向一致移动（知道不能移动为止）</li>
+</ul>
+<h1 id="box-sizing_3A_content-box_28_u9ED8_u8BA4_29__7C_border-box_28IE_29"><a href="#box-sizing_3A_content-box_28_u9ED8_u8BA4_29__7C_border-box_28IE_29" class="headerlink" title="box-sizing: content-box(默认) | border-box(IE)"></a><strong>box-sizing: content-box(默认) | border-box(IE)</strong></h1>
       
     </div>
     
@@ -284,13 +339,13 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/03/05/two/">bind()和on(),live()和bind()的区别</a></p>
+        <p><span>本文标题:</span><a href="/2016/03/27/CSS定位机制/">CSS定位机制</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
-        <p><span>发布时间:</span>2016年03月05日 - 22时19分</p>
-        <p><span>最后更新:</span>2016年03月06日 - 22时09分</p>
+        <p><span>发布时间:</span>2016年03月27日 - 23时05分</p>
+        <p><span>最后更新:</span>2016年03月27日 - 23时43分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/03/05/two/" title="bind()和on(),live()和bind()的区别">http://yoursite.com/2016/03/05/two/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/05/two/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/03/27/CSS定位机制/" title="CSS定位机制">http://yoursite.com/2016/03/27/CSS定位机制/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/03/27/CSS定位机制/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -304,15 +359,15 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/06/three/">
-                    事件
+                <a href="/2016/03/27/计算机网络体系结构/">
+                    计算机网络体系结构
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/01/27/js中的类型识别/">
-                    js中的类型识别
+                <a href="/2016/03/27/ajax原理/">
+                    ajax原理
                 </a>
             </div>
         
@@ -323,7 +378,7 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#bind_u76F4_u63A5_u7ED1_u5B9A_u5728_u4E00_u4E2A_u5BF9_u8C61_u4E0A"><span class="toc-number">1.</span> <span class="toc-text">bind直接绑定在一个对象上</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#on_u65B9_u6CD5_u662F_u4E00_u4E2A_u4E8B_u4EF6_u59D4_u6258"><span class="toc-number">2.</span> <span class="toc-text">on方法是一个事件委托</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#live_u65B9_u6CD5_u662Fon_u65B9_u6CD5_u7684_u4E00_u79CD_u5B9E_u73B0"><span class="toc-number">3.</span> <span class="toc-text">live方法是on方法的一种实现</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#display_3Ablock_u7279_u5F81"><span class="toc-number">1.</span> <span class="toc-text">display:block特征</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#display_3Ainline_u7279_u5F81"><span class="toc-number">2.</span> <span class="toc-text">display:inline特征</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#display_3Ainline-block_u7279_u5F81"><span class="toc-number">3.</span> <span class="toc-text">display:inline-block特征</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#position_3Arelative_u7279_u5F81"><span class="toc-number">4.</span> <span class="toc-text">position:relative特征</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#position_3Aabsolute_u7279_u5F81"><span class="toc-number">5.</span> <span class="toc-text">position:absolute特征</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#position_3Afixed_u7279_u5F81"><span class="toc-number">6.</span> <span class="toc-text">position:fixed特征</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#float_3Aleft/right_u7279_u5F81"><span class="toc-number">7.</span> <span class="toc-text">float:left/right特征</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#box-sizing_3A_content-box_28_u9ED8_u8BA4_29__7C_border-box_28IE_29"><span class="toc-number">8.</span> <span class="toc-text">box-sizing: content-box(默认) | border-box(IE)</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -391,7 +446,7 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/06/three/" title="上一篇: 事件">
+            <a href="/2016/03/27/计算机网络体系结构/" title="上一篇: 计算机网络体系结构">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -399,7 +454,7 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/01/27/js中的类型识别/" title="下一篇: js中的类型识别">
+            <a href="/2016/03/27/ajax原理/" title="下一篇: ajax原理">
                 <i class="fa fa-angle-right"></i>
             </a>
         
