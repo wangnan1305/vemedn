@@ -1,3 +1,41 @@
+
+function quickSort(array){
+    function sort(prev, numsize){
+        var nonius = prev;//0
+        var j = numsize -1;//8
+        var flag = array[prev];//array[0]
+        if ((numsize - prev) > 1) {
+            while(nonius < j){
+                for(; nonius < j; j--){
+                    if (array[j] < flag) {
+                        array[nonius++] = array[j];　//a[i] = a[j]; i += 1;
+                        break;
+                    };
+                }
+                for( ; nonius < j; nonius++){
+                    if (array[nonius] > flag){
+                        array[j--] = array[nonius];
+                        break;
+                    }
+                }
+            }
+            array[nonius] = flag;
+            sort(0, nonius);
+            sort(nonius + 1, numsize);
+        }
+    }
+    sort(0, array.length);
+    return array;
+}
+var a = [5,6,8,4,2,1,9];
+quickSort(a)
+
+---
+title: 计算机网络体系结构
+date: 2016-03-27 23:43:56
+tags:
+	- 计算机网络
+---
 # **OSI的体系结构：**
 
 - 物理层
