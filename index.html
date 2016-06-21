@@ -143,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS3/" style="font-size: 13.33px;">CSS3</a> <a href="/tags/HTTP/" style="font-size: 13.33px;">HTTP</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a>
+                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a>
                     </div>
                 </section>
                 
@@ -223,6 +223,68 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-布局" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/20/布局/" class="article-date">
+      <time datetime="2016-04-20T10:42:50.000Z" itemprop="datePublished">2016-04-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/20/布局/">水平垂直居中常用布局</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="u7236_u5B50_u5143_u7D20_u5BBD_u9AD8_u4E0D_u5B9A_uFF0C_u5782_u76F4_u6C34_u5E73_u5C45_u4E2D"><a href="#u7236_u5B50_u5143_u7D20_u5BBD_u9AD8_u4E0D_u5B9A_uFF0C_u5782_u76F4_u6C34_u5E73_u5C45_u4E2D" class="headerlink" title="父子元素宽高不定，垂直水平居中"></a><strong>父子元素宽高不定，垂直水平居中</strong></h2><h1 id="u6C34_u5E73_u5C45_u4E2D"><a href="#u6C34_u5E73_u5C45_u4E2D" class="headerlink" title="水平居中"></a><strong>水平居中</strong></h1><p><strong>inline-block + text-align</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">HTML:</span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"parent"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"child"</span>&gt;</span>DEMO<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">CSS:</span><br><span class="line">.child&#123;</span><br><span class="line">	display:inline-block;</span><br><span class="line">&#125;</span><br><span class="line">.parent&#123;</span><br><span class="line">	text-align:center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">优点：兼容性好，IE6,7。</span><br><span class="line">缺点：child元素也会继承父元素text-align：center的属性，需要加text-align:left来抵消text-align:center。</span><br></pre></td></tr></table></figure>
+<p><strong>table + margin</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">HTML:</span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"parent"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"child"</span>&gt;</span>DEMO<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">CSS:</span><br><span class="line">.child&#123;</span><br><span class="line">	display:table;</span><br><span class="line">	margin:0 auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">优点：只设置child。</span><br><span class="line">缺点：只兼容IE8+。</span><br></pre></td></tr></table></figure>
+<p><strong>absolute + transform</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">HTML:</span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"parent"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"child"</span>&gt;</span>DEMO<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">CSS:</span><br><span class="line">.parent&#123;</span><br><span class="line">	position:relative;</span><br><span class="line">&#125;</span><br><span class="line">.child&#123;</span><br><span class="line">	position:absolute;</span><br><span class="line">	left:50%;</span><br><span class="line">	transform:translateX(-50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-CSS属性推荐书写顺序" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -250,7 +312,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="CSS_u5C5E_u6027_u63A8_u8350_u987A_u5E8F"><a href="#CSS_u5C5E_u6027_u63A8_u8350_u987A_u5E8F" class="headerlink" title="CSS属性推荐顺序"></a><strong>CSS属性推荐顺序</strong></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">	position: ;</span><br><span class="line">	top: ;</span><br><span class="line">	right: ;</span><br><span class="line">	bottom: ;</span><br><span class="line">	left: ;</span><br><span class="line">	z-index: ;</span><br><span class="line">	float: ;</span><br><span class="line">	display: ;</span><br><span class="line">	width: ;</span><br><span class="line">	height: ;</span><br><span class="line">	max-width: ;</span><br><span class="line">	max-height: ;</span><br><span class="line">	min-width: ;</span><br><span class="line">	min-height: ;</span><br><span class="line">	padding: ;</span><br><span class="line">	padding-top: ;</span><br><span class="line">	padding-right: ;</span><br><span class="line">	padding-bottom:;</span><br><span class="line">	padding-left: ;</span><br><span class="line">	border: ;</span><br><span class="line">	margin: ;</span><br><span class="line">	overflow: ;</span><br><span class="line">	clip: ;</span><br><span class="line">	clear: ;</span><br><span class="line">	font: ;</span><br><span class="line">	line-height: ;</span><br><span class="line">	letter-spacing: ;</span><br><span class="line">	word-spacing: ;</span><br><span class="line">	color: ;</span><br><span class="line">	text-align: ;</span><br><span class="line">	text-decoration: ;</span><br><span class="line">	text-indent: ;</span><br><span class="line">	text-overflow: ;</span><br><span class="line">	text-rendering: ;</span><br><span class="line">	text-shadow: ;</span><br><span class="line">	text-transform: ;</span><br><span class="line">	word-<span class="keyword">break</span>: ;</span><br><span class="line">	word-wrap: ;</span><br><span class="line">	white-space: ;</span><br><span class="line">	vertical-align: ;</span><br><span class="line">	list-style: ;</span><br><span class="line">	list-style-type: ;</span><br><span class="line">	list-style-position: ;</span><br><span class="line">	list-style-image: ;</span><br><span class="line">	cursor:;</span><br><span class="line">	background: ;</span><br><span class="line">	content: ;</span><br><span class="line">	quotes: ;</span><br><span class="line">	outline: ;</span><br><span class="line">	outline-offset: ;</span><br><span class="line">	opacity: ;</span><br><span class="line">	filter: ;</span><br><span class="line">	visibility:;</span><br><span class="line">	size: ;</span><br><span class="line">	zoom: ;</span><br><span class="line">	transform: ;</span><br><span class="line">	box-shadow: ;</span><br><span class="line">	box-sizing: ;</span><br><span class="line">	table-layout: ;</span><br><span class="line">	animation: ;</span><br><span class="line">	transition: ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="CSS_u5C5E_u6027_u63A8_u8350_u987A_u5E8F"><a href="#CSS_u5C5E_u6027_u63A8_u8350_u987A_u5E8F" class="headerlink" title="CSS属性推荐顺序"></a><strong>CSS属性推荐顺序</strong></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">	position: ;</span><br><span class="line">	top: ;</span><br><span class="line">	right: ;</span><br><span class="line">	bottom: ;</span><br><span class="line">	left: ;</span><br><span class="line">	z-index: ;</span><br><span class="line">	float: ;</span><br><span class="line">	display: ;</span><br><span class="line">	width: ;</span><br><span class="line">	height: ;</span><br><span class="line">	max-width: ;</span><br><span class="line">	max-height: ;</span><br><span class="line">	min-width: ;</span><br><span class="line">	min-height: ;</span><br><span class="line">	padding: ;</span><br><span class="line">	padding-top: ;</span><br><span class="line">	padding-right: ;</span><br><span class="line">	padding-bottom:;</span><br><span class="line">	padding-left: ;</span><br><span class="line">	border: ;</span><br><span class="line">	margin: ;</span><br><span class="line">	overflow: ;</span><br><span class="line">	clip: ;</span><br><span class="line">	clear: ;</span><br><span class="line">	font: ;</span><br><span class="line">	line-height: ;</span><br><span class="line">	letter-spacing: ;</span><br><span class="line">	word-spacing: ;</span><br><span class="line"><span class="xml"><span class="comment">&lt;!--more--&gt;</span></span><br><span class="line">	color: ;</span><br><span class="line">	text-align: ;</span><br><span class="line">	text-decoration: ;</span><br><span class="line">	text-indent: ;</span><br><span class="line">	text-overflow: ;</span><br><span class="line">	text-rendering: ;</span><br><span class="line">	text-shadow: ;</span><br><span class="line">	text-transform: ;</span><br><span class="line">	word-break: ;</span><br><span class="line">	word-wrap: ;</span><br><span class="line">	white-space: ;</span><br><span class="line">	vertical-align: ;</span><br><span class="line">	list-style: ;</span><br><span class="line">	list-style-type: ;</span><br><span class="line">	list-style-position: ;</span><br><span class="line">	list-style-image: ;</span><br><span class="line">	cursor:;</span><br><span class="line">	background: ;</span><br><span class="line">	content: ;</span><br><span class="line">	quotes: ;</span><br><span class="line">	outline: ;</span><br><span class="line">	outline-offset: ;</span><br><span class="line">	opacity: ;</span><br><span class="line">	filter: ;</span><br><span class="line">	visibility:;</span><br><span class="line">	size: ;</span><br><span class="line">	zoom: ;</span><br><span class="line">	transform: ;</span><br><span class="line">	box-shadow: ;</span><br><span class="line">	box-sizing: ;</span><br><span class="line">	table-layout: ;</span><br><span class="line">	animation: ;</span><br><span class="line">	transition: ;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -321,6 +383,14 @@
 <li>默认宽度为内容宽度</li>
 <li>可设置宽高</li>
 <li>同行显示<br>常见元素有：input,button,textarea,select</li>
+</ul>
+<h1 id="display_3Atable_u7279_u5F81"><a href="#display_3Atable_u7279_u5F81" class="headerlink" title="display:table特征"></a><strong>display:table特征</strong></h1><ul>
+<li>表现上像一个block元素。</li>
+<li>但是table元素的宽度随着内容的多少而变化。</li>
+</ul>
+<h1 id="display_3Atable-cell_u7684_u7279_u5F81"><a href="#display_3Atable-cell_u7684_u7279_u5F81" class="headerlink" title="display:table-cell的特征"></a><strong>display:table-cell的特征</strong></h1><ul>
+<li>表现上和inline-block元素差不多，宽度随内容宽度，且可设置宽高。</li>
+<li>让标签元素以表格单元格的形式呈现，类似于td标签。只有IE8+支持。</li>
 </ul>
 <h1 id="position_3Arelative_u7279_u5F81"><a href="#position_3Arelative_u7279_u5F81" class="headerlink" title="position:relative特征"></a><strong>position:relative特征</strong></h1><ul>
 <li>默认宽度为父元素宽度</li>
@@ -841,63 +911,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ie6/">ie6</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-CSS3动画" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/15/CSS3动画/" class="article-date">
-      <time datetime="2016-03-15T08:10:14.000Z" itemprop="datePublished">2016-03-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/15/CSS3动画/">CSS3动画</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>综合CSS3动画的特性，写了一个小<a href="http://wangnan1305.github.io/css3/" target="_blank" rel="external">dome</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li></ul>
     </div>
 
       
