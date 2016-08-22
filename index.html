@@ -143,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/浏览器/" style="font-size: 10px;">浏览器</a>
+                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a>
                     </div>
                 </section>
                 
@@ -223,10 +223,10 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-翻译1" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-h5" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/23/翻译1/" class="article-date">
+      <a href="/2016/06/23/h5/" class="article-date">
       <time datetime="2016-06-23T10:36:49.000Z" itemprop="datePublished">2016-06-23</time>
 </a>
     </div>
@@ -240,7 +240,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/23/翻译1/">浏览器是如何工作的</a>
+      <a class="article-title" href="/2016/06/23/h5/">移动端困惑</a>
     </h1>
   
 
@@ -250,10 +250,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="u4E00_u3001_u4ECB_u7ECD"><a href="#u4E00_u3001_u4ECB_u7ECD" class="headerlink" title="一、介绍"></a><strong>一、介绍</strong></h1><p><strong>1.我们所讨论的浏览器</strong></p>
-<p>截止到今天共有五种主要的浏览器 - Internet Explorer, Firefox, Safari, Chrome and Opera。我会举一些开源浏览器的例子，比如Firefox,Chrome and Safari，他们是部分开源的。根据<a href="http://www.w3schools.com/browsers/browsers_stats.asp" target="_blank" rel="external">W3C浏览器统计</a>，目前(2009年十月)，Firefox, Safari and Chrome三种浏览器的市场份额接近60%。所以现在开源浏览器是浏览器业务很大的一部分。</p>
-<p><strong>2.浏览器的主要功能</strong></p>
-<p>浏览器的主要功能是展示你所选择的web资源，通过从服务器获取数据并且展示在浏览器窗口。资源的格式通常是HTML，单也有可能是PDF,图片，或者更多。本地资源可以被指定，通过用户使用一个URL(同意资源标识符)。<br>　　<br>浏览器解释和展现HTML文件的方式被指定使用HTML和CSS规范。目前CSS版本是2<a href="http://www.w3.org/TR/CSS2/" target="_blank" rel="external">http://www.w3.org/TR/CSS2/</a>，版本三正在制定中。</p>
+        <h1 id="u4E3A_u4EC0_u4E48_u4F7F_u7528font-size_uFF1A62-5_25_u800C_u4E0D_u662F10px_3F"><a href="#u4E3A_u4EC0_u4E48_u4F7F_u7528font-size_uFF1A62-5_25_u800C_u4E0D_u662F10px_3F" class="headerlink" title="为什么使用font-size：62.5%而不是10px?"></a>为什么使用font-size：62.5%而不是10px?</h1><p>《响应式Web设计实践》中提到过这一点，桌面浏览器默认页面字体大小是16px，这种情况下设置成具体像素大小或者对应的百分比，看起来的效果是一样的，但是其他类型的设备的默认字体大小不一定是16px,特别是高分辨率的设备，16px大小的字体在它们上面看起来会非常小，所以不能在body上设置具体像素值，设置成百分比，可以按照设备的基准字体大小给编写的网页设置好最适合用户浏览的字体大小。<br>书中原文：最重要的不是屏幕实际的像素大小，屏幕上文字的可读性才是最重要的</p>
+<h1 id="u8BBE_u5907_u50CF_u7D20_u6BD4_28device_pixel_ratio_29"><a href="#u8BBE_u5907_u50CF_u7D20_u6BD4_28device_pixel_ratio_29" class="headerlink" title="设备像素比(device pixel ratio)"></a>设备像素比(device pixel ratio)</h1><p>设备像素比简称为dpr，其定义了物理像素和设备独立像素的对应关系。它的值可以按下面的公式计算得到：</p>
+<p>设备像素比 ＝ 物理像素 / 设备独立像素<br>　<br>在JavaScript中，可以通过<code>window.devicePixelRatio</code>获取到当前设备的dpr。而在CSS中，可以通过<code>-webkit-device-pixel-ratio</code>，<code>-webkit-min-device-pixel-ratio</code>和 <code>-webkit-max-device-pixel-ratio</code>进行媒体查询，对不同dpr的设备，做一些样式适配(这里只针对webkit内核的浏览器和webview)。</p>
 
       
     </div>
@@ -264,7 +263,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/浏览器/">浏览器</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/H5/">H5</a></li></ul>
     </div>
 
       
