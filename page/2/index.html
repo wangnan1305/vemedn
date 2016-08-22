@@ -143,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a>
+                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a>
                     </div>
                 </section>
                 
@@ -222,6 +222,80 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-IE6下常见bug" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/17/IE6下常见bug/" class="article-date">
+      <time datetime="2016-03-17T07:21:35.000Z" itemprop="datePublished">2016-03-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/17/IE6下常见bug/">IE6下常见bug</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="u4E00_u3001IE6_u53CC_u500D_u8FB9_u8DDDbug"><a href="#u4E00_u3001IE6_u53CC_u500D_u8FB9_u8DDDbug" class="headerlink" title="一、IE6双倍边距bug"></a><strong>一、IE6双倍边距bug</strong></h1><p>当页面上的元素使用float浮动时，不管是向左还是向右浮动；只要该元素带有margin像素都会使该值乘以2，例如“margin-left:10px” 在IE6中，该值就会被解析为20px。想要解决这个BUG就需要在该元素中加入display:inline 或 display:block 明确其元素类型即可解决双倍边距的BUG。</p>
+<h1 id="u4E8C_u3001IE6_u4E2D3_u50CF_u7D20_u95EE_u9898_u53CA_u89E3_u51B3_u529E_u6CD5"><a href="#u4E8C_u3001IE6_u4E2D3_u50CF_u7D20_u95EE_u9898_u53CA_u89E3_u51B3_u529E_u6CD5" class="headerlink" title="二、IE6中3像素问题及解决办法"></a><strong>二、IE6中3像素问题及解决办法</strong></h1><p>当元素使用float浮动后，元素与相邻的元素之间会产生3px的间隙。诡异的是如果右侧的容器没设置高度时3px的间隙在相邻容器的内部，当设定高度后又跑到容器的相反侧了。要解决这类BUG的话，需要使布局在同一行的元素都加上float浮动。</p>
+<h1 id="u4E09_u3001IE6_u4E2D_u5947_u6570_u5BBD_u9AD8_u7684BUG"><a href="#u4E09_u3001IE6_u4E2D_u5947_u6570_u5BBD_u9AD8_u7684BUG" class="headerlink" title="三、IE6中奇数宽高的BUG"></a><strong>三、IE6中奇数宽高的BUG</strong></h1><p>IE6中奇数的高宽显示大小与偶数高宽显示大小存在一定的不同。其中要问题是出在奇数高宽上。要解决此类问题，只需要尽量将外部定位的div高宽写成偶数即可。</p>
+<h1 id="u56DB_u3001IE6_u4E2D_u56FE_u7247_u94FE_u63A5_u7684_u4E0B_u65B9_u6709_u95F4_u9699"><a href="#u56DB_u3001IE6_u4E2D_u56FE_u7247_u94FE_u63A5_u7684_u4E0B_u65B9_u6709_u95F4_u9699" class="headerlink" title="四、IE6中图片链接的下方有间隙"></a><strong>四、IE6中图片链接的下方有间隙</strong></h1><p>IE6中图片的下方会存在一定的间隙，尤其在图片垂直挨着图片的时候，即可看到这样的间隙。要解决此类问题，需要将img标签定义为display:block 或定义vertical-align对应的属性。也可以为img对应的样式写入font-size:0</p>
+<h1 id="u4E94_u3001IE6_u4E0B_u7A7A_u5143_u7D20_u7684_u9AD8_u5EA6BUG"><a href="#u4E94_u3001IE6_u4E0B_u7A7A_u5143_u7D20_u7684_u9AD8_u5EA6BUG" class="headerlink" title="五、IE6下空元素的高度BUG"></a><strong>五、IE6下空元素的高度BUG</strong></h1><p>如果一个元素中没有任何内容，当在样式中为这个元素设置了0-19px之间的高度时。此元素的高度始终为19px。</p>
+<p>解决的方法有四种:</p>
+<p>1.在元素的css中加入：overflow:hidden</p>
+<p>2.在元素中插入html注释：&lt;!– &gt;</p>
+<p>3.在元素中插入html的空白符：&nbsp;</p>
+<p>4.在元素的css中加入：font-size:0</p>
+<h1 id="u516D_u3001_u91CD_u590D_u6587_u5B57_u7684BUG"><a href="#u516D_u3001_u91CD_u590D_u6587_u5B57_u7684BUG" class="headerlink" title="六、重复文字的BUG"></a><strong>六、重复文字的BUG</strong></h1><p>在某些比较复杂的排版中，有时候浮动元素的最后一些字符会出现在clear清除元素的下面。</p>
+<p>解决方法如下：</p>
+<p>1.确保元素都带有display:inline</p>
+<p>2.在最后一个元素上使用“margin-right:-3px</p>
+<p>3.为浮动元素的最后一个条目加上条件注释，&lt;!–[if !IE]&gt;xxx&lt;![endif]–&gt;</p>
+<p>4.在容器的最后元素使用一个空白的div，为这个div指定不超过容器的宽度。</p>
+<h1 id="u4E03_u3001IE6_u4E2D_z-index_u5931_u6548"><a href="#u4E03_u3001IE6_u4E2D_z-index_u5931_u6548" class="headerlink" title="七、IE6中 z-index失效"></a><strong>七、IE6中 z-index失效</strong></h1><p>具体BUG为，元素的父级元素设置的z-index为1，那么其子级元素再设置z-index时会失效，其层级会继承父级元素的设置，造成某些层级调整上的BUG。详细解释可以<a href="http://www.frontopen.com/199.htmls" target="_blank" rel="external">阅读IE6中部分情况下z-index无效的原因，以及解决办法</a></p>
+<p>结语：实际上IE6中，很多BUG的解决方法都可以使用display:inline、font-size:0、float解决。因此我们在书写代码时要记住，<strong>一旦使用了float浮动，就为元素增加一个display:inline样式，可以有效的避免浮动造成的样式错乱问题</strong>。<strong>使用空DIV时，为了避免其高度影响布局美观，也可以为其加上font-size:0 这样就很容易避免一些兼容上的问题</strong>。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ie6/">ie6</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-CSS3动画" class="article article-type-post" itemscope itemprop="blogPost">
   
