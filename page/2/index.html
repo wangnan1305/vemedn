@@ -143,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a>
+                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a>
                     </div>
                 </section>
                 
@@ -222,6 +222,72 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-session和cookie" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/23/session和cookie/" class="article-date">
+      <time datetime="2016-03-23T10:41:31.000Z" itemprop="datePublished">2016-03-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/23/session和cookie/">session和cookie</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="u4E00_u3001Session"><a href="#u4E00_u3001Session" class="headerlink" title="一、Session"></a><strong>一、Session</strong></h1><p><code>session</code>，在汉语中表示会话，的意思，其本来的含义一个终端用户与交互系统进行通信的时间(间隔),通常是指从注册(进入系统)到注销(退出系统)之间所经过的时间。比如打电话时从拿起电话拨号到挂断电话这中间的一系列过程可以称之为一个<code>session</code>。<br>　<br>现在通常指一个浏览器窗口打开到关闭这个期间。<code>session</code>在我们的网络应用中就是一种客户端与服务器端保持状态的解决方案，有时候<code>session</code>也用来指这种解决方案的存储结构。<br>　<br><code>session</code>与用户之间是一种一对一的关系。<code>session</code>在用户进入网站时由服务器自动产生，并在用户正常离开站点时释放。使用<code>session</code>的好处就在于，可以将很多与用户相关的信息，例如用户的帐号、昵称等保存到<code>session</code>中；利用<code>session</code>，可以跟踪用户在网站上的活动。例如：当你上网进入一个网站时，如果你没有登陆，无论你访问哪几个页面都会跳转回登陆页。还有就是你在购物时，不可能把你的东西放到别人的购物车里去，这就得用一个信息变量来判断！<br>　<br><code>cookie</code>的作用就是为了解决<code>HTTP</code>协议无状态的缺陷所作出的努力。至于后来出现的Session机制则是又一种在客户端与服务器之间保持状态的解决方案。</p>
+<h1 id="u4E8C_u3001Session_u673A_u5236"><a href="#u4E8C_u3001Session_u673A_u5236" class="headerlink" title="二、Session机制"></a><strong>二、Session机制</strong></h1><p><code>session</code>机制采用的是在服务器端保持状态的方案。</p>
+<h1 id="u4E09_u3001Cookies"><a href="#u4E09_u3001Cookies" class="headerlink" title="三、Cookies"></a><strong>三、Cookies</strong></h1><p><code>cookie</code>是一种由服务器发送给客户端的片段信息，存储在客户端环境中，并在客户所有的对服务器的请求中都要发回它。<br>就好比我们在用IE登陆某个电子购物商城时，IE在得到商品列表页面的 同时还收到<code>Set-Cookie</code>应答头信息，我们打开一个<code>Cookie</code>文件，我们所看到的格式一般都是：<br><code>Cookie：NAME=VALUE；Comment=COMMENT；Domain=DOMAINNMAM；Max-age=SECONDS；Path=PATH；secure；Version=1*DIGIT</code><br>　<br>其中NAME值对（值对间用分号分隔）是必须的，其余都是可选的。最重要的信息当然也在所必须的值对里了，VALUE是NAME的值，也是这个 <code>Cookie</code>的标识。<code>Max-age</code>定义了<code>Cookie</code>的最长生存时间。<br>　<br>当我们选购了某种商品，向服务器发送选购清单时，会自动在你的请求信息头里加上NAME值对,如果<code>Cookie</code>被禁止。当Web服务器收到这个请求后，会检查该<code>Cookie</code>是否存在，然后相应的跟踪会话。从以上分析不难理解，其实Web服务器跟踪会话就靠<code>Set-Cookie</code>头信息，跟踪NAME值对进行身份验证。假如我们用非Web终端接收Web服务器的响应信息，从中解析出<code>Cookie</code>头信息，当再次向Web服务器发送请求时附加上解析出的<code>Cookie</code>信息，Web服务器据此不就可以进行身份认证了吗？<br>　<br>Cookies的好处：</p>
+<ul>
+<li><code>Cookie</code>能使站点跟踪特定访问者的访问次数、最后访问时间和访问者进入站点的路径 </li>
+<li><code>Cookie</code>能告诉在线广告商广告被点击的次数，从而可以更精确的投放广告 </li>
+<li><code>Cookie</code>有效期限未到时，Cookie能使用户在不键入密码和用户名的情况下进入曾经浏览过的一些站点 </li>
+<li><code>Cookie</code>能帮助站点统计用户个人资料以实现各种各样的个性化服务，其实，cookie的作用就是为了解决HTTP协议无状态的缺陷所作的努力</li>
+</ul>
+<h1 id="u56DB_u3001Cookies_u673A_u5236"><a href="#u56DB_u3001Cookies_u673A_u5236" class="headerlink" title="四、Cookies机制"></a><strong>四、Cookies机制</strong></h1><p><code>Cookie</code>机制采用的是在客户端保持状态的方案。 </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTTP/">HTTP</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-IE6下常见bug" class="article article-type-post" itemscope itemprop="blogPost">
   
