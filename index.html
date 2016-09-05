@@ -143,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a>
+                        <a href="/tags/js/" style="font-size: 10px;">-js</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a>
                     </div>
                 </section>
                 
@@ -222,6 +222,65 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-对象的可枚举属性" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/05/对象的可枚举属性/" class="article-date">
+      <time datetime="2016-09-05T02:25:30.000Z" itemprop="datePublished">2016-09-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/05/对象的可枚举属性/">对象的可枚举属性</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="JavaScript_u4E2D_u7684_u53EF_u679A_u4E3E_u5C5E_u6027_u4E0E_u4E0D_u53EF_u679A_u4E3E_u5C5E_u6027"><a href="#JavaScript_u4E2D_u7684_u53EF_u679A_u4E3E_u5C5E_u6027_u4E0E_u4E0D_u53EF_u679A_u4E3E_u5C5E_u6027" class="headerlink" title="JavaScript中的可枚举属性与不可枚举属性"></a><strong>JavaScript中的可枚举属性与不可枚举属性</strong></h1><p>　　在JavaScript中，对象的属性分为可枚举和不可枚举之分，它们是由属性的enumerable值决定的。可枚举性决定了这个属性能否被for…in查找遍历到。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;&#10;    name:&#34;wangnan&#34;,&#10;    age:22&#10;&#125;&#10;&#10;Object.defineProperty(obj,&#39;id&#39;,&#123;  //&#36890;&#36807;&#36825;&#20010;&#26041;&#27861;&#21019;&#24314;&#19981;&#21487;&#26522;&#20030;&#23646;&#24615;&#10;    value:&#39;&#25105;&#26159;&#19981;&#21487;&#26522;&#20030;&#30340;&#39;&#10;&#125;)&#10;&#10;for(var i in obj)&#123;&#10;    console.log(i)&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/../img/object_enumerable.png" alt=""></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">-js</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-CommonJS和AMD" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -842,66 +901,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-如何理解HTTP协议的无连接无状态" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/23/如何理解HTTP协议的无连接无状态/" class="article-date">
-      <time datetime="2016-03-23T13:43:33.000Z" itemprop="datePublished">2016-03-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/23/如何理解HTTP协议的无连接无状态/">如何理解HTTP协议的无连接无状态</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p><strong>HTTP 协议一共有五大特点：1、支持客户/服务器模式;2、简单快速;3、灵活;4、无连接;5、无状态。</strong>
-　</p>
-<h1 id="u65E0_u8FDE_u63A5"><a href="#u65E0_u8FDE_u63A5" class="headerlink" title="无连接"></a><strong>无连接</strong></h1><p>无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并且收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。<br>　<br>随着时间的推移，网页变得越来越复杂，里面可能嵌入了很多图片，这时候每次访问图片都需要建立一次 <code>TCP</code> 连接就显得很低效。后来，<code>Keep-Alive</code>被提出用来解决这效率低的问题。<br>　<br><code>Keep-Alive</code> 功能使客户端到服务器端的连接持续有效，当出现对服务器的后继请求时，<code>Keep-Alive</code> 功能避免了建立或者重新建立连接。市场上的大部分 <code>Web</code> 服务器，包括 <code>iPlanet</code>、<code>IIS</code> 和 <code>Apache</code>，都支持 <code>HTTP Keep-Alive</code>。对于提供静态内容的网站来说，这个功能通常很有用。但是，对于负担较重的网站来说，这里存在另外一个问题：虽然为客户保留打开的连接有一定的好处，但它同样影响了性能，因为在处理暂停期间，本来可以释放的资源仍旧被占用。当<code>Web</code>服务器和应用服务器在同一台机器上运行时，<code>Keep-Alive</code> 功能对资源利用的影响尤其突出。</p>
-<h1 id="u65E0_u72B6_u6001"><a href="#u65E0_u72B6_u6001" class="headerlink" title="无状态"></a><strong>无状态</strong></h1><p>无状态是指协议对于事务处理没有记忆能力，服务器不知道客户端是什么状态。即我们给服务器发送HTTP请求后，服务器根据请求，会给我们发送数据过来，但是发送完，不会记录任何信息。<br>　<br>HTTP是一个无状态协议，这意味着每个请求都是独立的，<code>Keep-Alive</code>没能改变这个结果。<br>　<br>缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。<br>　<br>HTTP协议这种特性有优点也有缺点，优点在于解放了服务器，每一次请求“点到为止”不会造成不必要连接占用，缺点在于每次请求会传输大量重复的内容信息。<br>　<br>客户端与服务器进行动态交互的 Web 应用程序出现之后，HTTP 无状态的特性严重阻碍了这些应用程序的实现，毕竟交互是需要承前启后的，简单的购物车程序也要知道用户到底在之前选择了什么商品。于是，两种用于保持 HTTP 连接状态的技术就应运而生了，一个是 Cookie，而另一个则是 Session。<br>　<br>Cookie可以保持登录信息到用户下次与服务器的会话，换句话说，下次访问同一网站时，用户会发现不必输入用户名和密码就已经登录了(当然，不排除用户手工删除Cookie)。而还有一些Cookie在用户退出会话的时候就被删除了，这样可以有效保护个人隐私。<br>　<br>Cookies 最典型的应用是判定注册用户是否已经登录网站，用户可能会得到提示，是否在下一次进入此网站时保留用户信息以便简化登录手续，这些都是 Cookies 的功用。另一个重要应用场合是“购物车”之类处理。用户可能会在一段时间内在同一家网站的不同页面中选择不同的商品，这些信息都会写入 Cookies，以便在最后付款时提取信息。<br>　<br>与 Cookie 相对的一个解决方案是 Session，它是通过服务器来保持状态的。<br>　<br>当客户端访问服务器时，服务器根据需求设置 Session，将会话信息保存在服务器上，同时将标示 Session 的 SessionId 传递给客户端浏览器，浏览器将这个 SessionId 保存在内存中，我们称之为无过期时间的 Cookie。浏览器关闭后，这个 Cookie 就会被清掉，它不会存在于用户的 Cookie 临时文件。<br>　<br>以后浏览器每次请求都会额外加上这个参数值，服务器会根据这个 SessionId，就能取得客户端的数据信息。<br>　<br>如果客户端浏览器意外关闭，服务器保存的 Session 数据不是立即释放，此时数据还会存在，只要我们知道那个 SessionId，就可以继续通过请求获得此 Session 的信息，因为此时后台的 Session 还存在，当然我们可以设置一个 Session 超时时间，一旦超过规定时间没有客户端请求时，服务器就会清除对应 SessionId 的 Session 信息。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTTP/">HTTP</a></li></ul>
     </div>
 
       
