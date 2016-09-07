@@ -143,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/js/" style="font-size: 10px;">-js</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a>
+                        <a href="/tags/js/" style="font-size: 10px;">-js</a> <a href="/tags/CSS3/" style="font-size: 13.33px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 13.33px;">HTTP</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a>
                     </div>
                 </section>
                 
@@ -222,6 +222,65 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-JS数组去重" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/07/JS数组去重/" class="article-date">
+      <time datetime="2016-09-07T03:23:32.000Z" itemprop="datePublished">2016-09-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/07/JS数组去重/">JS数组去重</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="JS_u6570_u7EC4_u53BB_u91CD_u7684_u51E0_u79CD_u65B9_u6CD5"><a href="#JS_u6570_u7EC4_u53BB_u91CD_u7684_u51E0_u79CD_u65B9_u6CD5" class="headerlink" title="JS数组去重的几种方法"></a><strong>JS数组去重的几种方法</strong></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#27979;&#35797;&#25968;&#32452;&#10;var arr = [];  //&#25968;&#32452;&#38271;&#24230;&#20026;&#21313;&#19975;&#10;for(var i = 0;i&#60;100000;i++)&#123;&#10;    arr.push(parseInt(Math.random())*i);&#10;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#26041;&#27861;1&#10;Array.prototype.unique = function(arr)&#123;&#10;    var newArray = []; //&#24314;&#19968;&#20010;&#26032;&#25968;&#32452;  &#10;    //&#36825;&#37324;&#20063;&#21487;&#20197;&#30452;&#25509;newArray = [arr[0]],&#19979;&#38754;&#30340;i&#23601;&#20174;1&#24320;&#22987;&#24490;&#29615;&#10;    this.array = arr;&#10;    for(var i = 0;i&#60;this.array.length;i++)&#123; &#10;        if(newArray.indexOf(this.array[i]) === -1)&#123;  //indexOf&#26041;&#27861;&#26159;&#24615;&#33021;&#30340;&#20851;&#38190;&#10;            newArray.push(this.array[i])  //&#22914;&#26524;&#26032;&#25968;&#32452;&#20013;&#27809;&#26377;&#21017;&#28155;&#21152;&#10;        &#125;&#10;    &#125;&#10;    return newArray;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#26041;&#27861;2&#10;Array.prototype.unique2 = function(arr)&#123;&#10;    var newArray = [arr[0]]; //&#20174;&#31532;1&#39033;&#24320;&#22987;&#65292;&#25226;&#31532;0&#39033;&#30452;&#25509;&#25918;&#20837;&#26032;&#25968;&#32452;&#20013;&#10;    this.array = arr;&#10;    for(var i = 1;i&#60;this.array.length;i++)&#123;&#10;        if(this.array.indexOf(this.array[i]) === i)&#123; &#10;            //&#21033;&#29992;indexOf&#30340;&#29305;&#24615;&#65292;&#21482;&#36820;&#22238;&#26368;&#20808;&#21305;&#37197;&#30340;&#37027;&#20010;&#20803;&#32032;&#30340;&#32034;&#24341;&#10;            //&#25152;&#20197;&#21487;&#20197;&#21033;&#29992;this.array[i]&#22312;this.array&#20013;&#30340;&#20301;&#32622;&#19981;&#31561;&#20110;&#24403;&#21069;i&#20540;&#37027;&#20040;&#19968;&#23450;&#26159;&#37325;&#22797;&#30340;&#10;            newArray.push(this.array[i])&#10;        &#125;&#10;    &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-对象的可枚举属性" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -861,71 +920,9 @@
 
 
   
-    <article id="post-js求一千万以内的质数算法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/24/js求一千万以内的质数算法/" class="article-date">
-      <time datetime="2016-03-24T04:24:25.000Z" itemprop="datePublished">2016-03-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/24/js求一千万以内的质数算法/">js求一千万以内的质数算法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>网易16年的实习生校招笔试题</p>
-<p>大体思路：定义一个<code>defi</code>,表示求多少以内的质数，然后定义一个数组<code>sum[]</code>,将数组内的<code>defi</code>个值全部置为1。</p>
-<p>从2开始，每次把质数的倍数那一项置为0，也就是数组的第2,4,6,8..项变为0，然后++2，再把3的倍数全置为0，留下的就全是质数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> defi = <span class="number">21</span>, </span><br><span class="line">    sum=[],</span><br><span class="line">    count = <span class="number">0</span>;  <span class="comment">//计数器</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; defi;i++)&#123;  <span class="comment">//将数组内的元素全部赋值1</span></span><br><span class="line">    sum[i] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">2</span>;   <span class="comment">//将i赋值2，从2开始，因为1不是质数</span></span><br><span class="line"><span class="keyword">while</span>(i&lt;defi)&#123;</span><br><span class="line">    <span class="keyword">if</span>(sum[i] === <span class="number">1</span>)&#123;</span><br><span class="line">        ++count;  <span class="comment">//计数器+1</span></span><br><span class="line">        <span class="built_in">console</span>.log(i+<span class="string">' '</span>);</span><br><span class="line">        <span class="comment">/*下面将i的倍数全部变为0*/</span></span><br><span class="line">        <span class="keyword">var</span> j = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">var</span> temp = i*j;</span><br><span class="line">            <span class="keyword">if</span>(temp&lt;defi)&#123;</span><br><span class="line">                sum[temp] = <span class="number">0</span>;  <span class="comment">//将i的倍数全部赋值为0</span></span><br><span class="line">                ++j;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ++i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"在"</span>+defi+<span class="string">"的范围内一共有"</span>+count+<span class="string">"个质数"</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="/../img/继承.jpg" alt="继承">;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dog</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.voice = <span class="string">"汪汪"</span>;</span><br><span class="line">&#125;</span><br><span class="line">dog.prototype.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.voice);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dog2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.voice = <span class="string">"呜呜"</span>;</span><br><span class="line">&#125;;</span><br><span class="line">dog2.prototype = <span class="keyword">new</span> dog();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newDog = <span class="keyword">new</span> dog2;</span><br><span class="line">newDog.say();  <span class="comment">//呜呜</span></span><br><span class="line"><span class="keyword">var</span> newDog2 = <span class="keyword">new</span> dog;</span><br><span class="line">newDog2.say();  <span class="comment">//汪汪</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>

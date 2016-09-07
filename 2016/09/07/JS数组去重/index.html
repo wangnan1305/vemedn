@@ -3,42 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>王楠</title>
+  <title>JS数组去重 | 王楠</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;lt;!DOCTYPE html&amp;gt;
-
-
-
-transition-property
-
-
-.m-demo{width:600px;height:100px;outline:2px dashed;margin:20px auto;}
-.m-demo pre{transition:2s;width:100px;height:100px;padding:0;line-height:100px;border-ra">
-<meta property="og:type" content="website">
-<meta property="og:title" content="王楠">
-<meta property="og:url" content="http://yoursite.com/css3动画/demo/14_transition-property.html">
+  <meta name="description" content="JS数组去重的几种方法1//&amp;#27979;&amp;#35797;&amp;#25968;&amp;#32452;&amp;#10;var arr = [];  //&amp;#25968;&amp;#32452;&amp;#38271;&amp;#24230;&amp;#20026;&amp;#21313;&amp;#19975;&amp;#10;for(var i = 0;i&amp;#60;100000;i++)&amp;#123;&amp;#10;    arr.push(parseInt(Math.ra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS数组去重">
+<meta property="og:url" content="http://yoursite.com/2016/09/07/JS数组去重/index.html">
 <meta property="og:site_name" content="王楠">
-<meta property="og:description" content="&amp;lt;!DOCTYPE html&amp;gt;
-
-
-
-transition-property
-
-
-.m-demo{width:600px;height:100px;outline:2px dashed;margin:20px auto;}
-.m-demo pre{transition:2s;width:100px;height:100px;padding:0;line-height:100px;border-ra">
-<meta property="og:updated_time" content="2014-12-25T11:06:58.450Z">
+<meta property="og:description" content="JS数组去重的几种方法1//&amp;#27979;&amp;#35797;&amp;#25968;&amp;#32452;&amp;#10;var arr = [];  //&amp;#25968;&amp;#32452;&amp;#38271;&amp;#24230;&amp;#20026;&amp;#21313;&amp;#19975;&amp;#10;for(var i = 0;i&amp;#60;100000;i++)&amp;#123;&amp;#10;    arr.push(parseInt(Math.ra">
+<meta property="og:updated_time" content="2016-09-07T06:45:01.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="王楠">
-<meta name="twitter:description" content="&amp;lt;!DOCTYPE html&amp;gt;
-
-
-
-transition-property
-
-
-.m-demo{width:600px;height:100px;outline:2px dashed;margin:20px auto;}
-.m-demo pre{transition:2s;width:100px;height:100px;padding:0;line-height:100px;border-ra">
+<meta name="twitter:title" content="JS数组去重">
+<meta name="twitter:description" content="JS数组去重的几种方法1//&amp;#27979;&amp;#35797;&amp;#25968;&amp;#32452;&amp;#10;var arr = [];  //&amp;#25968;&amp;#32452;&amp;#38271;&amp;#24230;&amp;#20026;&amp;#21313;&amp;#19975;&amp;#10;for(var i = 0;i&amp;#60;100000;i++)&amp;#123;&amp;#10;    arr.push(parseInt(Math.ra">
   
     <link rel="alternative" href="/atom.xml" title="王楠" type="application/atom+xml">
   
@@ -61,7 +37,7 @@ transition-property
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -243,11 +219,11 @@ transition-property
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JS数组去重" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/css3动画/demo/14_transition-property.html" class="article-date">
-      <time datetime="2016-03-15T03:25:22.371Z" itemprop="datePublished">2016-03-15</time>
+      <a href="/2016/09/07/JS数组去重/" class="article-date">
+      <time datetime="2016-09-07T03:23:32.000Z" itemprop="datePublished">2016-09-07</time>
 </a>
     </div>
   
@@ -256,85 +232,117 @@ transition-property
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS数组去重
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta {
-        display: none;
-    }
-    #container .article .article-title {
-        padding-right: 0;
-    }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover {
-        border-left: none;
-    }
-    .article-title {
-        font-size: 1.6em
-    }
-    .article-meta {
-        display: none;
-    }
-    .article-entry hr {
-        margin: 0;
-    }
-    #container .article-info-post.article-info {
-      display: none;
-      }
-    #container .article .article-title {
-    padding: 0;
-    }
-</style>
+        <h1 id="JS_u6570_u7EC4_u53BB_u91CD_u7684_u51E0_u79CD_u65B9_u6CD5"><a href="#JS_u6570_u7EC4_u53BB_u91CD_u7684_u51E0_u79CD_u65B9_u6CD5" class="headerlink" title="JS数组去重的几种方法"></a><strong>JS数组去重的几种方法</strong></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#27979;&#35797;&#25968;&#32452;&#10;var arr = [];  //&#25968;&#32452;&#38271;&#24230;&#20026;&#21313;&#19975;&#10;for(var i = 0;i&#60;100000;i++)&#123;&#10;    arr.push(parseInt(Math.random())*i);&#10;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#26041;&#27861;1&#10;Array.prototype.unique = function(arr)&#123;&#10;    var newArray = []; //&#24314;&#19968;&#20010;&#26032;&#25968;&#32452;  &#10;    //&#36825;&#37324;&#20063;&#21487;&#20197;&#30452;&#25509;newArray = [arr[0]],&#19979;&#38754;&#30340;i&#23601;&#20174;1&#24320;&#22987;&#24490;&#29615;&#10;    this.array = arr;&#10;    for(var i = 0;i&#60;this.array.length;i++)&#123; &#10;        if(newArray.indexOf(this.array[i]) === -1)&#123;  //indexOf&#26041;&#27861;&#26159;&#24615;&#33021;&#30340;&#20851;&#38190;&#10;            newArray.push(this.array[i])  //&#22914;&#26524;&#26032;&#25968;&#32452;&#20013;&#27809;&#26377;&#21017;&#28155;&#21152;&#10;        &#125;&#10;    &#125;&#10;    return newArray;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//&#26041;&#27861;2&#10;Array.prototype.unique2 = function(arr)&#123;&#10;    var newArray = [arr[0]]; //&#20174;&#31532;1&#39033;&#24320;&#22987;&#65292;&#25226;&#31532;0&#39033;&#30452;&#25509;&#25918;&#20837;&#26032;&#25968;&#32452;&#20013;&#10;    this.array = arr;&#10;    for(var i = 1;i&#60;this.array.length;i++)&#123;&#10;        if(this.array.indexOf(this.array[i]) === i)&#123; &#10;            //&#21033;&#29992;indexOf&#30340;&#29305;&#24615;&#65292;&#21482;&#36820;&#22238;&#26368;&#20808;&#21305;&#37197;&#30340;&#37027;&#20010;&#20803;&#32032;&#30340;&#32034;&#24341;&#10;            //&#25152;&#20197;&#21487;&#20197;&#21033;&#29992;this.array[i]&#22312;this.array&#20013;&#30340;&#20301;&#32622;&#19981;&#31561;&#20110;&#24403;&#21069;i&#20540;&#37027;&#20040;&#19968;&#23450;&#26159;&#37325;&#22797;&#30340;&#10;            newArray.push(this.array[i])&#10;        &#125;&#10;    &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
 
-
-          
-        <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>transition-property</title>
-<link rel="stylesheet" href="demo.css">
-<style type="text/css">
-.m-demo{width:600px;height:100px;outline:2px dashed;margin:20px auto;}
-.m-demo pre{transition:2s;width:100px;height:100px;padding:0;line-height:100px;border-radius:50%;font-size:20px;text-align:center;}
-.m-demo:hover pre{left:500px;color:#000;}
-.m-demo-1 pre{transition-property:none;}
-.m-demo-2 pre{transition-property:all;}
-.m-demo-3 pre{transition-property:left;}
-.m-demo-4 pre{transition-property:left,color;padding:20px 0;line-height:30px;}
-</style>
-</head>
-<body>
-<div class="m-demo m-demo-1">
-    <pre>none</pre>
-</div>
-<div class="m-demo m-demo-2">
-    <pre>all</pre>
-</div>
-<div class="m-demo m-demo-3">
-    <pre>left</pre>
-</div>
-<div class="m-demo m-demo-4">
-    <pre>left,<br>color</pre>
-</div>
-</body>
-</html>
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/09/07/JS数组去重/">JS数组去重</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
+        <p><span>发布时间:</span>2016年09月07日 - 11时23分</p>
+        <p><span>最后更新:</span>2016年09月07日 - 14时45分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/07/JS数组去重/" title="JS数组去重">http://yoursite.com/2016/09/07/JS数组去重/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/07/JS数组去重/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/09/05/对象的可枚举属性/">
+                    对象的可枚举属性
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JS_u6570_u7EC4_u53BB_u91CD_u7684_u51E0_u79CD_u65B9_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">JS数组去重的几种方法</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
 
 
 <div class="share">
@@ -356,6 +364,44 @@ transition-property
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/09/05/对象的可枚举属性/" title="下一篇: 对象的可枚举属性">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/07/JS数组去重/">JS数组去重</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/对象的可枚举属性/">对象的可枚举属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/29/CommonJS和AMD/">webpack模块化CommonJS和AMD</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/23/移动端/">移动端困惑</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/布局/">水平垂直居中常用布局</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/20/CSS属性推荐书写顺序/">CSS属性推荐书写顺序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/CSS定位机制/">CSS定位机制</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/27/ajax原理/">ajax原理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/26/逆转序列/">逆转序列</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/常用Array方法/">常用Array方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/24/js求一千万以内的质数算法/">js求一千万以内的质数算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/23/如何理解HTTP协议的无连接无状态/">如何理解HTTP协议的无连接无状态</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/23/session和cookie/">session和cookie</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/IE6下常见bug/">IE6下常见bug</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/15/CSS3动画/">CSS3动画</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/10/闭包/">闭包</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/09/原型/">javascript原型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/CSS3D/">CSS 3D transform变换那些事</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/06/three/">事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/two/">bind()和on(),live()和bind()的区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/27/js中的类型识别/">js中的类型识别</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 

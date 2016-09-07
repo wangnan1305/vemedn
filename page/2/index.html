@@ -143,7 +143,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/js/" style="font-size: 10px;">-js</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a>
+                        <a href="/tags/js/" style="font-size: 10px;">-js</a> <a href="/tags/CSS3/" style="font-size: 13.33px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 13.33px;">HTTP</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a>
                     </div>
                 </section>
                 
@@ -222,6 +222,68 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-js求一千万以内的质数算法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/24/js求一千万以内的质数算法/" class="article-date">
+      <time datetime="2016-03-24T04:24:25.000Z" itemprop="datePublished">2016-03-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/24/js求一千万以内的质数算法/">js求一千万以内的质数算法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>网易16年的实习生校招笔试题</p>
+<p>大体思路：定义一个<code>defi</code>,表示求多少以内的质数，然后定义一个数组<code>sum[]</code>,将数组内的<code>defi</code>个值全部置为1。</p>
+<p>从2开始，每次把质数的倍数那一项置为0，也就是数组的第2,4,6,8..项变为0，然后++2，再把3的倍数全置为0，留下的就全是质数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> defi = <span class="number">21</span>, </span><br><span class="line">    sum=[],</span><br><span class="line">    count = <span class="number">0</span>;  <span class="comment">//计数器</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; defi;i++)&#123;  <span class="comment">//将数组内的元素全部赋值1</span></span><br><span class="line">    sum[i] = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">2</span>;   <span class="comment">//将i赋值2，从2开始，因为1不是质数</span></span><br><span class="line"><span class="keyword">while</span>(i&lt;defi)&#123;</span><br><span class="line">    <span class="keyword">if</span>(sum[i] === <span class="number">1</span>)&#123;</span><br><span class="line">        ++count;  <span class="comment">//计数器+1</span></span><br><span class="line">        <span class="built_in">console</span>.log(i+<span class="string">' '</span>);</span><br><span class="line">        <span class="comment">/*下面将i的倍数全部变为0*/</span></span><br><span class="line">        <span class="keyword">var</span> j = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">var</span> temp = i*j;</span><br><span class="line">            <span class="keyword">if</span>(temp&lt;defi)&#123;</span><br><span class="line">                sum[temp] = <span class="number">0</span>;  <span class="comment">//将i的倍数全部赋值为0</span></span><br><span class="line">                ++j;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ++i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"在"</span>+defi+<span class="string">"的范围内一共有"</span>+count+<span class="string">"个质数"</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="/../img/继承.jpg" alt="继承">;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dog</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.voice = <span class="string">"汪汪"</span>;</span><br><span class="line">&#125;</span><br><span class="line">dog.prototype.say = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.voice);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dog2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.voice = <span class="string">"呜呜"</span>;</span><br><span class="line">&#125;;</span><br><span class="line">dog2.prototype = <span class="keyword">new</span> dog();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newDog = <span class="keyword">new</span> dog2;</span><br><span class="line">newDog.say();  <span class="comment">//呜呜</span></span><br><span class="line"><span class="keyword">var</span> newDog2 = <span class="keyword">new</span> dog;</span><br><span class="line">newDog2.say();  <span class="comment">//汪汪</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
   
     <article id="post-如何理解HTTP协议的无连接无状态" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -872,103 +934,9 @@ $(<span class="built_in">document</span>).on(<span class="string">"click"</span>
 
 
   
-    <article id="post-js中的类型识别" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/27/js中的类型识别/" class="article-date">
-      <time datetime="2016-01-27T07:31:29.000Z" itemprop="datePublished">2016-01-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/27/js中的类型识别/">js中的类型识别</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a><strong>typeof</strong></h1><p>typeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">'js'</span>;  <span class="comment">//"string"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">12</span>;   <span class="comment">//"number"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">//"boolean"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">//"object"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> &#123;name:<span class="string">"wn"</span>&#125;; <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;; <span class="comment">//"function"</span></span><br><span class="line"><span class="keyword">typeof</span> [];  <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>; <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> /\d/; <span class="comment">//"object"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> Person;<span class="comment">//"object"</span></span><br></pre></td></tr></table></figure>
-<p><strong>typeof 总结</strong>：</p>
-<ul>
-<li>可以识别标准类型（Null除外）</li>
-<li>不能识别具体的对象类型（Function 除外）</li>
-</ul>
-<h1 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a><strong>instanceof</strong></h1><p>instanceof用来识别内置的对象类型,不能够识别原始类型。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[] <span class="keyword">instanceof</span> <span class="built_in">Array</span>; <span class="comment">//true</span></span><br><span class="line">/\d/ <span class="keyword">instanceof</span> <span class="built_in">RegExp</span>; <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span> <span class="keyword">instanceof</span> <span class="built_in">Number</span>;<span class="comment">//false</span></span><br><span class="line"><span class="string">"wn"</span> <span class="keyword">instanceof</span> <span class="built_in">String</span>;<span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<p>instanceof 能够用来判别自定义对象类型及父子类型</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*我们先定义了一个Point构造函数，然后Circle继承了Point,生成了Circle对象。*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.x=x;</span><br><span class="line">	<span class="keyword">this</span>.y=y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Circle</span>(<span class="params">x,y,r</span>)</span>&#123;</span><br><span class="line">	Point.call(<span class="keyword">this</span>,x,y);</span><br><span class="line">	<span class="keyword">this</span>.radius=r;</span><br><span class="line">&#125;</span><br><span class="line">Circle.prototype = <span class="keyword">new</span> Point();</span><br><span class="line">Circle.prototype.constructor=Circle;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c=<span class="keyword">new</span> Circle(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">c <span class="keyword">instanceof</span> Circle ;<span class="comment">//true </span></span><br><span class="line">c <span class="keyword">instanceof</span> Point; <span class="comment">//true;</span></span><br></pre></td></tr></table></figure>
-<p><strong>instanceof 总结</strong>：</p>
-<ul>
-<li>判别内置对象类型</li>
-<li>不能判别原始类型</li>
-<li>判别自定义对象类型</li>
-</ul>
-<h1 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call"></a><strong>Object.prototype.toString.call</strong></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>,-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/../img/js-one-31.png" alt="img"></p>
-<p>Object.prototype.toString.call总结：</p>
-<ul>
-<li>可以识别标准类型以及内置（build-in）对象类型</li>
-<li>不能识别自定义对象类型</li>
-</ul>
-<h1 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a><strong>constructor</strong></h1><p>constructor就是构造这个对象的构造函数本身。</p>
-<p>我们用构造函数去识别这个对象是什么类型肯定是准确的。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断原始类型</span></span><br><span class="line"><span class="string">"wangnan"</span>.constructor === <span class="built_in">String</span>;  <span class="comment">//true</span></span><br><span class="line">(<span class="number">1</span>).constructor === <span class="built_in">Number</span>;        <span class="comment">//true</span></span><br><span class="line"><span class="literal">true</span>.constructor === <span class="built_in">Boolean</span>;      <span class="comment">//true</span></span><br><span class="line">(&#123;&#125;).constructor ===<span class="built_in">Object</span>;        <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//判断内置对象类型</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().constructor === <span class="built_in">Date</span>;   <span class="comment">//true</span></span><br><span class="line">[].constructor === <span class="built_in">Array</span>;          <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-<p><strong>constructor 总结</strong>：</p>
-<ul>
-<li>判断标准类型（Undefined/Null 除外，因为前两者没有构造函数）</li>
-<li>判别内置对象类型</li>
-<li>判别自定义对象类型</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取对象的构造函数名称</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getConstructorName</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> obj &amp;&amp; obj.constructor &amp;&amp; obj.constructor.toString().match(<span class="regexp">/function\s*([^(]*)/</span>)[<span class="number">1</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/../img/js-one-1.png" alt="img"></p>
-<p>用来实现长连接，在websocket不可用的时候作为一种替代，最开始由google发明。Comet：基于 HTTP 长连接的“服务器推”技术<br>跨域通信。JavaScript跨域总结与解决办法 ，类似的还有浏览器多页面通信，比如音乐播放器，用户如果打开了多个tab页，应该只有一个在播放。<br>历史记录管理，解决ajax化网站响应浏览器前进后退按钮的方案，在html5的history api不可用时作为一种替代。<br>纯前端的utf8和gbk编码互转。比如在utf8页面需要生成一个gbk的encodeURIComponent字符串，可以通过页面加载一个gbk的iframe，然后主页面与子页面通信的方式实现转换，这样就不用在页面上插入一个非常巨大的编码映射表文件了，其中子页面内容：<br>&lt;!doctype html&gt;</p>
-<p><html><br>  <head><br>    <meta charset="gbk"><br>    <script><br>      window.encoding = function(str){<br>        //利用a元素的href属性来encode<br>        var a = document.createElement(“a”);<br>        a.href = “/?q=” + str;<br>        var url = a.href; //这里读取的时候会自动编码<br>        a.href = “/?q=”;<br>        return url.replace(a.href, “”);<br>      };<br>    </script><br>  </head><br></html><br>把这个iframe部署到父页面的同源服务上，就能在父页面直接调用iframe中的encoding接口了。<br>评论里有提到，用iframe实现无刷新文件上传，在FormData不可用时作为替代方案</p>
-<p>作者：张云龙<br>链接：<a href="http://www.zhihu.com/question/20653055/answer/35387821" target="_blank" rel="external">http://www.zhihu.com/question/20653055/answer/35387821</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 </div>
