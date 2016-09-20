@@ -3,23 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>js中的类型识别 | 王楠</title>
+  <title>随机排列算法 | 王楠</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
-1234567891011121314typeof &apos;js&apos;;  //&quot;string&quot;typeof 12;   //&quot;number&quot;typeof true; //&quot;boolean&quot;typeof null; //&quot;object&quot;typeof &amp;#123;na">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677function shuffle(arr)&amp;#123;    return arr.sort(function">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js中的类型识别">
-<meta property="og:url" content="http://yoursite.com/2016/01/27/js中的类型识别/index.html">
+<meta property="og:title" content="随机排列算法">
+<meta property="og:url" content="http://yoursite.com/2016/09/20/随机排列算法/index.html">
 <meta property="og:site_name" content="王楠">
-<meta property="og:description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
-1234567891011121314typeof &apos;js&apos;;  //&quot;string&quot;typeof 12;   //&quot;number&quot;typeof true; //&quot;boolean&quot;typeof null; //&quot;object&quot;typeof &amp;#123;na">
-<meta property="og:image" content="http://yoursite.com/../img/js-one-31.png">
-<meta property="og:image" content="http://yoursite.com/../img/js-one-1.png">
-<meta property="og:updated_time" content="2016-04-08T05:06:51.957Z">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677function shuffle(arr)&amp;#123;    return arr.sort(function">
+<meta property="og:updated_time" content="2016-09-20T04:02:51.558Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js中的类型识别">
-<meta name="twitter:description" content="typeoftypeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。
-1234567891011121314typeof &apos;js&apos;;  //&quot;string&quot;typeof 12;   //&quot;number&quot;typeof true; //&quot;boolean&quot;typeof null; //&quot;object&quot;typeof &amp;#123;na">
+<meta name="twitter:title" content="随机排列算法">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677function shuffle(arr)&amp;#123;    return arr.sort(function">
   
     <link rel="alternative" href="/atom.xml" title="王楠" type="application/atom+xml">
   
@@ -224,11 +219,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-js中的类型识别" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-随机排列算法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/27/js中的类型识别/" class="article-date">
-      <time datetime="2016-01-27T07:31:29.000Z" itemprop="datePublished">2016-01-27</time>
+      <a href="/2016/09/20/随机排列算法/" class="article-date">
+      <time datetime="2016-09-20T03:59:40.000Z" itemprop="datePublished">2016-09-20</time>
 </a>
     </div>
   
@@ -241,7 +236,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js中的类型识别
+      随机排列算法
     </h1>
   
 
@@ -252,7 +247,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -262,44 +257,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a><strong>typeof</strong></h1><p>typeof是一种操作符，我们可以通过typeof(“a”)或者直接typeof “a”来调用。注意：typeof并不是一种方法。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">'js'</span>;  <span class="comment">//"string"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">12</span>;   <span class="comment">//"number"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">true</span>; <span class="comment">//"boolean"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">//"object"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> &#123;name:<span class="string">"wn"</span>&#125;; <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;; <span class="comment">//"function"</span></span><br><span class="line"><span class="keyword">typeof</span> [];  <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>; <span class="comment">//"object"</span></span><br><span class="line"><span class="keyword">typeof</span> /\d/; <span class="comment">//"object"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> Person;<span class="comment">//"object"</span></span><br></pre></td></tr></table></figure>
-<p><strong>typeof 总结</strong>：</p>
-<ul>
-<li>可以识别标准类型（Null除外）</li>
-<li>不能识别具体的对象类型（Function 除外）</li>
-</ul>
-<h1 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a><strong>instanceof</strong></h1><p>instanceof用来识别内置的对象类型,不能够识别原始类型。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[] <span class="keyword">instanceof</span> <span class="built_in">Array</span>; <span class="comment">//true</span></span><br><span class="line">/\d/ <span class="keyword">instanceof</span> <span class="built_in">RegExp</span>; <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span> <span class="keyword">instanceof</span> <span class="built_in">Number</span>;<span class="comment">//false</span></span><br><span class="line"><span class="string">"wn"</span> <span class="keyword">instanceof</span> <span class="built_in">String</span>;<span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<p>instanceof 能够用来判别自定义对象类型及父子类型</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*我们先定义了一个Point构造函数，然后Circle继承了Point,生成了Circle对象。*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Point</span>(<span class="params">x,y</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.x=x;</span><br><span class="line">	<span class="keyword">this</span>.y=y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Circle</span>(<span class="params">x,y,r</span>)</span>&#123;</span><br><span class="line">	Point.call(<span class="keyword">this</span>,x,y);</span><br><span class="line">	<span class="keyword">this</span>.radius=r;</span><br><span class="line">&#125;</span><br><span class="line">Circle.prototype = <span class="keyword">new</span> Point();</span><br><span class="line">Circle.prototype.constructor=Circle;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c=<span class="keyword">new</span> Circle(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">c <span class="keyword">instanceof</span> Circle ;<span class="comment">//true </span></span><br><span class="line">c <span class="keyword">instanceof</span> Point; <span class="comment">//true;</span></span><br></pre></td></tr></table></figure>
-<p><strong>instanceof 总结</strong>：</p>
-<ul>
-<li>判别内置对象类型</li>
-<li>不能判别原始类型</li>
-<li>判别自定义对象类型</li>
-</ul>
-<h1 id="Object-prototype-toString-call"><a href="#Object-prototype-toString-call" class="headerlink" title="Object.prototype.toString.call"></a><strong>Object.prototype.toString.call</strong></h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>,-<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/../img/js-one-31.png" alt="img"></p>
-<p>Object.prototype.toString.call总结：</p>
-<ul>
-<li>可以识别标准类型以及内置（build-in）对象类型</li>
-<li>不能识别自定义对象类型</li>
-</ul>
-<h1 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a><strong>constructor</strong></h1><p>constructor就是构造这个对象的构造函数本身。</p>
-<p>我们用构造函数去识别这个对象是什么类型肯定是准确的。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断原始类型</span></span><br><span class="line"><span class="string">"wangnan"</span>.constructor === <span class="built_in">String</span>;  <span class="comment">//true</span></span><br><span class="line">(<span class="number">1</span>).constructor === <span class="built_in">Number</span>;        <span class="comment">//true</span></span><br><span class="line"><span class="literal">true</span>.constructor === <span class="built_in">Boolean</span>;      <span class="comment">//true</span></span><br><span class="line">(&#123;&#125;).constructor ===<span class="built_in">Object</span>;        <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//判断内置对象类型</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().constructor === <span class="built_in">Date</span>;   <span class="comment">//true</span></span><br><span class="line">[].constructor === <span class="built_in">Array</span>;          <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-<p><strong>constructor 总结</strong>：</p>
-<ul>
-<li>判断标准类型（Undefined/Null 除外，因为前两者没有构造函数）</li>
-<li>判别内置对象类型</li>
-<li>判别自定义对象类型</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取对象的构造函数名称</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getConstructorName</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> obj &amp;&amp; obj.constructor &amp;&amp; obj.constructor.toString().match(<span class="regexp">/function\s*([^(]*)/</span>)[<span class="number">1</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="/../img/js-one-1.png" alt="img"></p>
-<p>用来实现长连接，在websocket不可用的时候作为一种替代，最开始由google发明。Comet：基于 HTTP 长连接的“服务器推”技术<br>跨域通信。JavaScript跨域总结与解决办法 ，类似的还有浏览器多页面通信，比如音乐播放器，用户如果打开了多个tab页，应该只有一个在播放。<br>历史记录管理，解决ajax化网站响应浏览器前进后退按钮的方案，在html5的history api不可用时作为一种替代。<br>纯前端的utf8和gbk编码互转。比如在utf8页面需要生成一个gbk的encodeURIComponent字符串，可以通过页面加载一个gbk的iframe，然后主页面与子页面通信的方式实现转换，这样就不用在页面上插入一个非常巨大的编码映射表文件了，其中子页面内容：<br>&lt;!doctype html&gt;</p>
-<p><html><br>  <head><br>    <meta charset="gbk"><br>    <script><br>      window.encoding = function(str){<br>        //利用a元素的href属性来encode<br>        var a = document.createElement(“a”);<br>        a.href = “/?q=” + str;<br>        var url = a.href; //这里读取的时候会自动编码<br>        a.href = “/?q=”;<br>        return url.replace(a.href, “”);<br>      };<br>    </script><br>  </head><br></html><br>把这个iframe部署到父页面的同源服务上，就能在父页面直接调用iframe中的encoding接口了。<br>评论里有提到，用iframe实现无刷新文件上传，在FormData不可用时作为替代方案</p>
-<p>作者：张云龙<br>链接：<a href="http://www.zhihu.com/question/20653055/answer/35387821" target="_blank" rel="external">http://www.zhihu.com/question/20653055/answer/35387821</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">shuffle</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.random() - <span class="number">0.5</span>; </span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//冒泡排序 ，两两相比  O(n^2)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">arr,compare</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;len-<span class="number">1</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>;j&lt;len-i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">            <span class="keyword">var</span> k = j + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(arr[j] &gt; arr[k])&#123;</span><br><span class="line">                <span class="keyword">var</span> temp = arr[j];</span><br><span class="line">                arr[j] = arr[k];</span><br><span class="line">                arr[k] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//插入排序 平均为 O(n^2)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">insertionSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> j = i + <span class="number">1</span>;j&lt;len;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[i]&gt;arr[j])&#123;</span><br><span class="line">                <span class="keyword">var</span> temp = arr[i];</span><br><span class="line">                arr[i] = arr[j];</span><br><span class="line">                arr[j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//快排 nlogn</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> arr = arr.slice(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span>(arr.length&lt;=<span class="number">1</span>) <span class="keyword">return</span> arr;</span><br><span class="line">    <span class="keyword">var</span> mid = arr[<span class="number">0</span>],rest = arr.slice(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">var</span> left = [] , right = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;rest.length;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(rest[i]&gt;mid)&#123;</span><br><span class="line">            right.push(rest[i])</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            left.push(rest[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> quickSort(left).concat([mid]).concat(quickSort(right))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//完全随机排列</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">shuffle</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;len-<span class="number">1</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> idx = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (len - i));</span><br><span class="line">        <span class="keyword">var</span> temp = arr[idx];</span><br><span class="line">        arr[idx] = arr[len-i-<span class="number">1</span>];</span><br><span class="line">        arr[len-i-<span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">var</span> res = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> t = <span class="number">10000</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;t;i++)&#123;</span><br><span class="line">    <span class="keyword">var</span> sorted = shuffle(arr.slice(<span class="number">0</span>));</span><br><span class="line">    sorted.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">o,i</span>)</span>&#123;</span><br><span class="line">        res[i]+=o;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">res = res.map(<span class="function"><span class="keyword">function</span>(<span class="params">o</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> o/t;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(res)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -308,13 +266,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/01/27/js中的类型识别/">js中的类型识别</a></p>
+        <p><span>本文标题:</span><a href="/2016/09/20/随机排列算法/">随机排列算法</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
-        <p><span>发布时间:</span>2016年01月27日 - 15时31分</p>
-        <p><span>最后更新:</span>2016年04月08日 - 13时06分</p>
+        <p><span>发布时间:</span>2016年09月20日 - 11时59分</p>
+        <p><span>最后更新:</span>2016年09月20日 - 12时02分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/01/27/js中的类型识别/" title="js中的类型识别">http://yoursite.com/2016/01/27/js中的类型识别/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/01/27/js中的类型识别/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/09/20/随机排列算法/" title="随机排列算法">http://yoursite.com/2016/09/20/随机排列算法/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/20/随机排列算法/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -327,12 +285,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/03/05/two/">
-                    bind()和on(),live()和bind()的区别
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/09/07/JS数组去重/">
+                    JS数组去重
                 </a>
             </div>
-        
         
     </nav>
 
@@ -341,7 +299,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#typeof"><span class="toc-number">1.</span> <span class="toc-text">typeof</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#instanceof"><span class="toc-number">2.</span> <span class="toc-text">instanceof</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Object-prototype-toString-call"><span class="toc-number">3.</span> <span class="toc-text">Object.prototype.toString.call</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#constructor-NaN"><span class="toc-number">4.</span> <span class="toc-text">constructor</span></a></li></ol>
+    
 </div>
 <style>
     .left-col .switch-btn {
@@ -409,15 +367,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/03/05/two/" title="上一篇: bind()和on(),live()和bind()的区别">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/09/07/JS数组去重/" title="下一篇: JS数组去重">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
