@@ -27,7 +27,7 @@ m-n位的数字：^\d{m,n}$
 非零开头的最多带两位小数的数字：^([1-9][0-9]*)+(.[0-9]{1,2})?$
 带1-2位小数的正数或负数：^(-)?\d+(.\d{1,2})?$
 正数、负数、和小数：^(-|+)?\">
-<meta property="og:updated_time" content="2016-09-20T04:17:11.752Z">
+<meta property="og:updated_time" content="2016-09-20T04:19:13.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用正则表达式">
 <meta name="twitter:description" content="一、校验数字的表达式
@@ -165,7 +165,7 @@ m-n位的数字：^\d{m,n}$
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/js/" style="font-size: 10px;">-js</a> <a href="/tags/CSS3/" style="font-size: 13.33px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 13.33px;">HTTP</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/算法/" style="font-size: 13.33px;">算法</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a>
+                        <a href="/tags/js/" style="font-size: 10px;">-js</a> <a href="/tags/CSS3/" style="font-size: 13.33px;">CSS3</a> <a href="/tags/H5/" style="font-size: 10px;">H5</a> <a href="/tags/HTTP/" style="font-size: 13.33px;">HTTP</a> <a href="/tags/css/" style="font-size: 16.67px;">css</a> <a href="/tags/ie6/" style="font-size: 10px;">ie6</a> <a href="/tags/javascript/" style="font-size: 16.67px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/做题记录/" style="font-size: 10px;">做题记录</a> <a href="/tags/正则/" style="font-size: 10px;">正则</a> <a href="/tags/算法/" style="font-size: 13.33px;">算法</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a>
                     </div>
                 </section>
                 
@@ -270,6 +270,10 @@ m-n位的数字：^\d{m,n}$
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则/">正则</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -296,10 +300,10 @@ m-n位的数字：^\d{m,n}$
 <li>非正浮点数：^((-\d+(.\d+)?)|(0+(.0+)?))$ 或 ^(-([1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>))|0?.0+|0$</li>
 <li>正浮点数：^[1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>$ 或 ^(([0-9]+.[0-9]<em>[1-9][0-9]</em>)|([0-9]<em>[1-9][0-9]</em>.[0-9]+)|([0-9]<em>[1-9][0-9]</em>))$</li>
 <li>负浮点数：^-([1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>)$ 或 ^(-(([0-9]+.[0-9]<em>[1-9][0-9]</em>)|([0-9]<em>[1-9][0-9]</em>.[0-9]+)|([0-9]<em>[1-9][0-9]</em>)))$</li>
-<li><p>浮点数：^(-?\d+)(.\d+)?$ 或 ^-?([1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>|0?.0+|0)$</p>
-<h1 id="u4E8C_u3001_u6821_u9A8C_u5B57_u7B26_u7684_u8868_u8FBE_u5F0F"><a href="#u4E8C_u3001_u6821_u9A8C_u5B57_u7B26_u7684_u8868_u8FBE_u5F0F" class="headerlink" title="二、校验字符的表达式"></a><strong>二、校验字符的表达式</strong></h1></li>
-<li><p>汉字：^[\u4e00-\u9fa5]{0,}$</p>
-</li>
+<li>浮点数：^(-?\d+)(.\d+)?$ 或 ^-?([1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>|0?.0+|0)$</li>
+</ul>
+<h1 id="u4E8C_u3001_u6821_u9A8C_u5B57_u7B26_u7684_u8868_u8FBE_u5F0F"><a href="#u4E8C_u3001_u6821_u9A8C_u5B57_u7B26_u7684_u8868_u8FBE_u5F0F" class="headerlink" title="二、校验字符的表达式"></a><strong>二、校验字符的表达式</strong></h1><ul>
+<li>汉字：^[\u4e00-\u9fa5]{0,}$</li>
 <li>英文和数字：^[A-Za-z0-9]+$ 或 ^[A-Za-z0-9]{4,40}$</li>
 <li>长度为3-20的所有字符：^.{3,20}$</li>
 <li>由26个英文字母组成的字符串：^[A-Za-z]+$</li>
@@ -310,10 +314,10 @@ m-n位的数字：^\d{m,n}$
 <li>中文、英文、数字包括下划线：^[\u4E00-\u9FA5A-Za-z0-9_]+$</li>
 <li>中文、英文、数字但不包括下划线等符号：^[\u4E00-\u9FA5A-Za-z0-9]+$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}$</li>
 <li>可以输入含有^%&amp;’,;=?$\”等字符：[^%&amp;’,;=?$\x22]+</li>
-<li><p>禁止输入含有~的字符：[^~\x22]+</p>
-<h1 id="u4E09_u3001_u7279_u6B8A_u9700_u6C42_u8868_u8FBE_u5F0F"><a href="#u4E09_u3001_u7279_u6B8A_u9700_u6C42_u8868_u8FBE_u5F0F" class="headerlink" title="三、特殊需求表达式"></a><strong>三、特殊需求表达式</strong></h1></li>
-<li><p>Email地址：^\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)*$</p>
-</li>
+<li>禁止输入含有~的字符：[^~\x22]+</li>
+</ul>
+<h1 id="u4E09_u3001_u7279_u6B8A_u9700_u6C42_u8868_u8FBE_u5F0F"><a href="#u4E09_u3001_u7279_u6B8A_u9700_u6C42_u8868_u8FBE_u5F0F" class="headerlink" title="三、特殊需求表达式"></a><strong>三、特殊需求表达式</strong></h1><ul>
+<li>Email地址：^\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)*$</li>
 <li>域名：[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?</li>
 <li>InternetURL：[a-zA-z]+://[^\s]<em> 或 ^<a href="http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=" target="_blank" rel="external">http://([\w-]+\.)+[\w-]+(/[\w-./?%&amp;=</a>]</em>)?$</li>
 <li>手机号码：^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$</li>
@@ -347,7 +351,7 @@ m-n位的数字：^\d{m,n}$
         <p><span>本文标题:</span><a href="/2016/09/20/常用正则表达式/">常用正则表达式</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 王楠 的个人博客">王楠</a></p>
         <p><span>发布时间:</span>2016年09月20日 - 12时13分</p>
-        <p><span>最后更新:</span>2016年09月20日 - 12时17分</p>
+        <p><span>最后更新:</span>2016年09月20日 - 12时19分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/09/20/常用正则表达式/" title="常用正则表达式">http://yoursite.com/2016/09/20/常用正则表达式/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/09/20/常用正则表达式/　　作者: 王楠" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
